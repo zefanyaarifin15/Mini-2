@@ -25,35 +25,33 @@ struct ChatView: View {
 struct ConversationView: View {
     let chatRepository = ChatRepository.shared
     let partner: String
-    @State private var messages: [ChatMessage] = []
-
-    init(partner: String) {
-        // Fetch messages for the specified partner from the repository
-        self.partner = partner
-        self._messages = State(initialValue: chatRepository.fetchMessages(for: partner) ?? [])
-    }
+    @State private var messages: [(String, String)] = []
 
     var body: some View {
         NavigationView {
             VStack {
-                List(messages, id: \.id) { message in
-                    MessageRow(message: message)
+                List(messages, id: \.1) { message in
+                    MessageRow(sender: message.0, text: message.1)
                 }
-                .listStyle(PlainListStyle()) // Use PlainListStyle for cleaner appearance
+                .listStyle(PlainListStyle())
             }
             .navigationTitle(Text(partner))
+            .onAppear {
+                self.messages = chatRepository.fetchMessages(for: partner) ?? []
+            }
         }
     }
 }
 
 struct MessageRow: View {
-    let message: ChatMessage
+    let sender: String
+    let text: String
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(message.sender)
+            Text(sender)
                 .font(.headline)
-            Text(message.text)
+            Text(text)
                 .foregroundColor(.secondary)
         }
         .padding(8)
