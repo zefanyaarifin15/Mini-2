@@ -13,6 +13,7 @@
 		6D5EF11B2C1AC1A600C20D4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D5EF11A2C1AC1A600C20D4D /* Preview Assets.xcassets */; };
 		6DACC7502C1AC37300AC7ED2 /* AnalysisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC74F2C1AC37300AC7ED2 /* AnalysisButton.swift */; };
 		6DACC7542C1AC67800AC7ED2 /* ProfileAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC7532C1AC67800AC7ED2 /* ProfileAnalysis.swift */; };
+		6DACC7562C1AE93500AC7ED2 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC7552C1AE93500AC7ED2 /* JournalView.swift */; };
 		D90B7CB22C1AE2FD008B3F7C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */; };
 		D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		6D5EF11A2C1AC1A600C20D4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DACC74F2C1AC37300AC7ED2 /* AnalysisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisButton.swift; sourceTree = "<group>"; };
 		6DACC7532C1AC67800AC7ED2 /* ProfileAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAnalysis.swift; sourceTree = "<group>"; };
+		6DACC7552C1AE93500AC7ED2 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 			children = (
 				6D5EF1152C1AC1A500C20D4D /* ContentView.swift */,
 				D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */,
+				6DACC7552C1AE93500AC7ED2 /* JournalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */,
 				6DACC7542C1AC67800AC7ED2 /* ProfileAnalysis.swift in Sources */,
 				D90B7CB22C1AE2FD008B3F7C /* ChatView.swift in Sources */,
+				6DACC7562C1AE93500AC7ED2 /* JournalView.swift in Sources */,
 				6D5EF1162C1AC1A500C20D4D /* ContentView.swift in Sources */,
 				6D5EF1142C1AC1A500C20D4D /* Mini_2App.swift in Sources */,
 			);

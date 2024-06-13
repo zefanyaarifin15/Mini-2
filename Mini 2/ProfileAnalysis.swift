@@ -9,8 +9,8 @@ struct Profile: Identifiable {
 
 struct ProfileAnalysisView: View {
     let profiles: [Profile] = [
-//        Profile(image: "stephanie", name: "stephaniejenn", description: "Stephanie Jen is a 20 year old influencer who rose to fame as a beauty vlogger on social media. She is a friend of yours, having met at a makeup event a year ago. You still keep in touch with her occasionally."),
-//        Profile(image: "natalia", name: "nataliaibert", description: "Natalie Bertman is a 23-year-old influencer who initially gained attention through her fashion and lifestyle content on social media. She is a close friend of yours, and you two have shared many memorable moments together."),
+        Profile(image: "stephanie", name: "stephaniejenn", description: "Stephanie Jen is a 20 year old influencer who rose to fame as a beauty vlogger on social media. She is a friend of yours, having met at a makeup event a year ago. You still keep in touch with her occasionally."),
+        Profile(image: "natalia", name: "nataliaibert", description: "Natalie Bertman is a 23-year-old influencer who initially gained attention through her fashion and lifestyle content on social media. She is a close friend of yours, and you two have shared many memorable moments together."),
         Profile(image: "James", name: "James", description: "James is an ex-boyfriend, and the two of you have a complicated history. Despite your breakup, he still reaches out to you from time to time."),
     ]
     
