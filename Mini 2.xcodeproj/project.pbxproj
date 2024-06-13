@@ -59,12 +59,11 @@
 		6D5EF1122C1AC1A500C20D4D /* Mini 2 */ = {
 			isa = PBXGroup;
 			children = (
+				D90B7CB82C1AE5D9008B3F7C /* View */,
+				D90B7CB72C1AE5C7008B3F7C /* Repository */,
 				6D5EF1132C1AC1A500C20D4D /* Mini_2App.swift */,
 				6DACC74F2C1AC37300AC7ED2 /* AnalysisButton.swift */,
-				6D5EF1152C1AC1A500C20D4D /* ContentView.swift */,
 				6DACC7532C1AC67800AC7ED2 /* ProfileAnalysis.swift */,
-				D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */,
-				D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */,
 				6D5EF1172C1AC1A600C20D4D /* Assets.xcassets */,
 				6D5EF1192C1AC1A600C20D4D /* Preview Content */,
 			);
@@ -77,6 +76,23 @@
 				6D5EF11A2C1AC1A600C20D4D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D90B7CB72C1AE5C7008B3F7C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D90B7CB82C1AE5D9008B3F7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D5EF1152C1AC1A500C20D4D /* ContentView.swift */,
+				D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
