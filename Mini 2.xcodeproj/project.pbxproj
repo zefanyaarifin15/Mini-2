@@ -19,6 +19,11 @@
 		D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */; };
 		D90B7CBD2C1C10F9008B3F7C /* IncomingChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CBC2C1C10F9008B3F7C /* IncomingChatBubble.swift */; };
 		D90B7CC12C1C1451008B3F7C /* OutgoingChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CC02C1C1451008B3F7C /* OutgoingChatBubble.swift */; };
+		D9526C3B2C1CC2A7008FFBE5 /* DMsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C3A2C1CC2A7008FFBE5 /* DMsView.swift */; };
+		D9526C3D2C1D7175008FFBE5 /* DMsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C3C2C1D7175008FFBE5 /* DMsList.swift */; };
+		D9526C3F2C1DBCB5008FFBE5 /* ChatProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C3E2C1DBCB5008FFBE5 /* ChatProfile.swift */; };
+		D9526C412C1DC9B8008FFBE5 /* ReplyOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C402C1DC9B8008FFBE5 /* ReplyOptions.swift */; };
+		D9526C432C1DCA2D008FFBE5 /* VNBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C422C1DCA2D008FFBE5 /* VNBubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 		D90B7CBC2C1C10F9008B3F7C /* IncomingChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingChatBubble.swift; sourceTree = "<group>"; };
 		D90B7CC02C1C1451008B3F7C /* OutgoingChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingChatBubble.swift; sourceTree = "<group>"; };
+		D9526C3A2C1CC2A7008FFBE5 /* DMsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMsView.swift; sourceTree = "<group>"; };
+		D9526C3C2C1D7175008FFBE5 /* DMsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMsList.swift; sourceTree = "<group>"; };
+		D9526C3E2C1DBCB5008FFBE5 /* ChatProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatProfile.swift; sourceTree = "<group>"; };
+		D9526C402C1DC9B8008FFBE5 /* ReplyOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyOptions.swift; sourceTree = "<group>"; };
+		D9526C422C1DCA2D008FFBE5 /* VNBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNBubble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 			children = (
 				6D5EF1152C1AC1A500C20D4D /* ContentView.swift */,
 				D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */,
+				D9526C3A2C1CC2A7008FFBE5 /* DMsView.swift */,
 				6DACC7552C1AE93500AC7ED2 /* JournalView.swift */,
 			);
 			path = View;
@@ -111,6 +122,10 @@
 			children = (
 				D90B7CBC2C1C10F9008B3F7C /* IncomingChatBubble.swift */,
 				D90B7CC02C1C1451008B3F7C /* OutgoingChatBubble.swift */,
+				D9526C3C2C1D7175008FFBE5 /* DMsList.swift */,
+				D9526C3E2C1DBCB5008FFBE5 /* ChatProfile.swift */,
+				D9526C422C1DCA2D008FFBE5 /* VNBubble.swift */,
+				D9526C402C1DC9B8008FFBE5 /* ReplyOptions.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -189,12 +204,17 @@
 				D90B7CBD2C1C10F9008B3F7C /* IncomingChatBubble.swift in Sources */,
 				D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */,
 				D6103F1C2C1C610C0092D0B7 /* HomeView.swift in Sources */,
+				D9526C3D2C1D7175008FFBE5 /* DMsList.swift in Sources */,
 				6DACC7542C1AC67800AC7ED2 /* ProfileAnalysis.swift in Sources */,
 				D90B7CB22C1AE2FD008B3F7C /* ChatView.swift in Sources */,
 				6DACC7562C1AE93500AC7ED2 /* JournalView.swift in Sources */,
 				6D5EF1162C1AC1A500C20D4D /* ContentView.swift in Sources */,
+				D9526C412C1DC9B8008FFBE5 /* ReplyOptions.swift in Sources */,
 				D90B7CC12C1C1451008B3F7C /* OutgoingChatBubble.swift in Sources */,
+				D9526C3F2C1DBCB5008FFBE5 /* ChatProfile.swift in Sources */,
 				6D5EF1142C1AC1A500C20D4D /* Mini_2App.swift in Sources */,
+				D9526C432C1DCA2D008FFBE5 /* VNBubble.swift in Sources */,
+				D9526C3B2C1CC2A7008FFBE5 /* DMsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,28 +2,6 @@ import SwiftUI
 
 struct ChatView: View {
     let chatRepository = ChatRepository.shared
-    let conversations: [String]
-
-    init() {
-        // Fetch all conversations from the repository
-        self.conversations = chatRepository.fetchAllConversations().keys.sorted()
-    }
-
-    var body: some View {
-        TabView {
-            ForEach(conversations, id: \.self) { partner in
-                ConversationView(partner: partner)
-                    .tabItem {
-                        Text(partner)
-                    }
-            }
-        }
-        .padding()
-    }
-}
-
-struct ConversationView: View {
-    let chatRepository = ChatRepository.shared
     let partner: String
     @State private var messages: [(String, String)] = []
 
@@ -31,35 +9,56 @@ struct ConversationView: View {
         NavigationView {
             VStack {
                 List(messages, id: \.1) { message in
-                    MessageRow(sender: message.0, text: message.1)
+                    MessageBubble(sender: message.0, text: message.1)
+                        .listRowSeparator(.hidden)
                 }
                 .listStyle(PlainListStyle())
+                .padding(-10)
             }
-            .navigationTitle(Text(partner))
-            .onAppear {
-                self.messages = chatRepository.fetchMessages(for: partner) ?? []
+            .onAppear {self.loadMessages()}
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    topProfileBar
+                }
             }
         }
     }
+    
+    private func loadMessages() {
+        self.messages = chatRepository.fetchMessages(for: partner)?.reversed() ?? []
+    }
+    
+    var topProfileBar: some View{
+        HStack {
+            Button(action: {
+                // masi blm bisa back
+            }, label: {
+                Image(systemName: "chevron.left")
+                    .foregroundColor(.greenInstaQ)
+            })
+            ChatProfile(profilePicture: partner, profileName: partner, checkMark: true)
+        }
+    }
+    
 }
 
-struct MessageRow: View {
+struct MessageBubble: View {
     let sender: String
     let text: String
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(sender)
-                .font(.headline)
-            Text(text)
-                .foregroundColor(.secondary)
+        if(sender != "Jasmine"){
+            IncomingChatBubble(message: text)
+        }else{
+            OutgoingChatBubble(message: text)
         }
-        .padding(8)
+        
     }
 }
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()
+        ChatView(partner: "James")
     }
 }
+

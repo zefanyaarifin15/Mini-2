@@ -1,10 +1,3 @@
-//
-//  HomeView.swift
-//  Mini 2
-//
-//  Created by Jasmine Mutia Alifa on 13/06/24.
-//
-
 import SwiftUI
 
 struct HomeView: View {
@@ -17,7 +10,7 @@ struct HomeView: View {
                 Label("Home", systemImage: "house")
             }
                    
-            ChatView()
+            DMsView()
                 .tabItem {
                     Label("Chat", systemImage: "ellipsis.message.fill")
                 }
@@ -251,11 +244,13 @@ struct HomeView: View {
     }
 }
 
-struct ChatView2: View {
-    var body: some View {
-        Text("Chat View")
-    }
-}
+// pindah ke DMsView -A
+//
+//struct ChatView2: View {
+//    var body: some View {
+//        Text("Chat View")
+//    }
+//}
 
 struct ReportView: View {
     var body: some View {

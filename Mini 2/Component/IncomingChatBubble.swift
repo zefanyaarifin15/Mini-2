@@ -1,24 +1,27 @@
 import SwiftUI
 
 struct IncomingChatBubble: View {
-    let incomingBubble = Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
+    let incomingBubble = Color(#colorLiteral(red: 0.9137254902, green: 0.9137254902, blue: 0.9215686275, alpha: 1))
     let message: String
     
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            Image("TailChatBubble")
-                .resizable()
-                .frame(width: 20, height: 20)
-                .padding(EdgeInsets(top: 0, leading: -5, bottom: -2, trailing: 0))
-            Text(message)
-                .font(.body)
-                .foregroundColor(.white)
-                .padding(10)
-                .background(incomingBubble)
-                .cornerRadius(16)
-                .frame(maxWidth: 300, alignment: .leading)
+        HStack {
+            ZStack(alignment: .bottomLeading) {
+                Image("TailChatBubble")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .padding(EdgeInsets(top: 0, leading: -5, bottom: -2, trailing: 0))
+                Text(message)
+                    .font(.body)
+                    .foregroundColor(.black)
+                    .padding(10)
+                    .background(incomingBubble)
+                    .cornerRadius(16)
+                    .frame(maxWidth: 270, alignment: .leading)
+            }
+            Spacer()
         }
-        .padding(.leading, 20)
+ 
     }
 }
 
