@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4B11956C2C1DA974002AE982 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B11956B2C1DA974002AE982 /* ImagePicker.swift */; };
+		4B1195732C1EE3AB002AE982 /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1195722C1EE3AB002AE982 /* SoundModel.swift */; };
+		4B1195762C1EE53B002AE982 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1195752C1EE53B002AE982 /* SoundViewModel.swift */; };
+		4B1195782C1EEB0C002AE982 /* Sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B1195772C1EEB0B002AE982 /* Sound1.mp3 */; };
 		6D5EF1142C1AC1A500C20D4D /* Mini_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5EF1132C1AC1A500C20D4D /* Mini_2App.swift */; };
 		6D5EF1162C1AC1A500C20D4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5EF1152C1AC1A500C20D4D /* ContentView.swift */; };
 		6D5EF1182C1AC1A600C20D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D5EF1172C1AC1A600C20D4D /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 		6DACC7542C1AC67800AC7ED2 /* ProfileAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC7532C1AC67800AC7ED2 /* ProfileAnalysis.swift */; };
 		6DACC7562C1AE93500AC7ED2 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC7552C1AE93500AC7ED2 /* JournalView.swift */; };
 		D6103F1C2C1C610C0092D0B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6103F1B2C1C610C0092D0B7 /* HomeView.swift */; };
+		D6FD36E02C20423100CC4259 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36DF2C20423100CC4259 /* ProfileView.swift */; };
+		D6FD36E22C20427A00CC4259 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36E12C20427A00CC4259 /* SettingsView.swift */; };
+		D6FD36E42C20788600CC4259 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36E32C20788600CC4259 /* PostView.swift */; };
 		D90B7CB22C1AE2FD008B3F7C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */; };
 		D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */; };
 		D90B7CBD2C1C10F9008B3F7C /* IncomingChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CBC2C1C10F9008B3F7C /* IncomingChatBubble.swift */; };
@@ -29,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		4B11956B2C1DA974002AE982 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		4B1195722C1EE3AB002AE982 /* SoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
+		4B1195752C1EE53B002AE982 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
+		4B1195772C1EEB0B002AE982 /* Sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound1.mp3; sourceTree = "<group>"; };
 		6D5EF1102C1AC1A500C20D4D /* Mini 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5EF1132C1AC1A500C20D4D /* Mini_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_2App.swift; sourceTree = "<group>"; };
 		6D5EF1152C1AC1A500C20D4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +47,9 @@
 		6DACC7532C1AC67800AC7ED2 /* ProfileAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAnalysis.swift; sourceTree = "<group>"; };
 		6DACC7552C1AE93500AC7ED2 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		D6103F1B2C1C610C0092D0B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D6FD36DF2C20423100CC4259 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D6FD36E12C20427A00CC4259 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D6FD36E32C20788600CC4259 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 		D90B7CBC2C1C10F9008B3F7C /* IncomingChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingChatBubble.swift; sourceTree = "<group>"; };
@@ -68,6 +80,30 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		4B11956D2C1EC375002AE982 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				4B1195772C1EEB0B002AE982 /* Sound1.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		4B11956E2C1EC49F002AE982 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B1195722C1EE3AB002AE982 /* SoundModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B1195742C1EE523002AE982 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B1195752C1EE53B002AE982 /* SoundViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6D5EF1072C1AC1A400C20D4D = {
 			isa = PBXGroup;
 			children = (
@@ -87,12 +123,18 @@
 		6D5EF1122C1AC1A500C20D4D /* Mini 2 */ = {
 			isa = PBXGroup;
 			children = (
+				4B1195742C1EE523002AE982 /* ViewModel */,
+				4B11956E2C1EC49F002AE982 /* Model */,
+				4B11956D2C1EC375002AE982 /* Sound */,
 				4B11956A2C1DA956002AE982 /* Helpers */,
 				D90B7CB92C1C0D78008B3F7C /* Component */,
 				D90B7CB82C1AE5D9008B3F7C /* View */,
 				D90B7CB72C1AE5C7008B3F7C /* Repository */,
 				6D5EF1132C1AC1A500C20D4D /* Mini_2App.swift */,
 				D6103F1B2C1C610C0092D0B7 /* HomeView.swift */,
+				D6FD36E32C20788600CC4259 /* PostView.swift */,
+				D6FD36DF2C20423100CC4259 /* ProfileView.swift */,
+				D6FD36E12C20427A00CC4259 /* SettingsView.swift */,
 				6DACC74F2C1AC37300AC7ED2 /* AnalysisButton.swift */,
 				6DACC7532C1AC67800AC7ED2 /* ProfileAnalysis.swift */,
 				6D5EF1172C1AC1A600C20D4D /* Assets.xcassets */,
@@ -199,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B1195782C1EEB0C002AE982 /* Sound1.mp3 in Resources */,
 				6D5EF11B2C1AC1A600C20D4D /* Preview Assets.xcassets in Resources */,
 				6D5EF1182C1AC1A600C20D4D /* Assets.xcassets in Resources */,
 			);
@@ -216,6 +259,9 @@
 				D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */,
 				D6103F1C2C1C610C0092D0B7 /* HomeView.swift in Sources */,
 				D9526C3D2C1D7175008FFBE5 /* DMsList.swift in Sources */,
+				D6FD36E22C20427A00CC4259 /* SettingsView.swift in Sources */,
+				4B1195732C1EE3AB002AE982 /* SoundModel.swift in Sources */,
+				D6FD36E42C20788600CC4259 /* PostView.swift in Sources */,
 				6DACC7542C1AC67800AC7ED2 /* ProfileAnalysis.swift in Sources */,
 				D90B7CB22C1AE2FD008B3F7C /* ChatView.swift in Sources */,
 				6DACC7562C1AE93500AC7ED2 /* JournalView.swift in Sources */,
@@ -226,6 +272,8 @@
 				D9526C3F2C1DBCB5008FFBE5 /* ChatProfile.swift in Sources */,
 				6D5EF1142C1AC1A500C20D4D /* Mini_2App.swift in Sources */,
 				D9526C432C1DCA2D008FFBE5 /* VNBubble.swift in Sources */,
+				D6FD36E02C20423100CC4259 /* ProfileView.swift in Sources */,
+				4B1195762C1EE53B002AE982 /* SoundViewModel.swift in Sources */,
 				D9526C3B2C1CC2A7008FFBE5 /* DMsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
