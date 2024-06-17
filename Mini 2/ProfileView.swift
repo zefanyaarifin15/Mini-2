@@ -46,7 +46,7 @@ struct ProfileView: View {
                     Divider()
                     HStack{
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Image("profile1")
+                            Image("beautyjasmine")
                                 .resizable()
                                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                 .frame(width: 100, height: 100)
