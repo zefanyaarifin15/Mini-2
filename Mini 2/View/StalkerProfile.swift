@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct StalkerView: View {
-    
-    @State var selectedTab: String = "square.grid.3x3"
-    
+    @State var selectedTab: String = "square.grid.3x3.fill"
     @Namespace var animation
+    @State private var isFollowed = false
 
     let postImages = ["StalkerPost1", "StalkerPost2", "StalkerPost3"]
-    
+    let captions = ["you think you're cool?!", "In the shadows", "You can't see me"]
+
     var body: some View {
         NavigationView {
             VStack {
@@ -20,12 +20,11 @@ struct StalkerView: View {
                             .bold()
                     })
                     Spacer()
-                    
-                    NavigationLink(destination: SettingsView()) {
+//                    NavigationLink(destination: SettingsView()) {
                         Image(systemName: "gearshape")
                             .foregroundColor(.black)
                             .font(.system(size: 18))
-                    }
+//                    }
                 }
                 .padding([.horizontal, .top], 10)
                 
@@ -89,13 +88,15 @@ struct StalkerView: View {
                         .padding([.horizontal, .top], 5)
                         
                         HStack {
-                            Button(action: {}, label: {
-                                Text("Follow Back")
+                            Button(action: {
+                                isFollowed.toggle()
+                            }, label: {
+                                Text(isFollowed ? "Followed" : "Follow Back")
                                     .fontWeight(.semibold)
-                                    .foregroundColor(.primary)
+                                    .foregroundColor(isFollowed ? .black : .white)
                                     .padding(.vertical, 10)
                                     .frame(maxWidth: .infinity)
-                                    .background(Color.gray.opacity(0.3))
+                                    .background(isFollowed ? Color.gray.opacity(0.3) : Color.blue.opacity(0.8))
                                     .cornerRadius(4)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 4)
@@ -126,13 +127,15 @@ struct StalkerView: View {
                         }
                         .frame(height: 40, alignment: .bottom)
                         
-                        // tab view
                         ZStack {
                             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 2), count: 3), spacing: 2) {
-                                ForEach(postImages, id: \.self) { imageName in
+                                ForEach(0..<postImages.count, id: \.self) { index in
+                                    let imageName = postImages[index]
+                                    let caption = captions[index]
+
                                     GeometryReader { proxy in
                                         let width = proxy.frame(in: .global).width
-                                        NavigationLink(destination: PostDetailView(imageName: imageName)) {
+                                        NavigationLink(destination: PostDetailView(imageName: imageName, username: "shadowlurker", caption: caption, profileImage: "Stalker", initialLikes: 0)) {
                                             ImageView(imageName: imageName, width: width)
                                         }
                                     }
@@ -150,62 +153,17 @@ struct StalkerView: View {
 struct ImageView: View {
     var imageName: String
     var width: CGFloat
-    
+
     var body: some View {
         VStack {
             Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: width, height: 120)
-                .cornerRadius(0)
+                .cornerRadius(4)
         }
     }
 }
-
-struct TabBarButton: View {
-    var image: String
-    var isSystemImage: Bool
-    var animation: Namespace.ID
-    @Binding var selectedTab: String
-    
-    var body: some View {
-        Button(action: {
-            withAnimation(.easeInOut) {
-                selectedTab = image
-            }
-        }, label: {
-            VStack(spacing: 12) {
-                (
-                    isSystemImage ? Image(systemName: image) : Image(image)
-                )
-                .renderingMode(.template)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            }
-        })
-        .frame(maxWidth: .infinity)
-        .padding(.top, 10)
-        .padding(.bottom, 5)
-        .background(Color.clear)
-        .foregroundColor(selectedTab == image ? .black : .gray)
-    }
-}
-
-struct PostDetailView: View {
-    var imageName: String
-    
-    var body: some View {
-        VStack {
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .navigationTitle(imageName)
-                .navigationBarTitleDisplayMode(.inline)
-        }
-    }
-}
-
-
 
 #Preview {
     StalkerView()
