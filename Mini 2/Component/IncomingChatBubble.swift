@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct IncomingChatBubble: View {
-    let incomingBubble = Color(#colorLiteral(red: 0.9137254902, green: 0.9137254902, blue: 0.9215686275, alpha: 1))
     let message: String
     
     var body: some View {
@@ -15,7 +14,7 @@ struct IncomingChatBubble: View {
                     .font(.body)
                     .foregroundColor(.black)
                     .padding(10)
-                    .background(incomingBubble)
+                    .background(.grayInstaQ)
                     .cornerRadius(16)
                     .frame(maxWidth: 270, alignment: .leading)
             }
