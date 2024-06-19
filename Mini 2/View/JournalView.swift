@@ -1,5 +1,5 @@
 import SwiftUI
-
+// ini gajadi ya
 struct JournalView: View {
     var body: some View {
         VStack(spacing: 20) {
