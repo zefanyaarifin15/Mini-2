@@ -11,6 +11,9 @@
 		4B1195732C1EE3AB002AE982 /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1195722C1EE3AB002AE982 /* SoundModel.swift */; };
 		4B1195762C1EE53B002AE982 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1195752C1EE53B002AE982 /* SoundViewModel.swift */; };
 		4B1195782C1EEB0C002AE982 /* Sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B1195772C1EEB0B002AE982 /* Sound1.mp3 */; };
+		4B2A045A2C22C53300E47EE5 /* ReportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A04592C22C53300E47EE5 /* ReportCard.swift */; };
+		4B2A045C2C22DA0900E47EE5 /* ConfirmationReportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A045B2C22DA0900E47EE5 /* ConfirmationReportPage.swift */; };
+		4B2A045E2C22E80100E47EE5 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A045D2C22E80100E47EE5 /* PrimaryButton.swift */; };
 		6D5EF1142C1AC1A500C20D4D /* Mini_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5EF1132C1AC1A500C20D4D /* Mini_2App.swift */; };
 		6D5EF1162C1AC1A500C20D4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5EF1152C1AC1A500C20D4D /* ContentView.swift */; };
 		6D5EF1182C1AC1A600C20D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D5EF1172C1AC1A600C20D4D /* Assets.xcassets */; };
@@ -36,7 +39,7 @@
 		D9526C492C2294A6008FFBE5 /* PhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C482C2294A6008FFBE5 /* PhoneView.swift */; };
 		D9526C4B2C22A744008FFBE5 /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C4A2C22A744008FFBE5 /* PhoneViewModel.swift */; };
 		D9526C4F2C22AC32008FFBE5 /* PictureEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C4E2C22AC32008FFBE5 /* PictureEditView.swift */; };
-		D9526C512C22C838008FFBE5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C502C22C838008FFBE5 /* HomeView.swift */; };
+		D9526C532C22CF14008FFBE5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C522C22CF14008FFBE5 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		4B1195722C1EE3AB002AE982 /* SoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
 		4B1195752C1EE53B002AE982 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 		4B1195772C1EEB0B002AE982 /* Sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound1.mp3; sourceTree = "<group>"; };
+		4B2A04592C22C53300E47EE5 /* ReportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCard.swift; sourceTree = "<group>"; };
+		4B2A045B2C22DA0900E47EE5 /* ConfirmationReportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationReportPage.swift; sourceTree = "<group>"; };
+		4B2A045D2C22E80100E47EE5 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		6D5EF1102C1AC1A500C20D4D /* Mini 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5EF1132C1AC1A500C20D4D /* Mini_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_2App.swift; sourceTree = "<group>"; };
 		6D5EF1152C1AC1A500C20D4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,7 +76,7 @@
 		D9526C482C2294A6008FFBE5 /* PhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneView.swift; sourceTree = "<group>"; };
 		D9526C4A2C22A744008FFBE5 /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 		D9526C4E2C22AC32008FFBE5 /* PictureEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureEditView.swift; sourceTree = "<group>"; };
-		D9526C502C22C838008FFBE5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../../../Downloads/HomeView.swift; sourceTree = "<group>"; };
+		D9526C522C22CF14008FFBE5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,11 +152,11 @@
 				6D5EF1132C1AC1A500C20D4D /* Mini_2App.swift */,
 				D6FD36E32C20788600CC4259 /* PostView.swift */,
 				D6FD36DF2C20423100CC4259 /* ProfileView.swift */,
-				D9526C502C22C838008FFBE5 /* HomeView.swift */,
 				6DACC7622C20B12300AC7ED2 /* PostDetailView.swift */,
 				D6FD36E12C20427A00CC4259 /* SettingsView.swift */,
 				6DACC74F2C1AC37300AC7ED2 /* AnalysisButton.swift */,
 				6DACC7532C1AC67800AC7ED2 /* ProfileAnalysis.swift */,
+				D9526C522C22CF14008FFBE5 /* HomeView.swift */,
 				6D5EF1172C1AC1A600C20D4D /* Assets.xcassets */,
 				6D5EF1192C1AC1A600C20D4D /* Preview Content */,
 			);
@@ -197,6 +203,9 @@
 				D9526C422C1DCA2D008FFBE5 /* VNBubble.swift */,
 				D9526C402C1DC9B8008FFBE5 /* ReplyOptions.swift */,
 				6DACC7662C21589C00AC7ED2 /* TabBarButton.swift */,
+				4B2A04592C22C53300E47EE5 /* ReportCard.swift */,
+				4B2A045B2C22DA0900E47EE5 /* ConfirmationReportPage.swift */,
+				4B2A045D2C22E80100E47EE5 /* PrimaryButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -273,11 +282,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DACC7502C1AC37300AC7ED2 /* AnalysisButton.swift in Sources */,
-				D9526C512C22C838008FFBE5 /* HomeView.swift in Sources */,
+				D9526C532C22CF14008FFBE5 /* HomeView.swift in Sources */,
 				D9526C4F2C22AC32008FFBE5 /* PictureEditView.swift in Sources */,
 				D90B7CBD2C1C10F9008B3F7C /* IncomingChatBubble.swift in Sources */,
 				D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */,
 				D9526C3D2C1D7175008FFBE5 /* DMsList.swift in Sources */,
+				4B2A045A2C22C53300E47EE5 /* ReportCard.swift in Sources */,
 				6DACC7672C21589C00AC7ED2 /* TabBarButton.swift in Sources */,
 				D6FD36E22C20427A00CC4259 /* SettingsView.swift in Sources */,
 				4B1195732C1EE3AB002AE982 /* SoundModel.swift in Sources */,
@@ -290,6 +300,8 @@
 				4B11956C2C1DA974002AE982 /* ImagePicker.swift in Sources */,
 				6D5EF1162C1AC1A500C20D4D /* ContentView.swift in Sources */,
 				D9526C412C1DC9B8008FFBE5 /* ReplyOptions.swift in Sources */,
+				4B2A045C2C22DA0900E47EE5 /* ConfirmationReportPage.swift in Sources */,
+				4B2A045E2C22E80100E47EE5 /* PrimaryButton.swift in Sources */,
 				D90B7CC12C1C1451008B3F7C /* OutgoingChatBubble.swift in Sources */,
 				D9526C3F2C1DBCB5008FFBE5 /* ChatProfile.swift in Sources */,
 				6D5EF1142C1AC1A500C20D4D /* Mini_2App.swift in Sources */,
