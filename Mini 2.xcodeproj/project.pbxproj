@@ -36,7 +36,7 @@
 		D9526C492C2294A6008FFBE5 /* PhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C482C2294A6008FFBE5 /* PhoneView.swift */; };
 		D9526C4B2C22A744008FFBE5 /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C4A2C22A744008FFBE5 /* PhoneViewModel.swift */; };
 		D9526C4F2C22AC32008FFBE5 /* PictureEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C4E2C22AC32008FFBE5 /* PictureEditView.swift */; };
-		D9526C512C22C838008FFBE5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C502C22C838008FFBE5 /* HomeView.swift */; };
+		D9526C532C22CF14008FFBE5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C522C22CF14008FFBE5 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +70,7 @@
 		D9526C482C2294A6008FFBE5 /* PhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneView.swift; sourceTree = "<group>"; };
 		D9526C4A2C22A744008FFBE5 /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 		D9526C4E2C22AC32008FFBE5 /* PictureEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureEditView.swift; sourceTree = "<group>"; };
-		D9526C502C22C838008FFBE5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../../../Downloads/HomeView.swift; sourceTree = "<group>"; };
+		D9526C522C22CF14008FFBE5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,11 +146,11 @@
 				6D5EF1132C1AC1A500C20D4D /* Mini_2App.swift */,
 				D6FD36E32C20788600CC4259 /* PostView.swift */,
 				D6FD36DF2C20423100CC4259 /* ProfileView.swift */,
-				D9526C502C22C838008FFBE5 /* HomeView.swift */,
 				6DACC7622C20B12300AC7ED2 /* PostDetailView.swift */,
 				D6FD36E12C20427A00CC4259 /* SettingsView.swift */,
 				6DACC74F2C1AC37300AC7ED2 /* AnalysisButton.swift */,
 				6DACC7532C1AC67800AC7ED2 /* ProfileAnalysis.swift */,
+				D9526C522C22CF14008FFBE5 /* HomeView.swift */,
 				6D5EF1172C1AC1A600C20D4D /* Assets.xcassets */,
 				6D5EF1192C1AC1A600C20D4D /* Preview Content */,
 			);
@@ -273,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DACC7502C1AC37300AC7ED2 /* AnalysisButton.swift in Sources */,
-				D9526C512C22C838008FFBE5 /* HomeView.swift in Sources */,
+				D9526C532C22CF14008FFBE5 /* HomeView.swift in Sources */,
 				D9526C4F2C22AC32008FFBE5 /* PictureEditView.swift in Sources */,
 				D90B7CBD2C1C10F9008B3F7C /* IncomingChatBubble.swift in Sources */,
 				D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */,
