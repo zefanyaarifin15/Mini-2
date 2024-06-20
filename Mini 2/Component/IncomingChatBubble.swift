@@ -14,7 +14,7 @@ struct IncomingChatBubble: View {
                     .font(.body)
                     .foregroundColor(.black)
                     .padding(10)
-                    .background(.grayInstaQ)
+                    .background(.whiteInstaQ)
                     .cornerRadius(16)
                     .frame(maxWidth: 270, alignment: .leading)
             }

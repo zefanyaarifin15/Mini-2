@@ -62,6 +62,46 @@
             "response": "Yes, we’re together now. I really hope this doesn't make things awkward between us."
           }
         ]
+      },
+      {
+        "id": 4,
+        "user_options": [
+          {
+            "id": "4a",
+            "reply": "Sure, I'll keep it classy. By the way, I noticed your latest post... Are you and James dating now?",
+            "response": "Yeah, we’ve been dating for a little while now. I was going to tell you in person. Are you okay with it?"
+          },
+          {
+            "id": "4b",
+            "reply": "Of course, I'll keep it stylish but understated. Hey, I noticed something in your last post... Are you and James seeing each other now?",
+            "response": "Oh, I was going to tell you about that. Yes, James and I are seeing each other. I hope it’s not too awkward for you."
+          },
+          {
+            "id": "4c",
+            "reply": "No worries, I'll keep it chic. Just curious, I noticed your recent post... Are you and James a thing?",
+            "response": "Yes, we’re together now. I really hope this doesn't make things awkward between us."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "user_options": [
+          {
+            "id": "5a",
+            "reply": "Sure, I'll keep it classy. By the way, I noticed your latest post... Are you and James dating now?",
+            "response": "Yeah, we’ve been dating for a little while now. I was going to tell you in person. Are you okay with it?"
+          },
+          {
+            "id": "5b",
+            "reply": "Of course, I'll keep it stylish but understated. Hey, I noticed something in your last post... Are you and James seeing each other now?",
+            "response": "Oh, I was going to tell you about that. Yes, James and I are seeing each other. I hope it’s not too awkward for you."
+          },
+          {
+            "id": "5c",
+            "reply": "No worries, I'll keep it chic. Just curious, I noticed your recent post... Are you and James a thing?",
+            "response": "Yes, we’re together now. I really hope this doesn't make things awkward between us."
+          }
+        ]
       }
     ]
   },
@@ -110,5 +150,6 @@
         ]
       }
     ]
-  }
+  },
+  
 ]

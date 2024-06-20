@@ -1,10 +1,3 @@
-//
-//  SoundModel.swift
-//  Mini 2
-//
-//  Created by Haliza Syafa Oktaviani on 16/06/24.
-//
-
 import Foundation
 
 struct Sound: Identifiable{
@@ -12,3 +5,4 @@ struct Sound: Identifiable{
     let title: String
     let filename: String
 }
+
