@@ -1,0 +1,114 @@
+[
+  {
+    "partner_dialog": "Steph",
+    "start_dialog": "Hi, Jasmine! How are you?",
+    "dialog": [
+      {
+        "id": 1,
+        "user_options": [
+          {
+            "id": "1a",
+            "reply": "Hi, Steph! I'm great! How about you?",
+            "response": "I’m doing well! Thanks for asking. By the way, I’m throwing a birthday party this weekend at Hotel Merlian. Would you like to come?"
+          },
+          {
+            "id": "1b",
+            "reply": "I’m doing wonderful! Thanks for asking.",
+            "response": "I’m doing well! Thanks for asking. By the way, I’m throwing a birthday party this weekend at Hotel Merlian. Would you like to come?"
+          },
+          {
+            "id": "1c",
+            "reply": "I’m great, thanks!",
+            "response": "I’m doing well! Thanks for asking. By the way, I’m throwing a birthday party this weekend at Hotel Merlian. Would you like to come?"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "user_options": [
+          {
+            "id": "2a",
+            "reply": "That’s awesome! I’d love to be there. Any special dress code?",
+            "response": "Just dress chic but, you know, don't go too overboard with the outfit. It's my night after all! 😉"
+          },
+          {
+            "id": "2b",
+            "reply": "That sounds fantastic! I'd love to join. What time should I be there?",
+            "response": "The party starts at 7 PM, but it would be awesome if you could come a bit earlier. Oh, and the dress code is chic, but nothing too flashy—let's keep it elegant since it's my special night! 😉"
+          },
+          {
+            "id": "2c",
+            "reply": "Of course, I’d love to join. What time does the party start?",
+            "response": "The party starts at 7 PM, but it would be awesome if you could come a bit earlier. Oh, and the dress code is chic, but nothing too flashy—let's keep it elegant since it's my special night! 😉"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "user_options": [
+          {
+            "id": "3a",
+            "reply": "Sure, I'll keep it classy. By the way, I noticed your latest post... Are you and James dating now?",
+            "response": "Yeah, we’ve been dating for a little while now. I was going to tell you in person. Are you okay with it?"
+          },
+          {
+            "id": "3b",
+            "reply": "Of course, I'll keep it stylish but understated. Hey, I noticed something in your last post... Are you and James seeing each other now?",
+            "response": "Oh, I was going to tell you about that. Yes, James and I are seeing each other. I hope it’s not too awkward for you."
+          },
+          {
+            "id": "3c",
+            "reply": "No worries, I'll keep it chic. Just curious, I noticed your recent post... Are you and James a thing?",
+            "response": "Yes, we’re together now. I really hope this doesn't make things awkward between us."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "partner_dialog": "(ex. James, Natalie, dll) ",
+    "start_dialog": " (chat paling pertama bgt ex. Hi jasmine, Hi james, dll. ) ",
+    "dialog": [
+      {
+        "id": 1,
+        "user_options": [
+          {
+            "id": "1a",
+            "reply": "(reply option user 1)",
+            "response": "(response partner dari reply 1)"
+          },
+          {
+            "id": "1b",
+            "reply": "(reply option user 2)",
+            "response": "(response partner dari reply 2)"
+          },
+          {
+            "id": "1c",
+            "reply": " ",
+            "response": " "
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "user_options": [
+          {
+            "id": "2a",
+            "reply": " (abis dapet response drj no.1, user dpt option apa lagi)",
+            "response": "(response partner dari reply ini)"
+          },
+          {
+            "id": "2b",
+            "reply": " ",
+            "response": " "
+          },
+          {
+            "id": "2c",
+            "reply": " ",
+            "response": " "
+          }
+        ]
+      }
+    ]
+  }
+]
