@@ -62,11 +62,71 @@
             "response": "Yes, we’re together now. I really hope this doesn't make things awkward between us."
           }
         ]
+      }, 
+      {
+        "id": 4,
+        "user_options": [
+          {
+            "id": "4a",
+            "reply": "I can't believe this, Steph! You knew James and I had just broken up, and now you're dating him?",
+            "response": "I'm truly sorry, Jasmine. This wasn't how I wanted you to find out. It just happened, and I didn't know how to tell you."
+          },
+          {
+            "id": "4b",
+            "reply": "Seriously, Steph? You knew how much James meant to me, and now you're with him? This feels like such a betrayal.",
+            "response": "Jasmine, I'm really sorry. I never wanted to hurt you. It just happened, and I was scared to tell you."
+          },
+          {
+            "id": "4c",
+            "reply": "Wow, Steph, I didn't expect this from you. James and I just ended things, and now you're together?",
+            "response": " I understand if you're upset, Jasmine. It wasn't planned, and I didn't know how to bring it up."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "user_options": [
+          {
+            "id": "5a",
+            "reply": "You didn't know how to tell me? You should have thought about how it would make me feel! This is so messed up.",
+            "response": "I get that you're upset, and you have every right to be. Can we please talk about this in person? I don’t want things to be this way between us."
+          },
+          {
+            "id": "5b",
+            "reply": "That’s weak, Steph. You should have thought about my feelings. This is really hurtful.",
+            "response": "I know, and I'm really sorry. I never wanted to hurt you. Can we please talk about this more and try to work things out?"
+          },
+          {
+            "id": "5c",
+            "reply": "Seriously, Steph? You didn’t know how to tell me? You should have been honest from the start. This is so unfair.",
+            "response": "You're right, I should have been honest with you. I regret not telling you sooner. Can we please talk about this and try to find a way to move forward?"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "user_options": [
+          {
+            "id": "6a",
+            "reply": "I don't know, Steph. I'm really hurt right now. I'll need some time to process this.",
+            "response": "Take all the time you need. I just hope we can work through this eventually. You're still my friend, and I care about you."
+          },
+          {
+            "id": "6b",
+            "reply": "I'm not sure, Steph. This is a lot to take in. I need some time to process everything.",
+            "response": "I understand. Take all the time you need. Just know that I truly value our friendship, and I hope we can get through this."
+          },
+          {
+            "id": "6c",
+            "reply": "I'm not sure, Steph. This is a lot to take in. I need some time to process everything.",
+            "response": "I understand how you feel. Please know that I'm here whenever you're ready to talk. I truly value our friendship and hope we can work through this."
+          }
+        ]
       }
     ]
   },
   {
-    "partner_dialog": "(ex. James, Natalie, dll) ",
+    "partner_dialog": "James",
     "start_dialog": " (chat paling pertama bgt ex. Hi jasmine, Hi james, dll. ) ",
     "dialog": [
       {
