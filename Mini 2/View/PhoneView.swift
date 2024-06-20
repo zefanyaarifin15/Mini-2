@@ -39,7 +39,7 @@ struct PhoneView: View {
                     .cornerRadius(14)
                 
                 Text(labelText)
-                    .font(.system(size: 12))
+                    .font(.system(size: 11))
                     .foregroundColor(.white)
             }
         }

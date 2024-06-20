@@ -10,10 +10,10 @@ struct HomeView: View {
                 Label("Home", systemImage: "house")
             }
                    
-            DMsView()
-                .tabItem {
-                    Label("Chat", systemImage: "ellipsis.message.fill")
-                }
+//            DMsView()
+//                .tabItem {
+//                    Label("Chat", systemImage: "ellipsis.message.fill")
+//                }
                    
             ReportView()
                 .tabItem {
