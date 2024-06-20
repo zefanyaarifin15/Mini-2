@@ -44,6 +44,7 @@ struct ReportCard: View {
                     RoundedRectangle(cornerRadius: 0)
                         .stroke(Color.black, lineWidth: 2)
                 )
+                .padding(.bottom, 70)
             }
         }
     }
