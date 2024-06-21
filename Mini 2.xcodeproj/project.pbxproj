@@ -12,6 +12,7 @@
 		4B1195762C1EE53B002AE982 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1195752C1EE53B002AE982 /* SoundViewModel.swift */; };
 		4B1195782C1EEB0C002AE982 /* Sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B1195772C1EEB0B002AE982 /* Sound1.mp3 */; };
 		4B24039A2C2584CB0085574A /* UploadProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2403992C2584CB0085574A /* UploadProfileView.swift */; };
+		4B24039C2C2589140085574A /* ReportCardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B24039B2C2589140085574A /* ReportCardDetail.swift */; };
 		4B2A045A2C22C53300E47EE5 /* ReportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A04592C22C53300E47EE5 /* ReportCard.swift */; };
 		4B2A045C2C22DA0900E47EE5 /* ConfirmationReportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A045B2C22DA0900E47EE5 /* ConfirmationReportPage.swift */; };
 		4B2A045E2C22E80100E47EE5 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A045D2C22E80100E47EE5 /* PrimaryButton.swift */; };
@@ -50,6 +51,7 @@
 		4B1195752C1EE53B002AE982 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 		4B1195772C1EEB0B002AE982 /* Sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound1.mp3; sourceTree = "<group>"; };
 		4B2403992C2584CB0085574A /* UploadProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProfileView.swift; sourceTree = "<group>"; };
+		4B24039B2C2589140085574A /* ReportCardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCardDetail.swift; sourceTree = "<group>"; };
 		4B2A04592C22C53300E47EE5 /* ReportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCard.swift; sourceTree = "<group>"; };
 		4B2A045B2C22DA0900E47EE5 /* ConfirmationReportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationReportPage.swift; sourceTree = "<group>"; };
 		4B2A045D2C22E80100E47EE5 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				D9526C402C1DC9B8008FFBE5 /* ReplyOptions.swift */,
 				6DACC7662C21589C00AC7ED2 /* TabBarButton.swift */,
 				4B2A04592C22C53300E47EE5 /* ReportCard.swift */,
+				4B24039B2C2589140085574A /* ReportCardDetail.swift */,
 				4B2A045B2C22DA0900E47EE5 /* ConfirmationReportPage.swift */,
 				4B2A045D2C22E80100E47EE5 /* PrimaryButton.swift */,
 			);
@@ -314,6 +317,7 @@
 				6D5EF1142C1AC1A500C20D4D /* Mini_2App.swift in Sources */,
 				D9526C432C1DCA2D008FFBE5 /* VNBubble.swift in Sources */,
 				4B24039A2C2584CB0085574A /* UploadProfileView.swift in Sources */,
+				4B24039C2C2589140085574A /* ReportCardDetail.swift in Sources */,
 				D6FD36E02C20423100CC4259 /* ProfileView.swift in Sources */,
 				4B1195762C1EE53B002AE982 /* SoundViewModel.swift in Sources */,
 				D9526C4B2C22A744008FFBE5 /* PhoneViewModel.swift in Sources */,

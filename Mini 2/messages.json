@@ -65,6 +65,8 @@
       }
     ]
   },
+  
+  
   {
     "partner_dialog": "James",
     "start_dialog": " (chat paling pertama bgt ex. Hi jasmine, Hi james, dll. ) ",
@@ -111,4 +113,173 @@
       }
     ]
   }
+  
+  {
+    "partner_dialog": "Nataliebert",
+    "start_dialog": "Hi Jasmine! It's been a while since we hung out. How about we plan something for this weekend? 😆",
+    "dialog": [
+      {
+        "id": 1,
+        "user_options": [
+          {
+            "id": "1a",
+            "reply": "Hey Nat! That sounds great. I’ve been wanting to catch up too. Do you have any place in mind?",
+            "response": "I heard there's a new café downtown that's supposed to be really nice. We could check it out and maybe do some shopping afterward lol 😝"
+          },
+          {
+            "id": "1b",
+            "reply": "Hi Nat! That sounds awesome. I've been wanting to catch up as well. Do you have any suggestions on where to go?",
+            "response": "I heard there's a new café downtown that's supposed to be really nice. We could check it out and maybe do some shopping afterward lol 😝"
+          },
+          {
+            "id": "1c",
+            "reply": "Hey Nat! That would be great. I’ve been looking forward to catching up too. Do you have any place you want to go?",
+            "response": "I heard there's a new café downtown that's supposed to be really nice. We could check it out and maybe do some shopping afterward lol 😝"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "user_options": [
+          {
+            "id": "2a",
+            "reply": "Perfect! I’ve been looking for an excuse to go shopping. Speaking of which, have you heard about the new makeup collection from GlowGlam?",
+            "response": "Yes! Everyone's been talking about it ugh. I saw a few beauty gurus on Instagram raving about their new highlighter. It looks so good 🧐"
+          },
+          {
+            "id": "2b",
+            "reply": "Sounds great! I’ve been wanting to go shopping anyway. By the way, have you heard about the new makeup collection from GlowGlam?",
+            "response": "Yes! Everyone's been talking about it ugh. I saw a few beauty gurus on Instagram raving about their new highlighter. It looks so good 🧐"
+          },
+          {
+            "id": "2c",
+            "reply": "That’s perfect! I’ve been eager to go shopping. Oh, and have you heard about GlowGlam’s new makeup collection?",
+            "response": "Yes! Everyone's been talking about it ugh. I saw a few beauty gurus on Instagram raving about their new highlighter. It looks so good 🧐"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "user_options": [
+          {
+            "id": "3a",
+            "reply": "I know, right? I’ve been eyeing their lip gloss too. Apparently, it’s super long-lasting and has a really nice finish.",
+            "response": "We should definitely go to a store that stocks their products and try them out. Maybe we can get some samples or do a mini-makeover there lol 😂"
+          },
+          {
+            "id": "3b",
+            "reply": "Totally! I've had my eye on their lip gloss too. It’s supposed to be really long-lasting and has a beautiful finish?",
+            "response": "We should definitely go to a store that stocks their products and try them out. Maybe we can get some samples or do a mini-makeover there lol 😂"
+          },
+          {
+            "id": "3c",
+            "reply": "I know, right? I’ve been wanting to try their lip gloss too. People say it lasts a long time and looks amazing.",
+            "response": "We should definitely go to a store that stocks their products and try them out. Maybe we can get some samples or do a mini-makeover there lol 😂"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "user_options": [
+          {
+            "id": "4a",
+            "reply": "That would be awesome! I love trying out new makeup. Plus, we can get some new stuff for our next girls’ night out.",
+            "response": "Totally! So, let's meet at the café around noon, and then we can head to the mall afterward?"
+          },
+          {
+            "id": "4b",
+            "reply": "That sounds great! I love experimenting with new makeup. Plus, we can pick up some new items for our next girls’ night out.",
+            "response": "Totally! So, let's meet at the café around noon, and then we can head to the mall afterward?"
+          },
+          {
+            "id": "4c",
+            "reply": "That sounds fantastic! I can't wait to try out some new makeup. Plus, we can grab some fresh stuff for our next girls' night out.",
+            "response": "Totally! So, let's meet at the café around noon, and then we can head to the mall afterward?"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "user_options": [
+          {
+            "id": "5a",
+            "reply": "Sounds like a plan. I’ll text you the details. Can’t wait!",
+            "response": "Btw Jasmine, I’ve noticed your Instagram has been blowing up lately. Your follower count is amazing lol. How do you do it?"
+          },
+          {
+            "id": "5b",
+            "reply": "Alright Nat!",
+            "response": "Btw Jasmine, I’ve noticed your Instagram has been blowing up lately. Your follower count is amazing lol. How do you do it?"
+          },
+          {
+            "id": "5c",
+            "reply": "Okay, i’ll send you the detail this Saturday!.",
+            "response": "Btw Jasmine, I’ve noticed your Instagram has been blowing up lately. Your follower count is amazing lol. How do you do it?"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "user_options": [
+          {
+            "id": "6a",
+            "reply": "I guess it's a mix of posting regularly, engaging with my followers, and using the right hashtags.",
+            "response": "Yeah, I’ve been trying, but my follower count just doesn’t seem to go up 😓. It’s kinda frustrating. Maybe we can take some cute pics this weekend for my IG?"
+          },
+          {
+            "id": "6b",
+            "reply": "Probably a combination of posting frequently, interacting with my followers, and making appropriate use of hashtags.",
+            "response": "Yeah, I’ve been trying, but my follower count just doesn’t seem to go up 😓. It’s kinda frustrating. Maybe we can take some cute pics this weekend for my IG?"
+          },
+          {
+            "id": "6c",
+            "reply": "I don’t know.. i just do what i want to do",
+            "response": "Yeah, I’ve been trying, but my follower count just doesn’t seem to go up 😓. It’s kinda frustrating. Maybe we can take some cute pics this weekend for my IG?"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "user_options": [
+          {
+            "id": "7a",
+            "reply": "Sounds great!",
+            "response": "Awesome! I’m really looking forward to it. Hopefully, it’ll help my account grow a bit. See you Saturday!"
+          },
+          {
+            "id": "7b",
+            "reply": "Of course! We’ll get some great shots at the café and during our shopping trip. It’ll be fun!",
+            "response": "Awesome! I’m really looking forward to it. Hopefully, it’ll help my account grow a bit. See you Saturday!"
+          },
+          {
+            "id": "7c",
+            "reply": "Obviously! We're going to get some amazing pictures in the café and when we go shopping. It will be enjoyable!",
+            "response": "Awesome! I’m really looking forward to it. Hopefully, it’ll help my account grow a bit. See you Saturday!"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "user_options": [
+          {
+            "id": "8a",
+            "reply": "See you!",
+            "response": "OK!"
+          },
+          {
+            "id": "8b",
+            "reply": "Definitely! Can’t wait to hang out. See you then!",
+            "response": "OK!"
+          },
+          {
+            "id": "8c",
+            "reply": "Can’t wait! see you there.",
+            "response": "OK!"
+          }
+        ]
+      }
+    ]
+  }
+  
+  
 ]
