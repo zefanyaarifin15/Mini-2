@@ -12,29 +12,33 @@ struct TabBarButton: View {
                 selectedTab = image
             }
         }) {
-            VStack {
+            VStack(spacing: 12) {
                 if isSystemImage {
                     Image(systemName: image)
-                        .font(.system(size: 24))
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 28, height: 28)
+                        .foregroundColor(selectedTab == image ? .primary : .gray)
                 } else {
                     Image(image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 24, height: 24)
+                        .frame(width: 28, height: 28)
+                        .foregroundColor(selectedTab == image ? .primary : .gray)
                 }
                 
-                if selectedTab == image {
-                    Capsule()
-                        .fill(Color.black)
-                        .frame(width: 30, height: 2)
-                        .matchedGeometryEffect(id: "tab", in: animation)
-                } else {
-                    Capsule()
-                        .fill(Color.clear)
-                        .frame(width: 30, height: 2)
+                ZStack {
+                    if selectedTab == image {
+                        Rectangle()
+                            .fill(Color.primary)
+                            .matchedGeometryEffect(id: "TAB", in: animation)
+                    } else {
+                        Rectangle()
+                            .fill(Color.clear)
+                    }
                 }
+                .frame(height: 1)
             }
-            .foregroundColor(selectedTab == image ? .black : .gray)
         }
     }
 }
