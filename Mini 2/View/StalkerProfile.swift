@@ -162,7 +162,7 @@ struct ImageView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: width, height: 120)
-                .cornerRadius(4)
+                .cornerRadius(0)
         }
     }
 }
