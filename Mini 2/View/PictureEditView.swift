@@ -4,16 +4,24 @@ struct PictureEditView: View {
     @State private var exposureValue: Double = 0.0
     
     var body: some View {
-        VStack {
-            Image("PictureEdit")
-                .resizable()
-                .frame(maxWidth: 500, maxHeight: 500)
-                .brightness(exposureValue)
+        ZStack {
+            Color.gray
+                .blur(radius: 100) 
+                .edgesIgnoringSafeArea(.all)
             
-            Slider(value: $exposureValue, in: -1.0...1.0, step: 0.01)
-                .padding(.horizontal)
+            VStack {
+                Image("PictureEdit")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: 300, maxHeight: 300)
+                    .brightness(exposureValue)
+                    .cornerRadius(20)
+                
+                Slider(value: $exposureValue, in: -1.0...1.0, step: 0.01)
+                    .padding(.horizontal)
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
@@ -22,5 +30,3 @@ struct PictureEditView_Previews: PreviewProvider {
         PictureEditView()
     }
 }
-
-
