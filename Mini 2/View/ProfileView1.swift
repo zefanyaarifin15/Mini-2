@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Post1: Identifiable {
+struct Post: Identifiable {
     let id: Int
     let username: String
     let caption: String
@@ -162,39 +162,66 @@ struct ProfileView1: View {
                         
                         HStack(spacing: 0){
                             TabBarButton(image: "square.grid.3x3.fill", isSystemImage: true, animation: animation, selectedTab: $selectedTab)
+                                .padding(.trailing, 80
+                                )
                             
                             TabBarButton(image: "person.crop.square", isSystemImage: true, animation: animation, selectedTab: $selectedTab)
+                                .padding(.leading, 80
+                                )
                         }
                         .frame(height: 70, alignment: .bottom)
                         
                         // tab view
-                        ZStack{
-                            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 2), count: 3), spacing: 2, content: {
-                                                            ForEach(posts) { post in
-                                                                // for getting width for image
-                                                                GeometryReader { proxy in
-                                                                    let width = proxy.frame(in: .global).width
-                                                                    
-                                                                    NavigationLink(destination: PostView(
-                                                                        username: post.username,
-                                                                        caption: post.caption,
-                                                                        location: post.location,
-                                                                        postImage: post.postImage,
-                                                                        profileImage: post.profileImage,
-                                                                        initialLikes: post.initialLikes,
-                                                                        commentUser: post.commentUser,
-                                                                        commentText: post.commentText
-                                                                    )) {
-                                                                        Image(post.postImage)
-                                                                            .resizable()
-                                                                            .aspectRatio(contentMode: .fill)
-                                                                            .frame(width: width, height: 120)
-                                                                            .cornerRadius(0)
-                                                                    }
-                                                                }
-                                                                .frame(height: 120)
-                                                            }
-                                                        })
+                        ZStack {
+                            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 2), count: 3), spacing: 2) {
+                                ForEach(posts) { post in
+                                    GeometryReader { proxy in
+                                        let width = proxy.frame(in: .global).width
+                                        
+                                        NavigationLink(destination: PostView(
+                                            username: post.username,
+                                            caption: post.caption,
+                                            location: post.location,
+                                            postImage: post.postImage,
+                                            profileImage: post.profileImage,
+                                            initialLikes: post.initialLikes,
+                                            commentUser: post.commentUser,
+                                            commentText: post.commentText
+                                        )) {
+                                            Image(post.postImage)
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: width, height: 120)
+                                                .cornerRadius(0)
+                                        }
+                                    }
+                                    .frame(height: 120)
+                                }
+                            }
+//                            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 2), count: 3), spacing: 2, content: {
+//                            ForEach(posts) { post in
+//                                    GeometryReader { proxy in
+//                                        let width = proxy.frame(in: .global).width
+//                            NavigationLink(destination: PostView(
+//                                                username: post.username,
+//                                                caption: post.caption,
+//                                                location: post.location,
+//                                                postImage: post.postImage,
+//                                                profileImage: post.profileImage,
+//                                                initialLikes: post.initialLikes,
+//                                                commentUser: post.commentUser,
+//                                                commentText: post.commentText
+//                                        )) {
+//                                            Image(post.postImage)
+//                                                .resizable()
+//                                                .aspectRatio(contentMode: .fill)
+//                                                .frame(width: width, height: 120)
+//                                                .cornerRadius(0)
+//                                            }
+//                                        }
+//                                        .frame(height: 120)
+//                                    }
+//                                })
                         }
                     }
                 })
