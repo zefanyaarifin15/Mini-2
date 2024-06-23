@@ -21,7 +21,7 @@ struct PrimaryButton: View {
             .foregroundColor(.white)
             .padding()
             .padding(.horizontal)
-            .background(Color.red)
+            .background(Color.button)
             .cornerRadius(20)
             .fontWeight(.bold)
             .shadow(color: Color.gray, radius: 4, x: 5, y: 6)

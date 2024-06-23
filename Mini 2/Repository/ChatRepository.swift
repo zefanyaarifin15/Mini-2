@@ -46,27 +46,6 @@ let jamesMessages: [(String, String)] = [
     ("Jasmine", "I’m sorry, James. Goodbye.")
 ]
 
-
-let natalieMessages: [(String, String)] = [
-    ("Natalie", "Hi Jasmine! It's been a while since we hung out. How about we plan something for this weekend? 😆"),
-    ("Jasmine", "Hey Nat! That sounds great. I’ve been wanting to catch up too. Do you have any place in mind?")
-]
-
-let roseMessages: [(String, String)] = [
-    ("Natalie", "Hi Jasmine! It's been a while since we hung out. How about we plan something for this weekend? 😆"),
-    ("Jasmine", "Hey Nat! That sounds great. I’ve been wanting to catch up too. Do you have any place in mind?")
-]
-
-let stephanieMessages: [(String, String)] = [
-    ("Natalie", "Hi Jasmine! It's been a while since we hung out. How about we plan something for this weekend? 😆"),
-    ("Jasmine", "Hey Nat! That sounds great. I’ve been wanting to catch up too. Do you have any place in mind?")
-]
-
-let stalkerMessages: [(String, String)] = [
-    ("Natalie", "Hi Jasmine! It's been a while since we hung out. How about we plan something for this weekend? 😆"),
-    ("Jasmine", "Hey Nat! That sounds great. I’ve been wanting to catch up too. Do you have any place in mind?")
-]
-
 class ChatRepository {
     static let shared = ChatRepository()
 
@@ -74,11 +53,7 @@ class ChatRepository {
 
 
     private let conversations: [String: [(String, String)]] = [
-        "James": jamesMessages,
-        "Natalie": natalieMessages,
-        "Rose": roseMessages,
-        "Stephanie": stephanieMessages,
-        "Stalker": stalkerMessages
+        "James": jamesMessages
     ]
 
     func fetchAllConversations() -> [String: [(String, String)]] {

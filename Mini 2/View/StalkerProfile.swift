@@ -4,6 +4,7 @@ struct StalkerView: View {
     @State var selectedTab: String = "square.grid.3x3.fill"
     @Namespace var animation
     @State private var isFollowed = false
+    @State private var followersCount = 0
 
     let postImages = ["StalkerPost1", "StalkerPost2", "StalkerPost3"]
     let captions = ["you think you're cool?!", "In the shadows", "You can't see me"]
@@ -66,7 +67,7 @@ struct StalkerView: View {
                             .frame(maxWidth: .infinity)
                             
                             VStack {
-                                Text("0")
+                                Text("\(followersCount)")
                                     .font(.system(size: 22))
                                     .bold()
                                     .foregroundColor(.black)
@@ -90,6 +91,7 @@ struct StalkerView: View {
                         HStack {
                             Button(action: {
                                 isFollowed.toggle()
+                                followersCount += isFollowed ? 1 : -1
                             }, label: {
                                 Text(isFollowed ? "Followed" : "Follow Back")
                                     .fontWeight(.semibold)
@@ -118,7 +120,7 @@ struct StalkerView: View {
                                     )
                             })
                         }
-                        .padding([.horizontal, .top])
+                        .padding()
                         
                         HStack(spacing: 0) {
                             TabBarButton(image: "square.grid.3x3.fill", isSystemImage: true, animation: animation, selectedTab: $selectedTab)
@@ -160,7 +162,7 @@ struct ImageView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: width, height: 120)
-                .cornerRadius(4)
+                .cornerRadius(0)
         }
     }
 }
