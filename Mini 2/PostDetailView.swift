@@ -29,8 +29,11 @@ struct PostDetailView: View {
                 Text(username)
                     .font(.headline)
                 Spacer()
-                Image(systemName: "ellipsis")
-                    .padding()
+                Image("dots")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .padding(.trailing, 15)
+                    .padding(.top, 5)
             }
             .padding(.horizontal)
 
@@ -39,16 +42,21 @@ struct PostDetailView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
 
-            HStack {
+            HStack(spacing: 20) {
                 Button(action: {
                     isLiked.toggle()
                     likesCount += isLiked ? 1 : -1
                 }) {
                     Image(systemName: isLiked ? "heart.fill" : "heart")
+                        .resizable()
                         .foregroundColor(isLiked ? .red : .black)
+                        .frame(width: 25, height: 25)
                 }
-                Image(systemName: "bubble.right")
-                Image(systemName: "paperplane")
+                Image(systemName: "ellipsis.bubble")
+                    .resizable()
+                    .foregroundColor(.black)
+                    .frame(width: 25, height: 25)
+                //Image(systemName: "paperplane")
 
                 Spacer()
             }
