@@ -9,7 +9,31 @@ import SwiftUI
 
 struct MessageNotification: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image("icon").resizable().frame(width: 40, height: 40)
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("Test")
+                        .font(.system(size: 15, weight: .semibold))
+                    Spacer()
+                    Text("19.20")
+                        .font(.system(size: 13))
+                        .foregroundColor(Color(red: 94/255, green: 89/255, blue: 88/255))
+                }
+                Text("Desciption")
+                    .font(.system(size: 15))
+            }
+            
+        }
+        .padding()
+        .frame(width: 370)
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color(red: 168/255, green: 165/255, blue: 164/255))
+                .opacity(0.6)
+                .shadow(radius: 5)
+        )
+        .padding()
     }
 }
 
