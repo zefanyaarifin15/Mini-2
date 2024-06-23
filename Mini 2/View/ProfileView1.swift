@@ -198,30 +198,6 @@ struct ProfileView1: View {
                                     .frame(height: 120)
                                 }
                             }
-//                            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 2), count: 3), spacing: 2, content: {
-//                            ForEach(posts) { post in
-//                                    GeometryReader { proxy in
-//                                        let width = proxy.frame(in: .global).width
-//                            NavigationLink(destination: PostView(
-//                                                username: post.username,
-//                                                caption: post.caption,
-//                                                location: post.location,
-//                                                postImage: post.postImage,
-//                                                profileImage: post.profileImage,
-//                                                initialLikes: post.initialLikes,
-//                                                commentUser: post.commentUser,
-//                                                commentText: post.commentText
-//                                        )) {
-//                                            Image(post.postImage)
-//                                                .resizable()
-//                                                .aspectRatio(contentMode: .fill)
-//                                                .frame(width: width, height: 120)
-//                                                .cornerRadius(0)
-//                                            }
-//                                        }
-//                                        .frame(height: 120)
-//                                    }
-//                                })
                         }
                     }
                 })
