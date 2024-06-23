@@ -13,7 +13,7 @@ struct Mini_2App: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            DMsView()
         }
     }
 }

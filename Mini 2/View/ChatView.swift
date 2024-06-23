@@ -1,104 +1,77 @@
-//import SwiftUI
-//
-//struct ChatView: View {
-//    let chatRepository = ChatRepository.shared
-//    let partner: String
-//    @State private var messages: [(String, String)] = []
-//
-//    var body: some View {
-//        NavigationView {
-//            VStack {
-//                List(messages, id: \.1) { message in
-//                    MessageBubble(sender: message.0, text: message.1)
-//                        .listRowSeparator(.hidden)
-//                }
-//                .listStyle(PlainListStyle())
-//                .padding(-10)
-//            }
-//            .onAppear {self.loadMessages()}
-//            .toolbar {
-//                ToolbarItem(placement: .principal) {
-//                    topProfileBar
-//                }
-//            }
-//        }
-//    }
-//    
-//    private func loadMessages() {
-//        self.messages = chatRepository.fetchMessages(for: partner)?.reversed() ?? []
-//    }
-//    
-//    var topProfileBar: some View{
-//        HStack {
-//            Button(action: {
-//                // masi blm bisa back
-//            }, label: {
-//                Image(systemName: "chevron.left")
-//                    .foregroundColor(.greenInstaQ)
-//            })
-//            ChatProfile(profilePicture: partner, profileName: partner, checkMark: true)
-//        }
-//    }
-//    
-//}
-//
-//struct MessageBubble: View {
-//    let sender: String
-//    let text: String
-//
-//    var body: some View {
-//        if(sender != "Jasmine"){
-//            IncomingChatBubble(message: text)
-//        }else{
-//            OutgoingChatBubble(message: text)
-//        }
-//        
-//    }
-//}
-//
-//struct ChatView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ChatView(partner: "James")
-//    }
-//}
-//
 import SwiftUI
 
-struct ConversationView: View {
-    @ObservedObject var viewModel = ConversationViewModel()
-    @State private var userResponse: String = ""
-    @State private var selectedPartner: String = "Steph"
-    
+struct ChatView: View {
+    @ObservedObject var viewModel: DialogViewModel
+    var partner: String
+
     var body: some View {
-        VStack {
-            if let conversation = viewModel.conversations.first(where: { $0.partner_dialog == selectedPartner }) {
-                Text(conversation.start_dialog)
-                    .padding()
+        VStack(spacing: 0) {
+            if let options = viewModel.fetchUserOptions(for: partner, dialogID: viewModel.currDialogID) {
+                ReplyOptions {
+                    VStack(spacing: 8) {
+                        Text("\(viewModel.currDialogID)")
+                        ForEach(viewModel.histories) { history in
+                            HStack {
+                                if history.isUser {
+                                    OutgoingChatBubble(message: history.content)
+                                } else {
+                                    IncomingChatBubble(message: history.content)
+                                }
+                            }
+                            .padding([.leading, .trailing], 10)
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }
+                    
+                } content2: {
+                    ScrollView {
+                        VStack(spacing: 8) {
+                            ForEach(options) { option in
+                                Button(action: {
+                                    viewModel.selectOption(option: option)
+                                }) {
+                                    HStack {
+                                        Spacer()
+                                        Text(option.reply)
+                                            .foregroundColor(.white)
+                                            .padding()
+                                            .background(Color.gray)
+                                            .cornerRadius(8)
+                                            .multilineTextAlignment(.center)
+                                        Spacer()
+                                    }
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                                .frame(minHeight: 40)
+                                
+                            }
+                        }
+                        .padding()
+                    }
+                }
+                
             } else {
                 Text("Loading...")
                     .padding()
             }
-            
-            Button(action: {
-                if let message = viewModel.fetchFirstMessage(for: selectedPartner) {
-                    self.userResponse = message.response
-                }
-            }) {
-                Text("Fetch User Response")
-            }
-            .padding()
-            
-            if !userResponse.isEmpty {
-                Text(userResponse)
-                    .padding()
-                    .multilineTextAlignment(.center)
+            Spacer()
+        }
+        .edgesIgnoringSafeArea(.bottom)
+        .onAppear {
+            viewModel.changeSelectedPartner(to: partner)
+            viewModel.appendStartDialogHistory(for: partner)
+        }
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                ChatProfile(profilePicture: "James", profileName: partner, checkMark: true)
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-struct ConversationView_Previews: PreviewProvider {
+struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ConversationView()
+        ChatView(viewModel: DialogViewModel(), partner: "Steph")
     }
 }

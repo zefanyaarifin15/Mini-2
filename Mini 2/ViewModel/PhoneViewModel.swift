@@ -10,8 +10,4 @@ class PhoneViewModel: ObservableObject {
     
 }
 
-struct AppIconViewModel<Destination: View> {
-    let imageName: String
-    let labelText: String
-    let destination: Destination
-}
+

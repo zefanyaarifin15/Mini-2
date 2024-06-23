@@ -3,7 +3,6 @@ import SwiftUI
 struct DMsList: View {
     let profilePicture: String
     let profileName: String
-    let timeMessage: String
     let textMessage: String
     
     var body: some View {
@@ -19,9 +18,6 @@ struct DMsList: View {
                         .bold()
                         .font(.system(size: 18))
                     Spacer()
-                    Text(timeMessage)
-                        .foregroundColor(.grayInstaQ)
-                        .font(.system(size: 15))
                 }
                 Text(textMessage)
                     .lineLimit(2)
@@ -36,6 +32,6 @@ struct DMsList: View {
 
 struct DMsList_Previews: PreviewProvider {
     static var previews: some View {
-        DMsList(profilePicture: "James", profileName: "James Harrison", timeMessage: "1.20 PM", textMessage: "<3")
+        DMsList(profilePicture: "James", profileName: "James Harrison", textMessage: "<3")
     }
 }

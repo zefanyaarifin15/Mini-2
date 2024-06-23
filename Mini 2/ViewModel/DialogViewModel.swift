@@ -1,10 +1,15 @@
 import Foundation
 
-class ConversationViewModel: ObservableObject {
+class DialogViewModel: ObservableObject {
     @Published var conversations: [PartnerConversation] = []
-    
+    @Published var histories: [History] = []
+    @Published var userResponse: String = ""
+    @Published var currDialogID: Int = 1
+    @Published var selectedPartner: String = ""
+    @Published var userOptions: [UserOption] = []
+
     init() {
-        loadJSONData()
+        initialSetup()
     }
     
     func loadJSONData() {
@@ -16,28 +21,48 @@ class ConversationViewModel: ObservableObject {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            self.conversations = try decoder.decode([PartnerConversation].self, from: data)
+            conversations = try decoder.decode([PartnerConversation].self, from: data)
         } catch {
             print("Error decoding JSON: \(error)")
         }
     }
     
-    func fetchFirstMessage(for partner: String) -> UserOption? {
-        guard let conversation = conversations.first(where: { $0.partner_dialog == partner }) else {
-            print("No conversation found for partner: \(partner)")
-            return nil
+    func fetchPartners() -> [String] {
+        conversations.map { $0.partner_dialog }
+    }
+    
+    func changeSelectedPartner(to newPartner: String) {
+        selectedPartner = newPartner
+        histories.removeAll()
+        currDialogID = 1
+        userOptions = fetchUserOptions(for: newPartner, dialogID: currDialogID) ?? []
+    }
+    
+    func fetchUserOptions(for partner: String, dialogID: Int) -> [UserOption]? {
+        conversations
+            .first(where: { $0.partner_dialog == partner })?
+            .dialog
+            .first(where: { $0.id == dialogID })?
+            .user_options
+    }
+    
+    func selectOption(option: UserOption) {
+        histories.append(History(content: option.reply, isUser: true))
+        histories.append(History(content: option.response, isUser: false))
+        currDialogID += 1
+        userOptions = fetchUserOptions(for: selectedPartner, dialogID: currDialogID) ?? []
+    }
+    
+    func appendStartDialogHistory(for partner: String) {
+        if let conversation = conversations.first(where: { $0.partner_dialog == partner }) {
+            histories.append(History(content: conversation.start_dialog, isUser: false))
         }
-        
-        guard let firstSegment = conversation.dialog.first else {
-            print("No dialog segments found for partner: \(partner)")
-            return nil
+    }
+    func initialSetup() {
+        loadJSONData()
+        if let conversation = conversations.first(where: { $0.partner_dialog == selectedPartner }) {
+            histories.append(History(content: conversation.start_dialog, isUser: false))
         }
-        
-        guard let firstOption = firstSegment.user_options.first else {
-            print("No user options found in the first segment for partner: \(partner)")
-            return nil
-        }
-        
-        return firstOption
+        userOptions = fetchUserOptions(for: selectedPartner, dialogID: currDialogID) ?? []
     }
 }

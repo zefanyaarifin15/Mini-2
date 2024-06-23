@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-struct Post: Identifiable {
-    let id: Int
-    let username: String
-    let caption: String
-    let location: String
-    let postImage: String
-    let profileImage: String
-    let initialLikes: Int
-    let commentUser: String
-    let commentText: String
-}
-
-
 struct ProfileView1: View {
     // First Tab Image
     @State var selectedTab: String = "square.grid.3x3"
@@ -162,11 +149,11 @@ struct ProfileView1: View {
                         
                         HStack(spacing: 0){
                             TabBarButton(image: "square.grid.3x3.fill", isSystemImage: true, animation: animation, selectedTab: $selectedTab)
-                                .padding(.trailing, 80
+                                .padding(.trailing, 10
                                 )
                             
                             TabBarButton(image: "person.crop.square", isSystemImage: true, animation: animation, selectedTab: $selectedTab)
-                                .padding(.leading, 80
+                                .padding(.leading, 10
                                 )
                         }
                         .frame(height: 70, alignment: .bottom)

@@ -6,13 +6,21 @@ struct PartnerConversation: Codable {
     let dialog: [DialogSegment]
 }
 
-struct DialogSegment: Codable {
+struct DialogSegment: Codable, Identifiable {
     let id: Int
     let user_options: [UserOption]
 }
 
-struct UserOption: Codable {
+struct UserOption: Codable, Identifiable {
     let id: String
     let reply: String
     let response: String
 }
+
+struct History: Identifiable {
+    let id = UUID()
+    let content: String
+    let isUser: Bool
+}
+
+

@@ -62,7 +62,7 @@
             "response": "Yes, we’re together now. I really hope this doesn't make things awkward between us."
           }
         ]
-      }, 
+      },
       {
         "id": 4,
         "user_options": [
@@ -125,11 +125,9 @@
       }
     ]
   },
-  
-  
   {
     "partner_dialog": "James",
-    "start_dialog": " (chat paling pertama bgt ex. Hi jasmine, Hi james, dll. ) ",
+    "start_dialog": "(chat paling pertama bgt ex. Hi jasmine, Hi james, dll. )",
     "dialog": [
       {
         "id": 1,
@@ -156,7 +154,7 @@
         "user_options": [
           {
             "id": "2a",
-            "reply": " (abis dapet response drj no.1, user dpt option apa lagi)",
+            "reply": "(abis dapet response drj no.1, user dpt option apa lagi)",
             "response": "(response partner dari reply ini)"
           },
           {
@@ -172,8 +170,7 @@
         ]
       }
     ]
-  }
-  
+  },
   {
     "partner_dialog": "Nataliebert",
     "start_dialog": "Hi Jasmine! It's been a while since we hung out. How about we plan something for this weekend? 😆",
@@ -340,6 +337,4 @@
       }
     ]
   }
-  
-  
 ]
