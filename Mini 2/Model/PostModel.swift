@@ -18,3 +18,4 @@ struct Post: Identifiable {
     let commentUser: String
     let commentText: String
 }
+

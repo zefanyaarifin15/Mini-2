@@ -1,3 +1,4 @@
+
 import SwiftUI
 
 struct HomeView: View {
@@ -15,7 +16,7 @@ struct HomeView: View {
                     Label("Chat", systemImage: "ellipsis.message.fill")
                 }
                    
-            ReportView()
+            ReportView2()
                 .tabItem {
                     Label("Report", systemImage: "list.clipboard.fill")
                 }
@@ -72,7 +73,7 @@ struct HomeView: View {
 }
 
 
-struct ReportView: View {
+struct ReportView2: View {
     var body: some View {
         Text("Report View")
     }
