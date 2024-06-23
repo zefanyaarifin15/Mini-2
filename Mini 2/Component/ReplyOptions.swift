@@ -7,9 +7,9 @@ struct ReplyOptions<Content: View, Content2: View>: View {
     let content2: Content2
 
     init(numOptions: Int = 3, @ViewBuilder content: () -> Content, @ViewBuilder content2: () -> Content2) {
-        self.numOptions = numOptions
         self.content = content()
         self.content2 = content2()
+        self.numOptions = numOptions
     }
 
     var body: some View {
