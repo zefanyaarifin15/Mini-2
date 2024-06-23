@@ -26,6 +26,14 @@
 		6DACC7672C21589C00AC7ED2 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC7662C21589C00AC7ED2 /* TabBarButton.swift */; };
 		6DACC76B2C2764F900AC7ED2 /* Taskview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC76A2C2764F900AC7ED2 /* Taskview.swift */; };
 		6DACC76D2C2776FD00AC7ED2 /* RBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC76C2C2776FD00AC7ED2 /* RBView.swift */; };
+
+		A30F11212C2885D300EFA434 /* MessageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11202C2885D300EFA434 /* MessageNotification.swift */; };
+		A30F11232C2885FD00EFA434 /* CallNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11222C2885FD00EFA434 /* CallNotification.swift */; };
+		A30F11262C28863700EFA434 /* OngoingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11252C28863700EFA434 /* OngoingCallView.swift */; };
+		A30F11282C28867A00EFA434 /* RingingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11272C28867A00EFA434 /* RingingCallView.swift */; };
+		A30F112A2C28869E00EFA434 /* IncomingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11292C28869E00EFA434 /* IncomingCallView.swift */; };
+		D6FD36E02C20423100CC4259 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36DF2C20423100CC4259 /* ProfileView.swift */; };
+
 		D6FD36E22C20427A00CC4259 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36E12C20427A00CC4259 /* SettingsView.swift */; };
 		D6FD36E42C20788600CC4259 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36E32C20788600CC4259 /* PostView.swift */; };
 		D6FD36E62C271C0600CC4259 /* ProfileView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36E52C271C0600CC4259 /* ProfileView1.swift */; };
@@ -71,6 +79,14 @@
 		6DACC7662C21589C00AC7ED2 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		6DACC76A2C2764F900AC7ED2 /* Taskview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taskview.swift; sourceTree = "<group>"; };
 		6DACC76C2C2776FD00AC7ED2 /* RBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBView.swift; sourceTree = "<group>"; };
+
+		A30F11202C2885D300EFA434 /* MessageNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNotification.swift; sourceTree = "<group>"; };
+		A30F11222C2885FD00EFA434 /* CallNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallNotification.swift; sourceTree = "<group>"; };
+		A30F11252C28863700EFA434 /* OngoingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingCallView.swift; sourceTree = "<group>"; };
+		A30F11272C28867A00EFA434 /* RingingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingingCallView.swift; sourceTree = "<group>"; };
+		A30F11292C28869E00EFA434 /* IncomingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingCallView.swift; sourceTree = "<group>"; };
+		D6FD36DF2C20423100CC4259 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+
 		D6FD36E12C20427A00CC4259 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D6FD36E32C20788600CC4259 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		D6FD36E52C271C0600CC4259 /* ProfileView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView1.swift; sourceTree = "<group>"; };
@@ -190,6 +206,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A30F11242C28862300EFA434 /* Call View */ = {
+			isa = PBXGroup;
+			children = (
+				A30F11252C28863700EFA434 /* OngoingCallView.swift */,
+				A30F11272C28867A00EFA434 /* RingingCallView.swift */,
+				A30F11292C28869E00EFA434 /* IncomingCallView.swift */,
+			);
+			path = "Call View";
+			sourceTree = "<group>";
+		};
 		D90B7CB72C1AE5C7008B3F7C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +227,7 @@
 		D90B7CB82C1AE5D9008B3F7C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A30F11242C28862300EFA434 /* Call View */,
 				D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */,
 				D9526C3A2C1CC2A7008FFBE5 /* DMsView.swift */,
 				6D5EF1152C1AC1A500C20D4D /* ContentView.swift */,
@@ -230,6 +257,8 @@
 				4B24039B2C2589140085574A /* ReportCardDetail.swift */,
 				4B2A045B2C22DA0900E47EE5 /* ConfirmationReportPage.swift */,
 				4B2A045D2C22E80100E47EE5 /* PrimaryButton.swift */,
+				A30F11202C2885D300EFA434 /* MessageNotification.swift */,
+				A30F11222C2885FD00EFA434 /* CallNotification.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -313,24 +342,29 @@
 				D6FD36EA2C28819D00CC4259 /* HomeView 1.swift in Sources */,
 				D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */,
 				D9526C3D2C1D7175008FFBE5 /* DMsList.swift in Sources */,
+				A30F11212C2885D300EFA434 /* MessageNotification.swift in Sources */,
 				4B2A045A2C22C53300E47EE5 /* ReportCard.swift in Sources */,
 				6DACC7672C21589C00AC7ED2 /* TabBarButton.swift in Sources */,
 				D6FD36E22C20427A00CC4259 /* SettingsView.swift in Sources */,
+				A30F11262C28863700EFA434 /* OngoingCallView.swift in Sources */,
 				4B1195732C1EE3AB002AE982 /* SoundModel.swift in Sources */,
 				D9526C612C244D30008FFBE5 /* PhoneModel.swift in Sources */,
 				D6FD36E42C20788600CC4259 /* PostView.swift in Sources */,
 				D9526C492C2294A6008FFBE5 /* PhoneView.swift in Sources */,
 				D6FD36E62C271C0600CC4259 /* ProfileView1.swift in Sources */,
 				D9526C5F2C241304008FFBE5 /* DialogModel.swift in Sources */,
+				A30F11232C2885FD00EFA434 /* CallNotification.swift in Sources */,
 				D90B7CB22C1AE2FD008B3F7C /* ChatView.swift in Sources */,
 				6DACC7632C20B12300AC7ED2 /* PostDetailView.swift in Sources */,
 				4B11956C2C1DA974002AE982 /* ImagePicker.swift in Sources */,
+				A30F11282C28867A00EFA434 /* RingingCallView.swift in Sources */,
 				6D5EF1162C1AC1A500C20D4D /* ContentView.swift in Sources */,
 				D9526C412C1DC9B8008FFBE5 /* ReplyOptions.swift in Sources */,
 				6DACC76B2C2764F900AC7ED2 /* Taskview.swift in Sources */,
 				4B2A045C2C22DA0900E47EE5 /* ConfirmationReportPage.swift in Sources */,
 				4B2A045E2C22E80100E47EE5 /* PrimaryButton.swift in Sources */,
 				D90B7CC12C1C1451008B3F7C /* OutgoingChatBubble.swift in Sources */,
+				A30F112A2C28869E00EFA434 /* IncomingCallView.swift in Sources */,
 				D9526C5D2C2412FB008FFBE5 /* DialogViewModel.swift in Sources */,
 				6DACC76D2C2776FD00AC7ED2 /* RBView.swift in Sources */,
 				D9526C3F2C1DBCB5008FFBE5 /* ChatProfile.swift in Sources */,
