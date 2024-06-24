@@ -27,6 +27,8 @@
 		6DACC76B2C2764F900AC7ED2 /* Taskview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC76A2C2764F900AC7ED2 /* Taskview.swift */; };
 		6DACC76D2C2776FD00AC7ED2 /* RBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC76C2C2776FD00AC7ED2 /* RBView.swift */; };
 		6DACC76F2C289BD800AC7ED2 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC76E2C289BD800AC7ED2 /* ReportView.swift */; };
+		6DACC7712C293A3000AC7ED2 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC7702C293A3000AC7ED2 /* TaskViewModel.swift */; };
+		6DACC7732C293AD800AC7ED2 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DACC7722C293AD800AC7ED2 /* TaskModel.swift */; };
 		A30F11212C2885D300EFA434 /* MessageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11202C2885D300EFA434 /* MessageNotification.swift */; };
 		A30F11232C2885FD00EFA434 /* CallNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11222C2885FD00EFA434 /* CallNotification.swift */; };
 		A30F11262C28863700EFA434 /* OngoingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11252C28863700EFA434 /* OngoingCallView.swift */; };
@@ -79,6 +81,8 @@
 		6DACC76A2C2764F900AC7ED2 /* Taskview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taskview.swift; sourceTree = "<group>"; };
 		6DACC76C2C2776FD00AC7ED2 /* RBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBView.swift; sourceTree = "<group>"; };
 		6DACC76E2C289BD800AC7ED2 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		6DACC7702C293A3000AC7ED2 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		6DACC7722C293AD800AC7ED2 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		A30F11202C2885D300EFA434 /* MessageNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNotification.swift; sourceTree = "<group>"; };
 		A30F11222C2885FD00EFA434 /* CallNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallNotification.swift; sourceTree = "<group>"; };
 		A30F11252C28863700EFA434 /* OngoingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingCallView.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				4B1195722C1EE3AB002AE982 /* SoundModel.swift */,
 				D9526C602C244D30008FFBE5 /* PhoneModel.swift */,
 				D6FD36E72C287D2800CC4259 /* PostModel.swift */,
+				6DACC7722C293AD800AC7ED2 /* TaskModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +159,8 @@
 				4B1195752C1EE53B002AE982 /* SoundViewModel.swift */,
 				D9526C4A2C22A744008FFBE5 /* PhoneViewModel.swift */,
 				D6FD36EB2C2881DE00CC4259 /* FeedsViewModel.swift */,
+				D6FD36EB2C2881DE00CC4259 /* PostViewModel.swift */,
+				6DACC7702C293A3000AC7ED2 /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -348,6 +355,7 @@
 				6DACC7672C21589C00AC7ED2 /* TabBarButton.swift in Sources */,
 				D6FD36E22C20427A00CC4259 /* SettingsView.swift in Sources */,
 				A30F11262C28863700EFA434 /* OngoingCallView.swift in Sources */,
+				6DACC7732C293AD800AC7ED2 /* TaskModel.swift in Sources */,
 				4B1195732C1EE3AB002AE982 /* SoundModel.swift in Sources */,
 				D9526C612C244D30008FFBE5 /* PhoneModel.swift in Sources */,
 				D6FD36E42C20788600CC4259 /* PostView.swift in Sources */,
@@ -369,6 +377,7 @@
 				D9526C5D2C2412FB008FFBE5 /* DialogViewModel.swift in Sources */,
 				6DACC76D2C2776FD00AC7ED2 /* RBView.swift in Sources */,
 				D9526C3F2C1DBCB5008FFBE5 /* ChatProfile.swift in Sources */,
+				6DACC7712C293A3000AC7ED2 /* TaskViewModel.swift in Sources */,
 				6D5EF1142C1AC1A500C20D4D /* Mini_2App.swift in Sources */,
 				D9526C432C1DCA2D008FFBE5 /* VNBubble.swift in Sources */,
 				4B24039A2C2584CB0085574A /* UploadProfileView.swift in Sources */,
