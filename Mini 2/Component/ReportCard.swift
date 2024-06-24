@@ -35,9 +35,9 @@ struct ReportCard: View {
                         DetailView(text: "Background Noise: Car engine, traffic noises, radio.")
                         
                         
-                        NavigationLink(destination: ConfirmationReportPage()) {
-                            PrimaryButton(text: "Report", width: 150, height: 10, fontSize: 18)
-                        }
+//                        NavigationLink(destination: ConfirmationReportPage()) {
+//                            PrimaryButton(text: "Report", width: 150, height: 10, fontSize: 18)
+//                        }
 
                         .padding(.top, 5) // Menambahkan padding atas untuk memberikan jarak dari teks terakhir
                         .padding([.leading, .trailing], 10) // Menambahkan padding kiri dan kanan
