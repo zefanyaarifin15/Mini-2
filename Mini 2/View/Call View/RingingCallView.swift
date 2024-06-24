@@ -1,6 +1,6 @@
 //
 //  RingingCallView.swift
-//  Mini 2
+//  mini2_bagiannatasha
 //
 //  Created by Natasha Radika on 23/06/24.
 //
@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct RingingCallView: View {
+    @Environment(\.dismiss) var dismiss
+    let soundPlayer = SoundPlayer()
+    let name: String
+    let profile: String
+    let account: String
     var body: some View {
         ZStack {
             LinearGradient(
@@ -26,7 +31,7 @@ struct RingingCallView: View {
                 
 
                 VStack(spacing: 30) {
-                    Image("profile")
+                    Image(profile)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 150, height: 150)
@@ -34,11 +39,11 @@ struct RingingCallView: View {
                         .clipped()
                     
                     VStack(spacing: 10) {
-                        Text("Stephanie")
+                        Text(name)
                             .font(.system(size: 28, weight: .bold))
                             .foregroundStyle(.white)
                         
-                        Text("ringing @stephaniejenn..")
+                        Text("ringing " + account)
                             .font(.system(size: 18))
                             .foregroundColor(Color(red: 0.94, green: 0.89, blue: 0.88))
                     }
@@ -46,8 +51,7 @@ struct RingingCallView: View {
                 }
                 
                 Button(action: {
-                    
-                    print("Call Rejected")
+                    dismiss()
                 }) {
                     Image(systemName: "phone.down.fill")
                         .font(.system(size: 40))
@@ -59,9 +63,12 @@ struct RingingCallView: View {
                 }
             }
         }
+        .onAppear() {
+            soundPlayer.playSound(sound: "dial_call", type: "mp3")
+        }
     }
 }
 
 #Preview {
-    RingingCallView()
+    RingingCallView(name: "Stephanie", profile: "profile", account: "@stephaniejenn")
 }
