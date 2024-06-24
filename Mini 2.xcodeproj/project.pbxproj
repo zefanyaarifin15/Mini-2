@@ -159,6 +159,7 @@
 				4B1195752C1EE53B002AE982 /* SoundViewModel.swift */,
 				D9526C4A2C22A744008FFBE5 /* PhoneViewModel.swift */,
 				D6FD36EB2C2881DE00CC4259 /* FeedsViewModel.swift */,
+				D6FD36EB2C2881DE00CC4259 /* PostViewModel.swift */,
 				6DACC7702C293A3000AC7ED2 /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
