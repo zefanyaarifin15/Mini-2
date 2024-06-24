@@ -126,52 +126,6 @@
     ]
   },
   {
-    "partner_dialog": "James",
-    "start_dialog": "(chat paling pertama bgt ex. Hi jasmine, Hi james, dll. )",
-    "dialog": [
-      {
-        "id": 1,
-        "user_options": [
-          {
-            "id": "1a",
-            "reply": "(reply option user 1)",
-            "response": "(response partner dari reply 1)"
-          },
-          {
-            "id": "1b",
-            "reply": "(reply option user 2)",
-            "response": "(response partner dari reply 2)"
-          },
-          {
-            "id": "1c",
-            "reply": " ",
-            "response": " "
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "user_options": [
-          {
-            "id": "2a",
-            "reply": "(abis dapet response drj no.1, user dpt option apa lagi)",
-            "response": "(response partner dari reply ini)"
-          },
-          {
-            "id": "2b",
-            "reply": " ",
-            "response": " "
-          },
-          {
-            "id": "2c",
-            "reply": " ",
-            "response": " "
-          }
-        ]
-      }
-    ]
-  },
-  {
     "partner_dialog": "Nataliebert",
     "start_dialog": "Hi Jasmine! It's been a while since we hung out. How about we plan something for this weekend? 😆",
     "dialog": [
@@ -336,5 +290,157 @@
         ]
       }
     ]
+  },
+  {
+    "partner_dialog": "Stalker",
+    "start_dialog": "I saw you go to work at 8 am today, you fucking piece of shit.",
+    "dialog": [
+      {
+        "id": 1,
+        "user_options": [
+          {
+            "id": "1a",
+            "reply": "",
+            "response": "Be careful, bitch. Lol"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "user_options": [
+          {
+            "id": "2a",
+            "reply": "Ignore",
+            "response": "Typical! You always ignore me, but I see everything lol"
+          },
+          {
+            "id": "2b",
+            "reply": "Who is this?",
+            "response": "Someone who's not a joke like you, you pathetic loser. lol"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "user_options": [
+          {
+            "id": "3a",
+            "reply": "",
+            "response": "Remember, every step you take, I'm right behind you, watching your every move."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "user_options": [
+          {
+            "id": "4a",
+            "reply": "Stop following me!",
+            "response": "Oh, I can't help it. You're just so fascinatingly pathetic, it's like a fucking train wreck."
+          },
+          {
+            "id": "4b",
+            "reply": "You don’t scare me.",
+            "response": "Oh, you should be scared. You have no idea what I'm fucking capable of."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "user_options": [
+          {
+            "id": "5a",
+            "reply": "",
+            "response": "HouseImage"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "user_options": [
+          {
+            "id": "6a",
+            "reply": "Why are you doing this?! You’re sick!",
+            "response": "Sick? No, just utterly disgusted by you."
+          },
+          {
+            "id": "6b",
+            "reply": "Leave me alone!",
+            "response": "Make me. I'm not done with you yet."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "user_options": [
+          {
+            "id": "7a",
+            "reply": "",
+            "response": "The way you double-check the locks every night is almost like you're expecting me. Paranoid much? lol 😛"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "user_options": [
+          {
+            "id": "8a",
+            "reply": "",
+            "response": "You're soo stupid! Even your closest ones can't stand you lol"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "user_options": [
+          {
+            "id": "9a",
+            "reply": "",
+            "response": "Your reflection in the bathroom mirror looked particularly haunted this morning, too much makeup can’t hide that 🤢"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "user_options": [
+          {
+            "id": "10a",
+            "reply": "",
+            "response": "VoiceNote"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "user_options": [
+          {
+            "id": "11a",
+            "reply": "I’m done with this. Leave me alone.",
+            "response": "Done? You'll never be done with me, you miserable fuck. Lol"
+          },
+          {
+            "id": "11b",
+            "reply": "This is too much. Stop messaging me.",
+            "response": "Oh, it's only just beginning. You can't escape me, you worthless piece of shit. Lol"
+          },
+          {
+            "id": "11c",
+            "reply": "Who are you?! Why are you tormenting me like this?",
+            "response": "I see right through your pathetic facade. And I won't stop until I've torn you apart."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "user_options": [
+          {
+            "id": "12a",
+            "reply": "",
+            "response": "And I dare you to try reporting me to the police! They won't believe a word you say. You're trapped, and I'm enjoying every second of it."
+          }
+        ]
+      }
+    ]
   }
+
 ]

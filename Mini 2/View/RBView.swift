@@ -19,91 +19,89 @@ struct RBView: View {
     @State private var connections: Set<Connection> = []
     @State private var photos: [Photo] = [
         Photo(name: "Jasmine", image: Image("post7"), position: CGPoint(x: 70, y: 200)),
-        Photo(name: "Jasmine", image: Image("post7"), position: CGPoint(x: 70, y: 500)),
-        Photo(name: "Jasmine", image: Image("post7"), position: CGPoint(x: 322, y: 200)),
-        Photo(name: "Jasmine", image: Image("post7"), position: CGPoint(x: 322, y: 500)),
+        Photo(name: "Stephanie", image: Image("post6"), position: CGPoint(x: 70, y: 500)),
+        Photo(name: "James", image: Image("post5"), position: CGPoint(x: 322, y: 200)),
+        Photo(name: "Natalie", image: Image("post4"), position: CGPoint(x: 322, y: 500)),
         Photo(name: "Jasmine", image: Image("post7"), position: CGPoint(x: 196, y: 350))
     ]
     @State private var notes: [Note] = [
-        Note(text: "Note 1", position: CGPoint(x: 200, y: 100))
+        Note(text: "Note 1", position: CGPoint(x: 320, y: 680)),
+        Note(text: "Note 2", position: CGPoint(x: 180, y: 680))
     ]
     @State private var connectingPhoto: Photo?
     
     var body: some View {
-        ZStack {
-            Color.white
-                .overlay(
-                    Image("dotsPattern")
-                        .resizable()
-                        .scaledToFill()
-                        .opacity(0.3)
-                )
-                .edgesIgnoringSafeArea(.all)
-            
-            ForEach(photos.indices, id: \.self) { index in
-                DraggableView {
-                    VStack {
-                        photos[index].image
+        NavigationView {
+            ZStack {
+                Color.white
+                    .overlay(
+                        Image("")
                             .resizable()
-                            .frame(width: 100, height: 100)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(radius: 5)
-                        Text(photos[index].name)
-                            .frame(maxWidth: 100)
-                            .padding(.vertical, 8)
+                            .scaledToFill()
+                            .opacity(0.3)
+                    )
+                    .edgesIgnoringSafeArea(.all)
+                
+                ForEach(photos.indices, id: \.self) { index in
+                    DraggableView {
+                        NavigationLink(destination: ReportView(photo: photos[index])) {
+                            VStack {
+                                photos[index].image
+                                    .resizable()
+                                    .frame(width: 100, height: 110)
+                                    .clipShape(RoundedRectangle(cornerRadius: 0))
+                                    .shadow(radius: 0)
+                                Text(photos[index].name)
+                                    .frame(maxWidth: 100)
+                                    .padding(.vertical, 7)
+                                    .background(Color.white)
+                                    .foregroundColor(.black)
+                            }
                             .background(Color.white)
-                            .foregroundColor(.black)
-                    }
-                    .background(Color.white)
-                    .border(Color.gray, width: 1)
-                    .shadow(radius: 5)
-                    .padding(8)
-                    .onTapGesture {
-                        if let connectingPhoto = connectingPhoto {
-                            connections.insert(Connection(start: connectingPhoto.position, end: photos[index].position))
-                            self.connectingPhoto = nil
-                        } else {
-                            connectingPhoto = photos[index]
+                            .border(Color.gray, width: 1)
+                            .shadow(radius: 0.5)
+                            .padding(8)
                         }
+                        .simultaneousGesture(LongPressGesture(minimumDuration: 0.5).onEnded { _ in
+                            if let connectingPhoto = connectingPhoto {
+                                connections.insert(Connection(start: connectingPhoto.position, end: photos[index].position))
+                                self.connectingPhoto = nil
+                            } else {
+                                connectingPhoto = photos[index]
+                            }
+                        })
+                        .simultaneousGesture(TapGesture().onEnded {
+                            // Handle tap if needed
+                        })
+                        .position(photos[index].position)
                     }
-                    .position(photos[index].position)
                 }
-            }
-
-            ForEach(notes.indices, id: \.self) { index in
-                DraggableView {
-                    VStack {
-                        TextField("Note", text: $notes[index].text)
-                            .multilineTextAlignment(.center)
-                            .padding()
-                            .frame(width: 120, height: 120)
-                            .background(Color.yellow)
-                            .foregroundColor(.black)
-                            .cornerRadius(5)
-                            .shadow(radius: 5)
+                
+                ForEach(notes.indices, id: \.self) { index in
+                    DraggableView {
+                        VStack {
+                            TextField( "Note 1", text: $notes[index].text)
+                                .multilineTextAlignment(.center)
+                                .padding()
+                                .frame(width: 120, height: 120)
+                                .background(Color.yellow)
+                                .foregroundColor(.black)
+                                .cornerRadius(5)
+                                .shadow(radius: 5)
+                                .lineLimit(nil)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        }
+                        .position(notes[index].position)
                     }
-                    .position(notes[index].position)
                 }
-            }
-            
-            //connections between photos
-            ForEach(Array(connections), id: \.self) { connection in
-                Path { path in
-                    path.move(to: connection.start)
-                    path.addLine(to: connection.end)
+                
+                ForEach(Array(connections), id: \.self) { connection in
+                    Path { path in
+                        path.move(to: connection.start)
+                        path.addLine(to: connection.end)
+                    }
+                    .stroke(Color.black, lineWidth: 2)
                 }
-                .stroke(Color.black, lineWidth: 2)
-            }
-        }
-        .navigationBarTitle("FreeBoard App", displayMode: .inline)
-        .navigationBarItems(leading: Text("9:41").foregroundColor(.black), trailing: HStack {
-            Image(systemName: "wifi").foregroundColor(.black)
-            Image(systemName: "battery.100").foregroundColor(.black)
-        })
-        .toolbar {
-            ToolbarItem(placement: .bottomBar) {
-                Text("whiteboard app to organise your thought")
-                    .foregroundColor(.gray)
             }
         }
     }

@@ -1,3 +1,10 @@
+//
+//  PostDetailView.swift
+//  Mini 2
+//
+//  Created by Jasmine Mutia Alifa on 24/06/24.
+//
+
 import SwiftUI
 
 struct PostDetailView: View {
