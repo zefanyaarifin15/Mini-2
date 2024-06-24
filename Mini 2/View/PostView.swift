@@ -2,7 +2,7 @@
 //  PostView.swift
 //  Mini 2
 //
-//  Created by Jasmine Mutia Alifa on 17/06/24.
+//  Created by Jasmine Mutia Alifa on 24/06/24.
 //
 
 import SwiftUI
@@ -136,9 +136,7 @@ struct PostView: View {
                 }
                 .padding(.top, 3)
                 
-                Button {
-                    
-                } label: {
+                NavigationLink(destination: StalkerView()) {
                     HStack {
                         Text(commentUser)
                             .foregroundColor(.black)
@@ -155,15 +153,6 @@ struct PostView: View {
         }
     }
 }
-
-// pindah ke DMsView -A
-//
-//struct ChatView2: View {
-//    var body: some View {
-//        Text("Chat View")
-//    }
-//}
-
 
 
 #Preview {
