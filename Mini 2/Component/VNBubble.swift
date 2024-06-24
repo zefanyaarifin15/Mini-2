@@ -8,8 +8,6 @@ struct VNBubble: View {
         HStack {
             VStack(alignment: .leading) {
                 HStack {
-                    
-                    
                     Button(action: {
                         viewModel.playSound(named: sound.filename)
                     }) {
@@ -28,13 +26,13 @@ struct VNBubble: View {
             }
             .frame(width: 250, height: 30)
             .padding()
-            .background(Color.gray.opacity(0.2))
+            .background(.gray2InstaQ)
             .cornerRadius(20)
             .shadow(radius: 2)
             
             Spacer()
         }
-        .padding()
+        //.padding()
     }
 }
 
