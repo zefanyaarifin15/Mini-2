@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct MessageNotification: View {
+    var notif: NotificationModel
+    
     var body: some View {
         HStack {
-            Image("icon").resizable().frame(width: 40, height: 40)
+            Image(notif.image).resizable().frame(width: 40, height: 40)
             VStack(alignment: .leading) {
                 HStack {
-                    Text("Test")
+                    Text(notif.title)
                         .font(.system(size: 15, weight: .semibold))
                     Spacer()
                     Text("19.20")
                         .font(.system(size: 13))
                         .foregroundColor(Color(red: 94/255, green: 89/255, blue: 88/255))
                 }
-                Text("Desciption")
+                Text(notif.body)
                     .font(.system(size: 15))
             }
             
@@ -38,5 +40,5 @@ struct MessageNotification: View {
 }
 
 #Preview {
-    MessageNotification()
+    MessageNotification(notif: NotificationModel(image: "Postingan 2", title: "InstaQueen", body: "ShadowLurker Commented on your post"))
 }

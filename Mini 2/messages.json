@@ -441,6 +441,167 @@
         ]
       }
     ]
-  }
+  },
+  {
+    "partner_dialog": "Rose",
+    "start_dialog": "Hey there! How are you holding up today?",
+    "dialog": [
+      {
+        "id": 1,
+        "user_options": [
+          {
+            "id": "1a",
+            "reply": "Hi Rose! I'm happy to be here. By the way, I wanted to talk to you about something serious.",
+            "response": "Of course! I'm all ears. What's going on?"
+          },
+          {
+            "id": "1b",
+            "reply": "No problem Rose, I want to thank you for staying with me during my hard time...",
+            "response": "Thank you so much! I'd love to help. What do you need advice on?"
+          },
+          {
+            "id": "1c",
+            "reply": "Hi Rose! Congratulations on your new shop! I need to share something personal with you.",
+            "response": "Thank you! I'm so excited about this new business! What’s on your mind?"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "user_options": [
+          {
+            "id": "2a",
+            "reply": "No problem Rose, I want to thank you for staying with me during my hard time...",
+            "response": "Thank you so much! I'd love to help. What do you need advice on?"
+          },
+          {
+            "id": "2b",
+            "reply": "Hi Rose! Congratulations on your new shop! I need to share something personal with you.",
+            "response": "Thank you! I'm so excited about this new business! What’s on your mind?"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "user_options": [
+          {
+            "id": "3a",
+            "reply": "",
+            "response": "Remember, every step you take, I'm right behind you, watching your every move."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "user_options": [
+          {
+            "id": "4a",
+            "reply": "Stop following me!",
+            "response": "Oh, I can't help it. You're just so fascinatingly pathetic, it's like a fucking train wreck."
+          },
+          {
+            "id": "4b",
+            "reply": "You don’t scare me.",
+            "response": "Oh, you should be scared. You have no idea what I'm fucking capable of."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "user_options": [
+          {
+            "id": "5a",
+            "reply": "",
+            "response": "HouseImage"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "user_options": [
+          {
+            "id": "6a",
+            "reply": "Why are you doing this?! You’re sick!",
+            "response": "Sick? No, just utterly disgusted by you."
+          },
+          {
+            "id": "6b",
+            "reply": "Leave me alone!",
+            "response": "Make me. I'm not done with you yet."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "user_options": [
+          {
+            "id": "7a",
+            "reply": "",
+            "response": "The way you double-check the locks every night is almost like you're expecting me. Paranoid much? lol 😛"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "user_options": [
+          {
+            "id": "8a",
+            "reply": "",
+            "response": "You're soo stupid! Even your closest ones can't stand you lol"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "user_options": [
+          {
+            "id": "9a",
+            "reply": "",
+            "response": "Your reflection in the bathroom mirror looked particularly haunted this morning, too much makeup can’t hide that 🤢"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "user_options": [
+          {
+            "id": "10a",
+            "reply": "",
+            "response": "VoiceNote"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "user_options": [
+          {
+            "id": "11a",
+            "reply": "I’m done with this. Leave me alone.",
+            "response": "Done? You'll never be done with me, you miserable fuck. Lol"
+          },
+          {
+            "id": "11b",
+            "reply": "This is too much. Stop messaging me.",
+            "response": "Oh, it's only just beginning. You can't escape me, you worthless piece of shit. Lol"
+          },
+          {
+            "id": "11c",
+            "reply": "Who are you?! Why are you tormenting me like this?",
+            "response": "I see right through your pathetic facade. And I won't stop until I've torn you apart."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "user_options": [
+          {
+            "id": "12a",
+            "reply": "",
+            "response": "And I dare you to try reporting me to the police! They won't believe a word you say. You're trapped, and I'm enjoying every second of it."
+          }
+        ]
+      }
+    ]
+  },
 
 ]

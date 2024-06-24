@@ -1,5 +1,5 @@
 //
-//  PostViewModel.swift
+//  FeedsViewModel.swift
 //  Mini 2
 //
 //  Created by Jasmine Mutia Alifa on 23/06/24.
