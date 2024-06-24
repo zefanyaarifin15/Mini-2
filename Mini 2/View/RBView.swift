@@ -44,35 +44,34 @@ struct RBView: View {
                 
                 ForEach(photos.indices, id: \.self) { index in
                     DraggableView {
-                        NavigationLink(destination: ReportView(photo: photos[index])) {
-                            VStack {
+                        VStack {
+                            NavigationLink(destination: ReportView(photo: photos[index])) {
                                 photos[index].image
                                     .resizable()
                                     .frame(width: 100, height: 110)
                                     .clipShape(RoundedRectangle(cornerRadius: 0))
                                     .shadow(radius: 0)
-                                Text(photos[index].name)
-                                    .frame(maxWidth: 100)
-                                    .padding(.vertical, 7)
-                                    .background(Color.white)
-                                    .foregroundColor(.black)
                             }
-                            .background(Color.white)
-                            .border(Color.gray, width: 1)
-                            .shadow(radius: 0.5)
-                            .padding(8)
+                            .buttonStyle(PlainButtonStyle())
+                            
+                            Text(photos[index].name)
+                                .frame(maxWidth: 100)
+                                .padding(.vertical, 7)
+                                .background(Color.white)
+                                .foregroundColor(.black)
+                                .onTapGesture {
+                                    if let connectingPhoto = connectingPhoto {
+                                        connections.insert(Connection(start: connectingPhoto.position, end: photos[index].position))
+                                        self.connectingPhoto = nil
+                                    } else {
+                                        connectingPhoto = photos[index]
+                                    }
+                                }
                         }
-                        .simultaneousGesture(LongPressGesture(minimumDuration: 0.5).onEnded { _ in
-                            if let connectingPhoto = connectingPhoto {
-                                connections.insert(Connection(start: connectingPhoto.position, end: photos[index].position))
-                                self.connectingPhoto = nil
-                            } else {
-                                connectingPhoto = photos[index]
-                            }
-                        })
-                        .simultaneousGesture(TapGesture().onEnded {
-                            // Handle tap if needed
-                        })
+                        .background(Color.white)
+                        .border(Color.gray, width: 1)
+                        .shadow(radius: 0.5)
+                        .padding(8)
                         .position(photos[index].position)
                     }
                 }
@@ -88,8 +87,7 @@ struct RBView: View {
                                 .foregroundColor(.black)
                                 .cornerRadius(5)
                                 .shadow(radius: 5)
-                                .lineLimit(nil)
-                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .fixedSize(horizontal: true, vertical: true)
                         }
                         .position(notes[index].position)
                     }
@@ -150,3 +148,11 @@ struct RBView_Previews: PreviewProvider {
         RBView()
     }
 }
+
+//struct ReportView: View {
+//    var photo: Photo
+//    
+//    var body: some View {
+//        Text(photo.name)
+//    }
+//}
