@@ -1,31 +1,40 @@
 //
-//  MessageNotification.swift
-//  Mini 2
+//  MessageNotificationView.swift
+//  mini2_bagiannatasha
 //
-//  Created by Natasha Radika on 23/06/24.
+//  Created by Natasha Radika on 24/06/24.
 //
 
 import SwiftUI
+import AVFoundation
 
 struct MessageNotification: View {
-    var notif: NotificationModel
+    let image: String
+    let title: String
+    let description: String
+    let time: String
+    
+    let soundPlayer = SoundPlayer()
     
     var body: some View {
         HStack {
-            Image(notif.image).resizable().frame(width: 40, height: 40)
+            Image(image).resizable().frame(width: 40, height: 40)
             VStack(alignment: .leading) {
                 HStack {
-                    Text(notif.title)
+                    Text(title)
                         .font(.system(size: 15, weight: .semibold))
                     Spacer()
-                    Text("19.20")
+                    Text(time)
                         .font(.system(size: 13))
                         .foregroundColor(Color(red: 94/255, green: 89/255, blue: 88/255))
                 }
-                Text(notif.body)
+                Text(description)
                     .font(.system(size: 15))
             }
             
+        }
+        .onAppear() {
+            soundPlayer.playSound(sound: "message_notif", type: "mp3")
         }
         .padding()
         .frame(width: 370)
@@ -37,8 +46,10 @@ struct MessageNotification: View {
         )
         .padding()
     }
+    
+    
 }
 
 #Preview {
-    MessageNotification(notif: NotificationModel(image: "Postingan 2", title: "InstaQueen", body: "ShadowLurker Commented on your post"))
+    MessageNotification(image: "icon", title: "Stephanie", description: "Hi how are u", time: "19:00")
 }
