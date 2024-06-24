@@ -1,33 +1,30 @@
-//
-//  CallNotification.swift
-//  Mini 2
-//
-//  Created by Natasha Radika on 23/06/24.
-//
-
 import SwiftUI
 
 struct CallNotification: View {
+    @Binding var showGameOverText: Bool
+
     var body: some View {
         HStack(spacing: 15) {
             Image("profile")
                 .resizable()
                 .frame(width: 60, height: 60)
                 .clipShape(Circle())
-            
+
             VStack(alignment: .leading, spacing: 5) {
                 Text("InstaQueen")
                     .font(.system(size: 15))
-                
+
                 Text("@stephaniejenn")
                     .font(.system(size: 15, weight: .semibold))
-                
             }
-            
+
             HStack(spacing: 0) {
                 Button(action: {
                     // Action when reject button is tapped
                     print("Call Rejected")
+                    withAnimation {
+                        showGameOverText = true
+                    }
                 }) {
                     Image(systemName: "phone.down.fill")
                         .font(.title)
@@ -40,6 +37,9 @@ struct CallNotification: View {
                 Button(action: {
                     // Action when accept button is tapped
                     print("Call Accepted")
+                    withAnimation {
+                        showGameOverText = true
+                    }
                 }) {
                     Image(systemName: "phone.fill")
                         .font(.title)
@@ -49,8 +49,6 @@ struct CallNotification: View {
                         .clipShape(Circle())
                         .shadow(radius: 5)
                 }
-                
-                
             }
         }
         .padding()
@@ -65,6 +63,8 @@ struct CallNotification: View {
     }
 }
 
-#Preview {
-    CallNotification()
+struct CallNotification_Previews: PreviewProvider {
+    static var previews: some View {
+        CallNotification(showGameOverText: .constant(false))
+    }
 }

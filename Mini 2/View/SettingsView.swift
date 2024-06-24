@@ -2,7 +2,7 @@
 //  SettingsView.swift
 //  Mini 2
 //
-//  Created by Jasmine Mutia Alifa on 17/06/24.
+//  Created by Jasmine Mutia Alifa on 24/06/24.
 //
 
 import SwiftUI
