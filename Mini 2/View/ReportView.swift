@@ -13,7 +13,7 @@ struct ReportView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 350, height: 180)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .padding(.top,85)
+                    .padding(.top,95)
             }
             
             VStack(alignment: .leading, spacing: 10) {
@@ -46,7 +46,7 @@ struct ReportView: View {
                 Text("Opportunity *")
                     .font(.headline)
                 
-                Text("What makes this suspect capable of stalking Jasmine?")
+                Text("What makes suspect capable of stalking Jasmine?")
                     .font(.subheadline)
                     .foregroundColor(.gray)
                 
@@ -76,7 +76,7 @@ struct ReportView: View {
             }
             .padding(.horizontal, 120)
             .padding(.bottom, 40)
-            .padding(.top, -7)
+            .padding(.top, -15)
         }
         .background(Color(.systemGray6))
         .edgesIgnoringSafeArea(.all)
