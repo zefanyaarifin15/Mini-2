@@ -1,607 +1,371 @@
 [
-  {
-    "partner_dialog": "Steph",
-    "start_dialog": "Hi, Jasmine! How are you?",
-    "dialog": [
-      {
-        "id": 1,
-        "user_options": [
-          {
-            "id": "1a",
-            "reply": "Hi, Steph! I'm great! How about you?",
-            "response": "I’m doing well! Thanks for asking. By the way, I’m throwing a birthday party this weekend at Hotel Merlian. Would you like to come?"
-          },
-          {
-            "id": "1b",
-            "reply": "I’m doing wonderful! Thanks for asking.",
-            "response": "I’m doing well! Thanks for asking. By the way, I’m throwing a birthday party this weekend at Hotel Merlian. Would you like to come?"
-          },
-          {
-            "id": "1c",
-            "reply": "I’m great, thanks!",
-            "response": "I’m doing well! Thanks for asking. By the way, I’m throwing a birthday party this weekend at Hotel Merlian. Would you like to come?"
-          }
+    {
+        "partner_dialog": "Rose",
+        "start_dialog": "Hi there, how are you holding up today?",
+        "options": [
+            {
+                "id": "A",
+                "user_option": "Hi Rose, not good. I want to talk to you about something serious.",
+                "response": {
+                    "text": "Of course, I’m all ears. What’s going on?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "user_option": "I’ve been stalked online recently, and it’s getting really scary",
+                            "response": {
+                                "text": "Oh no, that sounds terrifying. I’m so sorry you’re going through this. I’ve had my share of crazy fans who thought I was an imposter. It was tough, but I found a way to handle it.",
+                                "options": [
+                                    {
+                                        "id": "A1.1",
+                                        "user_option": "How did you deal with it?",
+                                        "response": {
+                                            "text": "I started documenting everything. Every message, every threat. Then I contacted the platform’s support team and reported the harassment. It also helped to confide in close friends and family for support.",
+                                            "options": [
+                                                {
+                                                    "id": "A1.1.1",
+                                                    "user_option": "That’s really helpful, thank you. I’ll start documenting everything."
+                                                },
+                                                {
+                                                    "id": "A1.1.2",
+                                                    "user_option": "I’ve reported it, but it’s still happening. Any other tips?",
+                                                    "response": {
+                                                        "text": "In that case, you might want to consider involving the authorities. It’s better to be safe, and they can provide more direct help. Stay safe, okay?"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "id": "A1.2",
+                                        "user_option": "What do you suggest I do?",
+                                        "response": {
+                                            "text": "I started documenting everything. Every message, every threat. Then I contacted the platform’s support team and reported the harassment. It also helped to confide in close friends and family for support.",
+                                            "options": [
+                                                {
+                                                    "id": "A1.2.1",
+                                                    "user_option": "That’s really helpful, thank you. I’ll start documenting everything."
+                                                },
+                                                {
+                                                    "id": "A1.2.2",
+                                                    "user_option": "I’ve reported it, but it’s still happening. Any other tips?",
+                                                    "response": {
+                                                        "text": "In that case, you might want to consider involving the authorities. It’s better to be safe, and they can provide more direct help. Stay safe, okay?"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "A2",
+                            "user_option": "Someone has been sending me threatening messages, and I don’t know what to do",
+                            "response": {
+                                "text": "Oh no, that sounds terrifying. I’m so sorry you’re going through this. I’ve had my share of crazy fans who thought I was an imposter. It was tough, but I found a way to handle it.",
+                                "options": [
+                                    {
+                                        "id": "A2.1",
+                                        "user_option": "How did you deal with it?",
+                                        "response": {
+                                            "text": "I started documenting everything. Every message, every threat. Then I contacted the platform’s support team and reported the harassment. It also helped to confide in close friends and family for support.",
+                                            "options": [
+                                                {
+                                                    "id": "A2.1.1",
+                                                    "user_option": "That’s really helpful, thank you. I’ll start documenting everything."
+                                                },
+                                                {
+                                                    "id": "A2.1.2",
+                                                    "user_option": "I’ve reported it, but it’s still happening. Any other tips?",
+                                                    "response": {
+                                                        "text": "In that case, you might want to consider involving the authorities. It’s better to be safe, and they can provide more direct help. Stay safe, okay?"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "id": "A2.2",
+                                        "user_option": "What do you suggest I do?",
+                                        "response": {
+                                            "text": "I started documenting everything. Every message, every threat. Then I contacted the platform’s support team and reported the harassment. It also helped to confide in close friends and family for support.",
+                                            "options": [
+                                                {
+                                                    "id": "A2.2.1",
+                                                    "user_option": "That’s really helpful, thank you. I’ll start documenting everything."
+                                                },
+                                                {
+                                                    "id": "A2.2.2",
+                                                    "user_option": "I’ve reported it, but it’s still happening. Any other tips?",
+                                                    "response": {
+                                                        "text": "In that case, you might want to consider involving the authorities. It’s better to be safe, and they can provide more direct help. Stay safe, okay?"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+              "id": "B",
+              "user_option": "Hi Rose, I’m feeling a bit better since the breakup. It’s been tough, but your support means the world to me.",
+              "response": {
+                "text": "I’m glad to hear that. Breakups are never easy. Just remember, you deserve someone who appreciates you for who you are.",
+                "options": [
+                  {
+                    "id": "B1",
+                    "user_option": "I know, it’s just hard to see that right now",
+                    "response": {
+                      "text": "That’s totally normal. Healing takes time. I’m always here for you, no matter what.",
+                      "options": [
+                        {
+                          "id": "B1.1",
+                          "user_option": "Thank you, Rose. I feel like you’re the only one who understands.",
+                          "response": {
+                            "text": "I’m just glad I can help. You know, sometimes we discover who our true friends are during tough times.",
+                            "options": [
+                              {
+                                "id": "B1.1.1",
+                                "user_option": "It’s true. I’ve been let down by people I considered close friends",
+                                "response": {
+                                  "text": "Exactly. True friends are rare. They stand by you, support you, and never take advantage of your vulnerability.",
+                                  "options": [
+                                    {
+                                      "id": "B1.1.1.1",
+                                      "user_option": "I guess I’m learning that the hard way.",
+                                      "response": {
+                                        "text": "It’s a valuable lesson, though. It’s better to have a few genuine friends than many who don’t really care.",
+                                        "options": [
+                                          {
+                                            "id": "B1.1.1.1.1",
+                                            "user_option": "That’s true. Thanks for always being here for me, Rose.",
+                                            "response": {
+                                              "text": "Sure Jasmine. And remember, if you feel unsure about someone, trust your instincts. They’re usually right.",
+                                              "options": [
+                                                {
+                                                  "id": "B1.1.1.1.1.1",
+                                                  "user_option": "I will. Thanks for the advice."
+                                                },
+                                                {
+                                                  "id": "B1.1.1.1.1.2",
+                                                  "user_option": "I’ll try to. It’s hard sometimes."
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "id": "B1.1.1.1.2",
+                                            "user_option": "I need to reevaluate my friendships",
+                                            "response": {
+                                              "text": "Sure Jasmine. And remember, if you feel unsure about someone, trust your instincts. They’re usually right.",
+                                              "options": [
+                                                {
+                                                  "id": "B1.1.1.1.2.1",
+                                                  "user_option": "I will. Thanks for the advice."
+                                                },
+                                                {
+                                                  "id": "B1.1.1.1.2.2",
+                                                  "user_option": "I’ll try to. It’s hard sometimes."
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "id": "B1.1.1.2",
+                                      "user_option": "I wish I had realized that sooner.",
+                                      "response": {
+                                        "text": "It’s a valuable lesson, though. It’s better to have a few genuine friends than many who don’t really care.",
+                                        "options": [
+                                          {
+                                            "id": "B1.1.1.2.1",
+                                            "user_option": "That’s true. Thanks for always being here for me, Rose.",
+                                            "response": {
+                                              "text": "Sure Jasmine. And remember, if you feel unsure about someone, trust your instincts. They’re usually right.",
+                                              "options": [
+                                                {
+                                                  "id": "B1.1.1.2.1.1",
+                                                  "user_option": "I will. Thanks for the advice."
+                                                },
+                                                {
+                                                  "id": "B1.1.1.2.1.2",
+                                                  "user_option": "I’ll try to. It’s hard sometimes."
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "id": "B1.1.1.2.2",
+                                            "user_option": "I need to reevaluate my friendships",
+                                            "response": {
+                                              "text": "Sure Jasmine. And remember, if you feel unsure about someone, trust your instincts. They’re usually right.",
+                                              "options": [
+                                                {
+                                                  "id": "B1.1.1.2.2.1",
+                                                  "user_option": "I will. Thanks for the advice."
+                                                },
+                                                {
+                                                  "id": "B1.1.1.2.2.2",
+                                                  "user_option": "I’ll try to. It’s hard sometimes."
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "id": "B1.1.2",
+                                "user_option": "I’m grateful for you. I don’t know who else to trust anymore.",
+                                "response": {
+                                  "text": "Unfortunately that’s the reality of life. Not everyone has the best intentions. It’s important to be cautious about who you trust.",
+                                  "options": [
+                                    {
+                                      "id": "B1.1.2.1",
+                                      "user_option": "You’re right. It’s hard to know who to rely on.",
+                                      "response": {
+                                        "text": "It really is. But watch how people treat you, especially when you need them the most. Actions speak louder than words. True friends will always show up for you, even in the smallest ways."
+                                      }
+                                    },
+                                    {
+                                      "id": "B1.1.2.2",
+                                      "user_option": "How do you know who to trust?",
+                                      "response": {
+                                        "text": "It can be difficult, but I usually look for consistency and honesty. Trust your instincts, too. If someone makes you feel uneasy or their actions don’t match with their words, it’s a sign to be cautious. Surround yourself with those who genuinely care about your well-being."
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "B1.2",
+                          "user_option": "I appreciate it. It feels like everyone else has disappeared.",
+                          "response": {
+                            "text": "I’m just glad I can help. You know, sometimes we discover who our true friends are during tough times.",
+                            "options": [
+                              {
+                                "id": "B1.2.1",
+                                "user_option": "It’s true. I’ve been let down by people I considered close friends",
+                                "response": {
+                                  "text": "Exactly. True friends are rare. They stand by you, support you, and never take advantage of your vulnerability.",
+                                  "options": [
+                                    {
+                                      "id": "B1.2.1.1",
+                                      "user_option": "I guess I’m learning that the hard way.",
+                                      "response": {
+                                        "text": "It’s a valuable lesson, though. It’s better to have a few genuine friends than many who don’t really care.",
+                                        "options": [
+                                          {
+                                            "id": "B1.2.1.1.1",
+                                            "user_option": "That’s true. Thanks for always being here for me, Rose.",
+                                            "response": {
+                                              "text": "Sure Jasmine. And remember, if you feel unsure about someone, trust your instincts. They’re usually right.",
+                                              "options": [
+                                                {
+                                                  "id": "B1.2.1.1.1.1",
+                                                  "user_option": "I will. Thanks for the advice."
+                                                },
+                                                {
+                                                  "id": "B1.2.1.1.1.2",
+                                                  "user_option": "I’ll try to. It’s hard sometimes."
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "id": "B1.2.1.1.2",
+                                            "user_option": "I need to reevaluate my friendships",
+                                            "response": {
+                                              "text": "Sure Jasmine. And remember, if you feel unsure about someone, trust your instincts. They’re usually right.",
+                                              "options": [
+                                                {
+                                                  "id": "B1.2.1.1.2.1",
+                                                  "user_option": "I will. Thanks for the advice."
+                                                },
+                                                {
+                                                  "id": "B1.2.1.1.2.2",
+                                                  "user_option": "I’ll try to. It’s hard sometimes."
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "id": "B1.2.1.2",
+                                      "user_option": "I wish I had realized that sooner.",
+                                      "response": {
+                                        "text": "It’s a valuable lesson, though. It’s better to have a few genuine friends than many who don’t really care.",
+                                        "options": [
+                                          {
+                                            "id": "B1.2.1.2.1",
+                                            "user_option": "That’s true. Thanks for always being here for me, Rose.",
+                                            "response": {
+                                              "text": "Sure Jasmine. And remember, if you feel unsure about someone, trust your instincts. They’re usually right.",
+                                              "options": [
+                                                {
+                                                  "id": "B1.2.1.2.1.1",
+                                                  "user_option": "I will. Thanks for the advice."
+                                                },
+                                                {
+                                                  "id": "B1.2.1.2.1.2",
+                                                  "user_option": "I’ll try to. It’s hard sometimes."
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "id": "B1.2.1.2.2",
+                                            "user_option": "I need to reevaluate my friendships",
+                                            "response": {
+                                              "text": "Sure Jasmine. And remember, if you feel unsure about someone, trust your instincts. They’re usually right.",
+                                              "options": [
+                                                {
+                                                  "id": "B1.2.1.2.2.1",
+                                                  "user_option": "I will. Thanks for the advice."
+                                                },
+                                                {
+                                                  "id": "B1.2.1.2.2.2",
+                                                  "user_option": "I’ll try to. It’s hard sometimes."
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "B2",
+                    "user_option": "You always know the right thing to say",
+                    "response": {
+                      "text": "Thank you! I just speak from the heart and try to put myself in your shoes. I’ve had my own struggles, and I’ve learned that sometimes, just knowing someone is there for you can make all the difference."
+                    }
+                  }
+                ]
+              }
+            }
         ]
-      },
-      {
-        "id": 2,
-        "user_options": [
-          {
-            "id": "2a",
-            "reply": "That’s awesome! I’d love to be there. Any special dress code?",
-            "response": "Just dress chic but, you know, don't go too overboard with the outfit. It's my night after all! 😉"
-          },
-          {
-            "id": "2b",
-            "reply": "That sounds fantastic! I'd love to join. What time should I be there?",
-            "response": "The party starts at 7 PM, but it would be awesome if you could come a bit earlier. Oh, and the dress code is chic, but nothing too flashy—let's keep it elegant since it's my special night! 😉"
-          },
-          {
-            "id": "2c",
-            "reply": "Of course, I’d love to join. What time does the party start?",
-            "response": "The party starts at 7 PM, but it would be awesome if you could come a bit earlier. Oh, and the dress code is chic, but nothing too flashy—let's keep it elegant since it's my special night! 😉"
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "user_options": [
-          {
-            "id": "3a",
-            "reply": "Sure, I'll keep it classy. By the way, I noticed your latest post... Are you and James dating now?",
-            "response": "Yeah, we’ve been dating for a little while now. I was going to tell you in person. Are you okay with it?"
-          },
-          {
-            "id": "3b",
-            "reply": "Of course, I'll keep it stylish but understated. Hey, I noticed something in your last post... Are you and James seeing each other now?",
-            "response": "Oh, I was going to tell you about that. Yes, James and I are seeing each other. I hope it’s not too awkward for you."
-          },
-          {
-            "id": "3c",
-            "reply": "No worries, I'll keep it chic. Just curious, I noticed your recent post... Are you and James a thing?",
-            "response": "Yes, we’re together now. I really hope this doesn't make things awkward between us."
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "user_options": [
-          {
-            "id": "4a",
-            "reply": "I can't believe this, Steph! You knew James and I had just broken up, and now you're dating him?",
-            "response": "I'm truly sorry, Jasmine. This wasn't how I wanted you to find out. It just happened, and I didn't know how to tell you."
-          },
-          {
-            "id": "4b",
-            "reply": "Seriously, Steph? You knew how much James meant to me, and now you're with him? This feels like such a betrayal.",
-            "response": "Jasmine, I'm really sorry. I never wanted to hurt you. It just happened, and I was scared to tell you."
-          },
-          {
-            "id": "4c",
-            "reply": "Wow, Steph, I didn't expect this from you. James and I just ended things, and now you're together?",
-            "response": " I understand if you're upset, Jasmine. It wasn't planned, and I didn't know how to bring it up."
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "user_options": [
-          {
-            "id": "5a",
-            "reply": "You didn't know how to tell me? You should have thought about how it would make me feel! This is so messed up.",
-            "response": "I get that you're upset, and you have every right to be. Can we please talk about this in person? I don’t want things to be this way between us."
-          },
-          {
-            "id": "5b",
-            "reply": "That’s weak, Steph. You should have thought about my feelings. This is really hurtful.",
-            "response": "I know, and I'm really sorry. I never wanted to hurt you. Can we please talk about this more and try to work things out?"
-          },
-          {
-            "id": "5c",
-            "reply": "Seriously, Steph? You didn’t know how to tell me? You should have been honest from the start. This is so unfair.",
-            "response": "You're right, I should have been honest with you. I regret not telling you sooner. Can we please talk about this and try to find a way to move forward?"
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "user_options": [
-          {
-            "id": "6a",
-            "reply": "I don't know, Steph. I'm really hurt right now. I'll need some time to process this.",
-            "response": "Take all the time you need. I just hope we can work through this eventually. You're still my friend, and I care about you."
-          },
-          {
-            "id": "6b",
-            "reply": "I'm not sure, Steph. This is a lot to take in. I need some time to process everything.",
-            "response": "I understand. Take all the time you need. Just know that I truly value our friendship, and I hope we can get through this."
-          },
-          {
-            "id": "6c",
-            "reply": "I'm not sure, Steph. This is a lot to take in. I need some time to process everything.",
-            "response": "I understand how you feel. Please know that I'm here whenever you're ready to talk. I truly value our friendship and hope we can work through this."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "partner_dialog": "Nataliebert",
-    "start_dialog": "Hi Jasmine! It's been a while since we hung out. How about we plan something for this weekend? 😆",
-    "dialog": [
-      {
-        "id": 1,
-        "user_options": [
-          {
-            "id": "1a",
-            "reply": "Hey Nat! That sounds great. I’ve been wanting to catch up too. Do you have any place in mind?",
-            "response": "I heard there's a new café downtown that's supposed to be really nice. We could check it out and maybe do some shopping afterward lol 😝"
-          },
-          {
-            "id": "1b",
-            "reply": "Hi Nat! That sounds awesome. I've been wanting to catch up as well. Do you have any suggestions on where to go?",
-            "response": "I heard there's a new café downtown that's supposed to be really nice. We could check it out and maybe do some shopping afterward lol 😝"
-          },
-          {
-            "id": "1c",
-            "reply": "Hey Nat! That would be great. I’ve been looking forward to catching up too. Do you have any place you want to go?",
-            "response": "I heard there's a new café downtown that's supposed to be really nice. We could check it out and maybe do some shopping afterward lol 😝"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "user_options": [
-          {
-            "id": "2a",
-            "reply": "Perfect! I’ve been looking for an excuse to go shopping. Speaking of which, have you heard about the new makeup collection from GlowGlam?",
-            "response": "Yes! Everyone's been talking about it ugh. I saw a few beauty gurus on Instagram raving about their new highlighter. It looks so good 🧐"
-          },
-          {
-            "id": "2b",
-            "reply": "Sounds great! I’ve been wanting to go shopping anyway. By the way, have you heard about the new makeup collection from GlowGlam?",
-            "response": "Yes! Everyone's been talking about it ugh. I saw a few beauty gurus on Instagram raving about their new highlighter. It looks so good 🧐"
-          },
-          {
-            "id": "2c",
-            "reply": "That’s perfect! I’ve been eager to go shopping. Oh, and have you heard about GlowGlam’s new makeup collection?",
-            "response": "Yes! Everyone's been talking about it ugh. I saw a few beauty gurus on Instagram raving about their new highlighter. It looks so good 🧐"
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "user_options": [
-          {
-            "id": "3a",
-            "reply": "I know, right? I’ve been eyeing their lip gloss too. Apparently, it’s super long-lasting and has a really nice finish.",
-            "response": "We should definitely go to a store that stocks their products and try them out. Maybe we can get some samples or do a mini-makeover there lol 😂"
-          },
-          {
-            "id": "3b",
-            "reply": "Totally! I've had my eye on their lip gloss too. It’s supposed to be really long-lasting and has a beautiful finish?",
-            "response": "We should definitely go to a store that stocks their products and try them out. Maybe we can get some samples or do a mini-makeover there lol 😂"
-          },
-          {
-            "id": "3c",
-            "reply": "I know, right? I’ve been wanting to try their lip gloss too. People say it lasts a long time and looks amazing.",
-            "response": "We should definitely go to a store that stocks their products and try them out. Maybe we can get some samples or do a mini-makeover there lol 😂"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "user_options": [
-          {
-            "id": "4a",
-            "reply": "That would be awesome! I love trying out new makeup. Plus, we can get some new stuff for our next girls’ night out.",
-            "response": "Totally! So, let's meet at the café around noon, and then we can head to the mall afterward?"
-          },
-          {
-            "id": "4b",
-            "reply": "That sounds great! I love experimenting with new makeup. Plus, we can pick up some new items for our next girls’ night out.",
-            "response": "Totally! So, let's meet at the café around noon, and then we can head to the mall afterward?"
-          },
-          {
-            "id": "4c",
-            "reply": "That sounds fantastic! I can't wait to try out some new makeup. Plus, we can grab some fresh stuff for our next girls' night out.",
-            "response": "Totally! So, let's meet at the café around noon, and then we can head to the mall afterward?"
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "user_options": [
-          {
-            "id": "5a",
-            "reply": "Sounds like a plan. I’ll text you the details. Can’t wait!",
-            "response": "Btw Jasmine, I’ve noticed your Instagram has been blowing up lately. Your follower count is amazing lol. How do you do it?"
-          },
-          {
-            "id": "5b",
-            "reply": "Alright Nat!",
-            "response": "Btw Jasmine, I’ve noticed your Instagram has been blowing up lately. Your follower count is amazing lol. How do you do it?"
-          },
-          {
-            "id": "5c",
-            "reply": "Okay, i’ll send you the detail this Saturday!.",
-            "response": "Btw Jasmine, I’ve noticed your Instagram has been blowing up lately. Your follower count is amazing lol. How do you do it?"
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "user_options": [
-          {
-            "id": "6a",
-            "reply": "I guess it's a mix of posting regularly, engaging with my followers, and using the right hashtags.",
-            "response": "Yeah, I’ve been trying, but my follower count just doesn’t seem to go up 😓. It’s kinda frustrating. Maybe we can take some cute pics this weekend for my IG?"
-          },
-          {
-            "id": "6b",
-            "reply": "Probably a combination of posting frequently, interacting with my followers, and making appropriate use of hashtags.",
-            "response": "Yeah, I’ve been trying, but my follower count just doesn’t seem to go up 😓. It’s kinda frustrating. Maybe we can take some cute pics this weekend for my IG?"
-          },
-          {
-            "id": "6c",
-            "reply": "I don’t know.. i just do what i want to do",
-            "response": "Yeah, I’ve been trying, but my follower count just doesn’t seem to go up 😓. It’s kinda frustrating. Maybe we can take some cute pics this weekend for my IG?"
-          }
-        ]
-      },
-      {
-        "id": 7,
-        "user_options": [
-          {
-            "id": "7a",
-            "reply": "Sounds great!",
-            "response": "Awesome! I’m really looking forward to it. Hopefully, it’ll help my account grow a bit. See you Saturday!"
-          },
-          {
-            "id": "7b",
-            "reply": "Of course! We’ll get some great shots at the café and during our shopping trip. It’ll be fun!",
-            "response": "Awesome! I’m really looking forward to it. Hopefully, it’ll help my account grow a bit. See you Saturday!"
-          },
-          {
-            "id": "7c",
-            "reply": "Obviously! We're going to get some amazing pictures in the café and when we go shopping. It will be enjoyable!",
-            "response": "Awesome! I’m really looking forward to it. Hopefully, it’ll help my account grow a bit. See you Saturday!"
-          }
-        ]
-      },
-      {
-        "id": 8,
-        "user_options": [
-          {
-            "id": "8a",
-            "reply": "See you!",
-            "response": "OK!"
-          },
-          {
-            "id": "8b",
-            "reply": "Definitely! Can’t wait to hang out. See you then!",
-            "response": "OK!"
-          },
-          {
-            "id": "8c",
-            "reply": "Can’t wait! see you there.",
-            "response": "OK!"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "partner_dialog": "Stalker",
-    "start_dialog": "I saw you go to work at 8 am today, you fucking piece of shit.",
-    "dialog": [
-      {
-        "id": 1,
-        "user_options": [
-          {
-            "id": "1a",
-            "reply": "",
-            "response": "Be careful, bitch. Lol"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "user_options": [
-          {
-            "id": "2a",
-            "reply": "Ignore",
-            "response": "Typical! You always ignore me, but I see everything lol"
-          },
-          {
-            "id": "2b",
-            "reply": "Who is this?",
-            "response": "Someone who's not a joke like you, you pathetic loser. lol"
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "user_options": [
-          {
-            "id": "3a",
-            "reply": "",
-            "response": "Remember, every step you take, I'm right behind you, watching your every move."
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "user_options": [
-          {
-            "id": "4a",
-            "reply": "Stop following me!",
-            "response": "Oh, I can't help it. You're just so fascinatingly pathetic, it's like a fucking train wreck."
-          },
-          {
-            "id": "4b",
-            "reply": "You don’t scare me.",
-            "response": "Oh, you should be scared. You have no idea what I'm fucking capable of."
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "user_options": [
-          {
-            "id": "5a",
-            "reply": "",
-            "response": "HouseImage"
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "user_options": [
-          {
-            "id": "6a",
-            "reply": "Why are you doing this?! You’re sick!",
-            "response": "Sick? No, just utterly disgusted by you."
-          },
-          {
-            "id": "6b",
-            "reply": "Leave me alone!",
-            "response": "Make me. I'm not done with you yet."
-          }
-        ]
-      },
-      {
-        "id": 7,
-        "user_options": [
-          {
-            "id": "7a",
-            "reply": "",
-            "response": "The way you double-check the locks every night is almost like you're expecting me. Paranoid much? lol 😛"
-          }
-        ]
-      },
-      {
-        "id": 8,
-        "user_options": [
-          {
-            "id": "8a",
-            "reply": "",
-            "response": "You're soo stupid! Even your closest ones can't stand you lol"
-          }
-        ]
-      },
-      {
-        "id": 9,
-        "user_options": [
-          {
-            "id": "9a",
-            "reply": "",
-            "response": "Your reflection in the bathroom mirror looked particularly haunted this morning, too much makeup can’t hide that 🤢"
-          }
-        ]
-      },
-      {
-        "id": 10,
-        "user_options": [
-          {
-            "id": "10a",
-            "reply": "",
-            "response": "VoiceNote"
-          }
-        ]
-      },
-      {
-        "id": 11,
-        "user_options": [
-          {
-            "id": "11a",
-            "reply": "I’m done with this. Leave me alone.",
-            "response": "Done? You'll never be done with me, you miserable fuck. Lol"
-          },
-          {
-            "id": "11b",
-            "reply": "This is too much. Stop messaging me.",
-            "response": "Oh, it's only just beginning. You can't escape me, you worthless piece of shit. Lol"
-          },
-          {
-            "id": "11c",
-            "reply": "Who are you?! Why are you tormenting me like this?",
-            "response": "I see right through your pathetic facade. And I won't stop until I've torn you apart."
-          }
-        ]
-      },
-      {
-        "id": 12,
-        "user_options": [
-          {
-            "id": "12a",
-            "reply": "",
-            "response": "And I dare you to try reporting me to the police! They won't believe a word you say. You're trapped, and I'm enjoying every second of it."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "partner_dialog": "Rose",
-    "start_dialog": "Hey there! How are you holding up today?",
-    "dialog": [
-      {
-        "id": 1,
-        "user_options": [
-          {
-            "id": "1a",
-            "reply": "Hi Rose! I'm happy to be here. By the way, I wanted to talk to you about something serious.",
-            "response": "Of course! I'm all ears. What's going on?"
-          },
-          {
-            "id": "1b",
-            "reply": "No problem Rose, I want to thank you for staying with me during my hard time...",
-            "response": "Thank you so much! I'd love to help. What do you need advice on?"
-          },
-          {
-            "id": "1c",
-            "reply": "Hi Rose! Congratulations on your new shop! I need to share something personal with you.",
-            "response": "Thank you! I'm so excited about this new business! What’s on your mind?"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "user_options": [
-          {
-            "id": "2a",
-            "reply": "No problem Rose, I want to thank you for staying with me during my hard time...",
-            "response": "Thank you so much! I'd love to help. What do you need advice on?"
-          },
-          {
-            "id": "2b",
-            "reply": "Hi Rose! Congratulations on your new shop! I need to share something personal with you.",
-            "response": "Thank you! I'm so excited about this new business! What’s on your mind?"
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "user_options": [
-          {
-            "id": "3a",
-            "reply": "",
-            "response": "Remember, every step you take, I'm right behind you, watching your every move."
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "user_options": [
-          {
-            "id": "4a",
-            "reply": "Stop following me!",
-            "response": "Oh, I can't help it. You're just so fascinatingly pathetic, it's like a fucking train wreck."
-          },
-          {
-            "id": "4b",
-            "reply": "You don’t scare me.",
-            "response": "Oh, you should be scared. You have no idea what I'm fucking capable of."
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "user_options": [
-          {
-            "id": "5a",
-            "reply": "",
-            "response": "HouseImage"
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "user_options": [
-          {
-            "id": "6a",
-            "reply": "Why are you doing this?! You’re sick!",
-            "response": "Sick? No, just utterly disgusted by you."
-          },
-          {
-            "id": "6b",
-            "reply": "Leave me alone!",
-            "response": "Make me. I'm not done with you yet."
-          }
-        ]
-      },
-      {
-        "id": 7,
-        "user_options": [
-          {
-            "id": "7a",
-            "reply": "",
-            "response": "The way you double-check the locks every night is almost like you're expecting me. Paranoid much? lol 😛"
-          }
-        ]
-      },
-      {
-        "id": 8,
-        "user_options": [
-          {
-            "id": "8a",
-            "reply": "",
-            "response": "You're soo stupid! Even your closest ones can't stand you lol"
-          }
-        ]
-      },
-      {
-        "id": 9,
-        "user_options": [
-          {
-            "id": "9a",
-            "reply": "",
-            "response": "Your reflection in the bathroom mirror looked particularly haunted this morning, too much makeup can’t hide that 🤢"
-          }
-        ]
-      },
-      {
-        "id": 10,
-        "user_options": [
-          {
-            "id": "10a",
-            "reply": "",
-            "response": "VoiceNote"
-          }
-        ]
-      },
-      {
-        "id": 11,
-        "user_options": [
-          {
-            "id": "11a",
-            "reply": "I’m done with this. Leave me alone.",
-            "response": "Done? You'll never be done with me, you miserable fuck. Lol"
-          },
-          {
-            "id": "11b",
-            "reply": "This is too much. Stop messaging me.",
-            "response": "Oh, it's only just beginning. You can't escape me, you worthless piece of shit. Lol"
-          },
-          {
-            "id": "11c",
-            "reply": "Who are you?! Why are you tormenting me like this?",
-            "response": "I see right through your pathetic facade. And I won't stop until I've torn you apart."
-          }
-        ]
-      },
-      {
-        "id": 12,
-        "user_options": [
-          {
-            "id": "12a",
-            "reply": "",
-            "response": "And I dare you to try reporting me to the police! They won't believe a word you say. You're trapped, and I'm enjoying every second of it."
-          }
-        ]
-      }
-    ]
-  },
-
+    }
 ]
