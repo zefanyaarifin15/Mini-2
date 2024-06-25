@@ -68,25 +68,25 @@ struct HomeView: View {
                 )
             }
             // Add New Post Button
-            Button(action: {
-                viewModel.addPost(
-                    username: "newuser",
-                    caption: "New Post Caption",
-                    location: "New Location",
-                    postImage: "newpostimage",
-                    profileImage: "newprofileimage",
-                    initialLikes: 0,
-                    commentUser: "newcommentuser",
-                    commentText: "New comment text"
-                )
-            }) {
-                Text("Add New Post")
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.blue)
-                    .cornerRadius(8)
-            }
-            .padding()
+//            Button(action: {
+//                viewModel.addPost(
+//                    username: "newuser",
+//                    caption: "New Post Caption",
+//                    location: "New Location",
+//                    postImage: "newpostimage",
+//                    profileImage: "newprofileimage",
+//                    initialLikes: 0,
+//                    commentUser: "newcommentuser",
+//                    commentText: "New comment text"
+//                )
+//            }) {
+//                Text("Add New Post")
+//                    .foregroundColor(.white)
+//                    .padding()
+//                    .background(Color.blue)
+//                    .cornerRadius(8)
+//            }
+//            .padding()
         }
     }
 }

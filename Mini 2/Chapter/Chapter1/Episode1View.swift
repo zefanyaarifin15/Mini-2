@@ -50,7 +50,7 @@ struct Episode1View: View {
         profileImage: "beautyjasmine",
         initialLikes: 319872,
         commentUser: "ShadowLurker",
-        commentText: "That lips look like pongo lips"
+        commentText: "You're nothing but a fake"
     )
 
     var body: some View {

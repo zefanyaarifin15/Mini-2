@@ -49,6 +49,8 @@
 		D6FD36F62C296BE600CC4259 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36F52C296BE600CC4259 /* SettingsView.swift */; };
 		D6FD36F82C29CCFC00CC4259 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36F72C29CCFC00CC4259 /* HomeViewModel.swift */; };
 		D6FD36FA2C2ABB7C00CC4259 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36F92C2ABB7C00CC4259 /* NotificationViewModel.swift */; };
+		D6FD36FC2C2AC27700CC4259 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36FB2C2AC27700CC4259 /* CommentModel.swift */; };
+		D6FD36FE2C2AC29000CC4259 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36FD2C2AC29000CC4259 /* CommentsView.swift */; };
 		D90B7CB22C1AE2FD008B3F7C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */; };
 		D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */; };
 		D90B7CBD2C1C10F9008B3F7C /* IncomingChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CBC2C1C10F9008B3F7C /* IncomingChatBubble.swift */; };
@@ -113,6 +115,8 @@
 		D6FD36F52C296BE600CC4259 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D6FD36F72C29CCFC00CC4259 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D6FD36F92C2ABB7C00CC4259 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		D6FD36FB2C2AC27700CC4259 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		D6FD36FD2C2AC29000CC4259 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 		D90B7CBC2C1C10F9008B3F7C /* IncomingChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingChatBubble.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 				6DACC7702C293A3000AC7ED2 /* TaskViewModel.swift */,
 				D92C1B192C2AA4A000E6288F /* DMsViewModel.swift */,
 				D6FD36F92C2ABB7C00CC4259 /* NotificationViewModel.swift */,
+				D6FD36FB2C2AC27700CC4259 /* CommentModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				D6FD36F12C296AAB00CC4259 /* PostView.swift */,
 				D6FD36F32C296B9900CC4259 /* PostDetailView.swift */,
 				D6FD36F52C296BE600CC4259 /* SettingsView.swift */,
+				D6FD36FD2C2AC29000CC4259 /* CommentsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 				4B30030D2C2AAAB7003CCCB3 /* Episode1View.swift in Sources */,
 				6DACC7502C1AC37300AC7ED2 /* AnalysisButton.swift in Sources */,
 				D6FD36F22C296AAB00CC4259 /* PostView.swift in Sources */,
+				D6FD36FC2C2AC27700CC4259 /* CommentModel.swift in Sources */,
 				D9526C4F2C22AC32008FFBE5 /* PictureEditView.swift in Sources */,
 				D90B7CBD2C1C10F9008B3F7C /* IncomingChatBubble.swift in Sources */,
 				D6FD36EA2C28819D00CC4259 /* HomeView 1.swift in Sources */,
@@ -431,6 +438,7 @@
 				D9526C412C1DC9B8008FFBE5 /* ReplyOptions.swift in Sources */,
 				6DACC76B2C2764F900AC7ED2 /* Taskview.swift in Sources */,
 				4B2A045C2C22DA0900E47EE5 /* ConfirmationReportPage.swift in Sources */,
+				D6FD36FE2C2AC29000CC4259 /* CommentsView.swift in Sources */,
 				4B2A045E2C22E80100E47EE5 /* PrimaryButton.swift in Sources */,
 				D90B7CC12C1C1451008B3F7C /* OutgoingChatBubble.swift in Sources */,
 				A30F112A2C28869E00EFA434 /* IncomingCallView.swift in Sources */,
