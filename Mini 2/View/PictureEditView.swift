@@ -21,7 +21,6 @@ struct PictureEditView: View {
             
             }
             .padding()
-            //.offset(y:-65)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onTapGesture {
