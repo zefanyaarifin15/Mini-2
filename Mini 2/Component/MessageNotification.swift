@@ -26,13 +26,16 @@ struct MessageNotification: View {
                         HStack {
                             Text(title)
                                 .font(.system(size: 15, weight: .semibold))
+                                .foregroundColor(.black)
                             Spacer()
                             Text(time)
                                 .font(.system(size: 13))
                                 .foregroundColor(Color(red: 94/255, green: 89/255, blue: 88/255))
+                                .foregroundColor(.black)
                         }
                         Text(description)
                             .font(.system(size: 15))
+                            .foregroundColor(.black)
                     }
                 }
                 .padding()
