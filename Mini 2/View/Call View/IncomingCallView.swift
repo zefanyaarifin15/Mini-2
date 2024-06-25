@@ -1,6 +1,6 @@
 //
 //  IncomingCallView.swift
-//  Mini 2
+//  mini2_bagiannatasha
 //
 //  Created by Natasha Radika on 23/06/24.
 //
@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct IncomingCallView: View {
+    @Environment(\.dismiss) var dismiss
+    
+    let name: String
+    let profile: String
+    
+    let soundPlayer = SoundPlayer()
+    
     var body: some View {
         ZStack {
             LinearGradient(
@@ -32,13 +39,13 @@ struct IncomingCallView: View {
                         Text("Incoming Call...")
                             .font(.system(size: 18))
                             .foregroundColor(Color(red: 0.94, green: 0.89, blue: 0.88))
-                        Text("Stephanie")
+                        Text(name)
                             .font(.system(size: 28, weight: .bold))
                             .foregroundStyle(.white)
                         
                         
                     }
-                    Image("profile")
+                    Image(profile)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 150, height: 150)
@@ -49,8 +56,7 @@ struct IncomingCallView: View {
                 
                 HStack(spacing: 100) {
                     Button(action: {
-                        
-                        print("Call Rejected")
+                        dismiss()
                     }) {
                         Image(systemName: "phone.down.fill")
                             .font(.system(size: 40))
@@ -61,11 +67,9 @@ struct IncomingCallView: View {
                             .shadow(radius: 5)
                     }
                     
-                    
-                    Button(action: {
-                        // Action when accept button is tapped
-                        print("Call Accepted")
-                    }) {
+                    NavigationLink {
+                        OngoingCallView(name: name, profile: profile)
+                    } label: {
                         Image(systemName: "phone.fill")
                             .font(.system(size: 40))
                             .foregroundColor(.white)
@@ -78,9 +82,13 @@ struct IncomingCallView: View {
                 
             }
         }
+        .onAppear() {
+            soundPlayer.playSound(sound: "ring_call", type: "mp3")
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
-    IncomingCallView()
+    IncomingCallView(name: "Stephanie", profile: "profile")
 }

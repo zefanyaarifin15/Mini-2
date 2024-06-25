@@ -50,7 +50,7 @@ struct PhoneView: View {
 
 struct BoardView: View {
     var body: some View {
-        NavigationLink(destination: ReportCard()) { // Navigasi ke ReportCard
+        NavigationLink(destination: RBView()) { // Navigasi ke ReportCard
                     
                 }
     }
