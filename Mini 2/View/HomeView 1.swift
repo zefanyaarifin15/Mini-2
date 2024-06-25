@@ -12,7 +12,7 @@ struct HomeView: View {
                 Label("Home", systemImage: "house")
             }
                    
-            DMsView()
+            DMsView(viewModel: DialogViewModel(), viewModel_2: DMsViewModel())
                 .tabItem {
                     Label("Chat", systemImage: "ellipsis.message.fill")
                 }

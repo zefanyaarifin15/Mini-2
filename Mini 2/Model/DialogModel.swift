@@ -1,20 +1,21 @@
 import Foundation
+import SwiftData
 
-struct PartnerConversation: Codable {
+struct PartnerConversation: Decodable {
     let partner_dialog: String
     let start_dialog: String
-    let dialog: [DialogSegment]
-}
-
-struct DialogSegment: Codable, Identifiable {
-    let id: Int
-    let user_options: [UserOption]
+    let options: [UserOption]
 }
 
 struct UserOption: Codable, Identifiable {
     let id: String
-    let reply: String
-    let response: String
+    let user_option: String
+    let response: Response?
+    
+    struct Response: Codable {
+        let text: String
+        let options: [UserOption]?
+    }
 }
 
 struct History: Identifiable {
@@ -22,5 +23,21 @@ struct History: Identifiable {
     let content: String
     let isUser: Bool
 }
+
+@Model
+final class ConversationHistory {
+    @Attribute(.unique) var id: UUID
+    @Attribute var content: String
+    @Attribute var isUser: Bool
+    @Attribute var partner: String
+    
+    init(content: String, isUser: Bool, partner: String) {
+        self.id = UUID()
+        self.content = content
+        self.isUser = isUser
+        self.partner = partner
+    }
+}
+
 
 

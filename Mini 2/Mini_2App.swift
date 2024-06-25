@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct Mini_2App: App {
@@ -13,7 +14,8 @@ struct Mini_2App: App {
     
     var body: some Scene {
         WindowGroup {
-            DMsView()
+            PhoneView()
+                //.modelContainer(for: [ConversationHistory.self])
         }
     }
 }
