@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 
-class SoundPlayer {
+class SoundPlayer: ObservableObject {
     var audioPlayer: AVAudioPlayer?
     
     func playSound(sound: String, type: String) {
@@ -29,6 +29,10 @@ class SoundPlayer {
         playNextCharacter(morseCharacters)
     }
 
+    func stopSound() {
+        audioPlayer?.stop()
+    }
+    
     private func playNextCharacter(_ characters: [Character]) {
         guard !characters.isEmpty else { return }
 
