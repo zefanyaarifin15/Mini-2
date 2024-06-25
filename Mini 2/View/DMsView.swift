@@ -5,23 +5,34 @@ struct DMsView: View {
     @ObservedObject var viewModel_2: DMsViewModel
 
     var body: some View {
-        NavigationView { 
-            List {
-                ForEach(viewModel_2.chat, id: \.profileName) { message in
-                    NavigationLink(destination: ChatView(viewModel: viewModel, partner: message.profileName)) {
-                        DMsList(profilePicture: message.profilePicture, profileName: message.profileName, textMessage: message.textMessage)
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(viewModel_2.chat, id: \.profileName) { message in
+                        NavigationLink(destination: ChatView(viewModel: viewModel, partner: message.profileName)) {
+                            HStack {
+                                DMsList(profilePicture: message.profilePicture, profileName: message.profileName, textMessage: "..")
+                                }
+                            }
+                        }
                     }
+                
+                Button(action: {
+                    viewModel_2.addDM(.natalie)
+                }, label: {
+                    Text("Button")
+                })
                 }
-            }
-            .listStyle(.grouped)
-            .scrollContentBackground(.hidden)
-            .navigationBarTitle("Beautyjasmine", displayMode: .large) // Check if this title is now visible
-            .onAppear {
-                viewModel.loadJSONData()
+                .listStyle(.grouped)
+                .scrollContentBackground(.hidden)
+                .navigationBarTitle("Beautyjasmine", displayMode: .large)
+                .onAppear {
+                    viewModel.loadJSONData()
+                }
             }
         }
     }
-}
+
 
 struct DMsView_Previews: PreviewProvider {
     static var previews: some View {

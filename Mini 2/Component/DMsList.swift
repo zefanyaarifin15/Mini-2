@@ -3,7 +3,7 @@ import SwiftUI
 struct DMsList: View {
     let profilePicture: String
     let profileName: String
-    let textMessage: String
+    var textMessage: String
     
     var body: some View {
         

@@ -1,34 +1,20 @@
 import Foundation
-import SwiftData
-import CoreData
 
-struct PartnerConversation: Decodable {
+struct PartnerConversation: Codable {
     let partner_dialog: String
     let start_dialog: String
-    let options: [UserOption]?
-    let dialog: [Dialog]?
+    let dialog: [DialogSegment]
 }
 
-struct UserOption: Codable, Identifiable {
-    let id: String
-    let user_option: String
-    let response: Response?
-
-    struct Response: Codable {
-        let text: String
-        let options: [UserOption]?
-    }
-}
-
-struct Dialog: Codable {
+struct DialogSegment: Codable, Identifiable {
     let id: Int
     let user_options: [UserOption]
 }
 
-struct ConversationState: Codable {
-    let selectedPartner: String
-    let currDialogID: Int
-    let userOptions: [UserOption]
+struct UserOption: Codable, Identifiable {
+    let id: String
+    let reply: String
+    let response: String
 }
 
 struct History: Identifiable, Codable {
@@ -37,3 +23,4 @@ struct History: Identifiable, Codable {
     let isUser: Bool
     let partner: String
 }
+
