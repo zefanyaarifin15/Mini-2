@@ -56,30 +56,16 @@ struct Episode1View: View {
         NavigationView {
             ZStack {
                 VStack {
-                    PhoneView().overlay {
-                        VStack {
-                            if notificationViewModel.showNotification {
-                                NavigationLink(destination: PostView(
-                                    username: targetPost.username,
-                                    caption: targetPost.caption,
-                                    location: targetPost.location,
-                                    postImage: targetPost.postImage,
-                                    profileImage: targetPost.profileImage,
-                                    initialLikes: targetPost.initialLikes,
-                                    commentUser: targetPost.commentUser,
-                                    commentText: targetPost.commentText
-                                )) {
-                                    MessageNotification(
-                                        image: "icon",
-                                        title: "Stephanie",
-                                        description: "You got 1K+ comments on your latest post",
-                                        time: "19:00"
-                                    )
-                                }
-                            }
+                    PhoneView().overlay{
+                        VStack{
+                            NavigationLink(destination: DMsView(viewModel: DialogViewModel(), viewModel_2: DMsViewModel())) {
+                                                        MessageNotification(image: "icon", title: "Stephanie", description: "You got 1K+ comments on your latest post", time: "19:00")
+                                                    }
                             Spacer()
                         }
                     }
+                
+                    
                 }
             }
         }
