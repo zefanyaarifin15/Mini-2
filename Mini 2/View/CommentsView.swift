@@ -11,6 +11,7 @@ struct CommentsView: View {
     let comments: [Comment] = [
         Comment(username: "makeupfanatic", text: "Love this look! Can you share your routine?"),
         Comment(username: "beautyjunkie", text: "Your makeup is always on point!"),
+        Comment(username: "ShadowLurker", text: "You're nothing but a fake"),
         Comment(username: "beautylover", text: "Absolutely stunning!"),
         Comment(username: "glamqueen", text: "You look gorgeous! What's your lipstick shade?"),
         Comment(username: "nataliebert", text: "So stunning😍"),
@@ -27,8 +28,7 @@ struct CommentsView: View {
         Comment(username: "beautyaddicted", text: "Your makeup skills are incredible!"),
         Comment(username: "cosmeticfanatic", text: "You always look amazing!"),
         Comment(username: "glamsquad", text: "Love this! You're so talented!"),
-        Comment(username: "beautyicon", text: "Absolutely gorgeous!"),
-        Comment(username: "grlfrauds", text: "You're nothing but a fake")
+        Comment(username: "beautyicon", text: "Absolutely gorgeous!")
     ]
 
     
