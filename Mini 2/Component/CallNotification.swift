@@ -10,6 +10,7 @@ import SwiftUI
 struct CallNotification: View {
     let profile: String
     let name: String
+    @Binding var showGameOverText: Bool
     
     let soundPlayer = SoundPlayer()
     
@@ -82,5 +83,5 @@ struct CallNotification: View {
 }
 
 #Preview {
-    CallNotification(profile: "profile", name: "Stephanie")
+    CallNotification(profile: "profile", name: "Stephanie",  showGameOverText: .constant(false))
 }
