@@ -33,14 +33,20 @@
 		A30F11262C28863700EFA434 /* OngoingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11252C28863700EFA434 /* OngoingCallView.swift */; };
 		A30F11282C28867A00EFA434 /* RingingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11272C28867A00EFA434 /* RingingCallView.swift */; };
 		A30F112A2C28869E00EFA434 /* IncomingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11292C28869E00EFA434 /* IncomingCallView.swift */; };
+		A3AACE352C2982CF007C982F /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AACE342C2982CF007C982F /* SoundPlayer.swift */; };
+		A3AACE3B2C298360007C982F /* dial_call.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3AACE362C298360007C982F /* dial_call.mp3 */; };
+		A3AACE3C2C298360007C982F /* people_talking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3AACE372C298360007C982F /* people_talking.mp3 */; };
+		A3AACE3D2C298360007C982F /* system_notif.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3AACE382C298360007C982F /* system_notif.mp3 */; };
+		A3AACE3E2C298360007C982F /* message_notif.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3AACE392C298360007C982F /* message_notif.mp3 */; };
+		A3AACE3F2C298360007C982F /* ring_call.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3AACE3A2C298360007C982F /* ring_call.mp3 */; };
 		D6FD36E62C271C0600CC4259 /* ProfileView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36E52C271C0600CC4259 /* ProfileView1.swift */; };
 		D6FD36E82C287D2800CC4259 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36E72C287D2800CC4259 /* PostModel.swift */; };
 		D6FD36EA2C28819D00CC4259 /* HomeView 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36E92C28819D00CC4259 /* HomeView 1.swift */; };
 		D6FD36EC2C2881DE00CC4259 /* FeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36EB2C2881DE00CC4259 /* FeedsViewModel.swift */; };
-		D6FD36EE2C29617300CC4259 /* Chapter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36ED2C29617300CC4259 /* Chapter1.swift */; };
 		D6FD36F22C296AAB00CC4259 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36F12C296AAB00CC4259 /* PostView.swift */; };
 		D6FD36F42C296B9900CC4259 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36F32C296B9900CC4259 /* PostDetailView.swift */; };
 		D6FD36F62C296BE600CC4259 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36F52C296BE600CC4259 /* SettingsView.swift */; };
+		D6FD36F82C29CCFC00CC4259 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD36F72C29CCFC00CC4259 /* HomeViewModel.swift */; };
 		D90B7CB22C1AE2FD008B3F7C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */; };
 		D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */; };
 		D90B7CBD2C1C10F9008B3F7C /* IncomingChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CBC2C1C10F9008B3F7C /* IncomingChatBubble.swift */; };
@@ -87,14 +93,20 @@
 		A30F11252C28863700EFA434 /* OngoingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingCallView.swift; sourceTree = "<group>"; };
 		A30F11272C28867A00EFA434 /* RingingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingingCallView.swift; sourceTree = "<group>"; };
 		A30F11292C28869E00EFA434 /* IncomingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingCallView.swift; sourceTree = "<group>"; };
+		A3AACE342C2982CF007C982F /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		A3AACE362C298360007C982F /* dial_call.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dial_call.mp3; sourceTree = "<group>"; };
+		A3AACE372C298360007C982F /* people_talking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = people_talking.mp3; sourceTree = "<group>"; };
+		A3AACE382C298360007C982F /* system_notif.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = system_notif.mp3; sourceTree = "<group>"; };
+		A3AACE392C298360007C982F /* message_notif.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = message_notif.mp3; sourceTree = "<group>"; };
+		A3AACE3A2C298360007C982F /* ring_call.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ring_call.mp3; sourceTree = "<group>"; };
 		D6FD36E52C271C0600CC4259 /* ProfileView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView1.swift; sourceTree = "<group>"; };
 		D6FD36E72C287D2800CC4259 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		D6FD36E92C28819D00CC4259 /* HomeView 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView 1.swift"; sourceTree = "<group>"; };
 		D6FD36EB2C2881DE00CC4259 /* FeedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewModel.swift; sourceTree = "<group>"; };
-		D6FD36ED2C29617300CC4259 /* Chapter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1.swift; sourceTree = "<group>"; };
 		D6FD36F12C296AAB00CC4259 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		D6FD36F32C296B9900CC4259 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		D6FD36F52C296BE600CC4259 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D6FD36F72C29CCFC00CC4259 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D90B7CB32C1AE39D008B3F7C /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 		D90B7CBC2C1C10F9008B3F7C /* IncomingChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingChatBubble.swift; sourceTree = "<group>"; };
@@ -128,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				4B11956B2C1DA974002AE982 /* ImagePicker.swift */,
+				A3AACE342C2982CF007C982F /* SoundPlayer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -135,6 +148,11 @@
 		4B11956D2C1EC375002AE982 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				A3AACE362C298360007C982F /* dial_call.mp3 */,
+				A3AACE392C298360007C982F /* message_notif.mp3 */,
+				A3AACE372C298360007C982F /* people_talking.mp3 */,
+				A3AACE3A2C298360007C982F /* ring_call.mp3 */,
+				A3AACE382C298360007C982F /* system_notif.mp3 */,
 				4B1195772C1EEB0B002AE982 /* Sound1.mp3 */,
 			);
 			path = Sound;
@@ -159,7 +177,7 @@
 				4B1195752C1EE53B002AE982 /* SoundViewModel.swift */,
 				D9526C4A2C22A744008FFBE5 /* PhoneViewModel.swift */,
 				D6FD36EB2C2881DE00CC4259 /* FeedsViewModel.swift */,
-				D6FD36EB2C2881DE00CC4259 /* PostViewModel.swift */,
+				D6FD36F72C29CCFC00CC4259 /* HomeViewModel.swift */,
 				6DACC7702C293A3000AC7ED2 /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
@@ -193,9 +211,7 @@
 				D90B7CB82C1AE5D9008B3F7C /* View */,
 				D90B7CB72C1AE5C7008B3F7C /* Repository */,
 				6D5EF1132C1AC1A500C20D4D /* Mini_2App.swift */,
-				6DACC74F2C1AC37300AC7ED2 /* AnalysisButton.swift */,
 				6D5EF1172C1AC1A600C20D4D /* Assets.xcassets */,
-				D6FD36ED2C29617300CC4259 /* Chapter1.swift */,
 				6D5EF1192C1AC1A600C20D4D /* Preview Content */,
 			);
 			path = "Mini 2";
@@ -266,6 +282,7 @@
 				4B2A045D2C22E80100E47EE5 /* PrimaryButton.swift */,
 				A30F11202C2885D300EFA434 /* MessageNotification.swift */,
 				A30F11222C2885FD00EFA434 /* CallNotification.swift */,
+				6DACC74F2C1AC37300AC7ED2 /* AnalysisButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -329,9 +346,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9526C5B2C241184008FFBE5 /* messages.json in Resources */,
+				A3AACE3F2C298360007C982F /* ring_call.mp3 in Resources */,
 				4B1195782C1EEB0C002AE982 /* Sound1.mp3 in Resources */,
 				6D5EF11B2C1AC1A600C20D4D /* Preview Assets.xcassets in Resources */,
+				A3AACE3E2C298360007C982F /* message_notif.mp3 in Resources */,
+				A3AACE3B2C298360007C982F /* dial_call.mp3 in Resources */,
+				A3AACE3C2C298360007C982F /* people_talking.mp3 in Resources */,
 				6D5EF1182C1AC1A600C20D4D /* Assets.xcassets in Resources */,
+				A3AACE3D2C298360007C982F /* system_notif.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +371,6 @@
 				D9526C4F2C22AC32008FFBE5 /* PictureEditView.swift in Sources */,
 				D90B7CBD2C1C10F9008B3F7C /* IncomingChatBubble.swift in Sources */,
 				D6FD36EA2C28819D00CC4259 /* HomeView 1.swift in Sources */,
-				D6FD36EE2C29617300CC4259 /* Chapter1.swift in Sources */,
 				D90B7CB42C1AE39D008B3F7C /* ChatRepository.swift in Sources */,
 				D9526C3D2C1D7175008FFBE5 /* DMsList.swift in Sources */,
 				A30F11212C2885D300EFA434 /* MessageNotification.swift in Sources */,
@@ -381,9 +402,11 @@
 				6D5EF1142C1AC1A500C20D4D /* Mini_2App.swift in Sources */,
 				D9526C432C1DCA2D008FFBE5 /* VNBubble.swift in Sources */,
 				4B24039A2C2584CB0085574A /* UploadProfileView.swift in Sources */,
+				A3AACE352C2982CF007C982F /* SoundPlayer.swift in Sources */,
 				4B24039C2C2589140085574A /* ReportCardDetail.swift in Sources */,
 				4B1195762C1EE53B002AE982 /* SoundViewModel.swift in Sources */,
 				D9526C4B2C22A744008FFBE5 /* PhoneViewModel.swift in Sources */,
+				D6FD36F82C29CCFC00CC4259 /* HomeViewModel.swift in Sources */,
 				6DACC7652C20B16F00AC7ED2 /* StalkerProfile.swift in Sources */,
 				6DACC76F2C289BD800AC7ED2 /* ReportView.swift in Sources */,
 				D9526C3B2C1CC2A7008FFBE5 /* DMsView.swift in Sources */,
