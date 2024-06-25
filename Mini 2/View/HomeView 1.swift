@@ -16,6 +16,7 @@ struct HomeView: View {
                 .tabItem {
                     Label("Chat", systemImage: "ellipsis.message.fill")
                 }
+                .navigationBarBackButtonHidden(true)
                    
             ProfileView()
                 .tabItem {

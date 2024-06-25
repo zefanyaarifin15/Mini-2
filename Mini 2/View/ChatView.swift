@@ -18,7 +18,7 @@ struct ChatView: View {
                             }) {
                                 HStack {
                                     Spacer()
-                                    Text(option.user_option) // Display user_option instead of response.text
+                                    Text(option.reply) // Display user's reply as the option text
                                         .foregroundColor(.white)
                                         .padding()
                                         .background(Color.gray)
@@ -42,32 +42,33 @@ struct ChatView: View {
             }
             .toolbar(.hidden, for: .tabBar)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden(true)
+            //.navigationBarBackButtonHidden(true)
             .edgesIgnoringSafeArea(.bottom)
-            
         }
     }
 
     var historyFlow: some View {
-        VStack(spacing: 8) {
-            ForEach(viewModel.histories) { history in
-                HStack {
-                    if history.isUser {
-                        OutgoingChatBubble(message: history.content)
-                    } else {
-                        switch history.content {
-                        case "VoiceNote":
-                            VNBubble(viewModel: SoundViewModel(), sound: Sound(id: "0", title: "Sound1", filename: "Sound1"))
-                        case "HouseImage":
-                            PictureBubble()
-                        default:
-                            IncomingChatBubble(message: history.content)
+        ScrollView {
+            VStack(spacing: 8) {
+                ForEach(viewModel.histories) { history in
+                    HStack {
+                        if history.isUser {
+                            OutgoingChatBubble(message: history.content)
+                        } else {
+                            switch history.content {
+                            case "VoiceNote":
+                                VNBubble(viewModel: SoundViewModel(), sound: Sound(id: "0", title: "Sound1", filename: "Sound1"))
+                            case "HouseImage":
+                                PictureBubble()
+                            default:
+                                IncomingChatBubble(message: history.content)
+                            }
                         }
                     }
+                    .padding([.leading, .trailing], 10)
                 }
-                .padding([.leading, .trailing], 10)
             }
-            Spacer()
+            .padding(.top, 8)
         }
     }
 }

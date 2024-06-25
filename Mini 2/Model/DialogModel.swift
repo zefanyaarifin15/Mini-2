@@ -24,3 +24,8 @@ struct History: Identifiable, Codable {
     let partner: String
 }
 
+struct ConversationState: Codable {
+    var selectedPartner: String
+    var currDialogID: Int
+    var userOptions: [UserOption]
+}

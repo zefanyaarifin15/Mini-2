@@ -1,4 +1,4 @@
-import SwiftUI
+import Foundation
 
 class DialogViewModel: ObservableObject {
     @Published var conversations: [PartnerConversation] = []
@@ -6,7 +6,6 @@ class DialogViewModel: ObservableObject {
     @Published var selectedPartner: String = ""
     @Published var userOptions: [UserOption] = []
     @Published var currDialogID: Int = 1
-    @Published var lastResponseText: String?
 
     private let historyFileName = "ChatStorage.json"
     private let stateFileName = "Conversation.json"
@@ -24,55 +23,32 @@ class DialogViewModel: ObservableObject {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            let decodedData = try decoder.decode([String: PartnerConversation].self, from: data)
-            conversations = Array(decodedData.values)
+            conversations = try decoder.decode([PartnerConversation].self, from: data)
         } catch {
             print("Error decoding JSON: \(error)")
         }
     }
 
+    // Ambil nama2 partnersnya
     func fetchPartners() -> [String] {
         conversations.map { $0.partner_dialog }
     }
 
+    // Ganti nama partner yang sedang dipilih
     func changeSelectedPartner(to newPartner: String) {
         selectedPartner = newPartner
-        loadHistoryFromJSON()
-        loadStateFromJSON()
-
-        if histories.isEmpty {
-            appendStartDialogHistoryIfNeeded(for: newPartner)
-        }
-
-        if userOptions.isEmpty {
-            userOptions = fetchUserOptions(for: newPartner, dialogID: currDialogID)
-        }
+        histories.removeAll()
+        currDialogID = 1
+        userOptions = fetchUserOptions(for: newPartner, dialogID: currDialogID)
+        appendStartDialogHistoryIfNeeded(for: newPartner)
     }
+
 
     func fetchUserOptions(for partner: String, dialogID: Int) -> [UserOption] {
-        guard let conversation = conversations.first(where: { $0.partner_dialog == partner }) else {
+        guard let dialog = conversations.first(where: { $0.partner_dialog == partner })?.dialog.first(where: { $0.id == dialogID }) else {
             return []
         }
-
-        if partner == "Rose" {
-            return dialogID == 1 ? conversation.options ?? [] : findUserOptions(in: conversation.options ?? [], dialogID: dialogID)
-        } else {
-            return findDialogOptions(in: conversation.dialog ?? [], dialogID: dialogID)
-        }
-    }
-
-    private func findUserOptions(in options: [UserOption], dialogID: Int) -> [UserOption] {
-        guard let currentOption = options.first(where: { $0.id == "\(dialogID)" }) else {
-            return []
-        }
-        return currentOption.response?.options ?? []
-    }
-
-    private func findDialogOptions(in dialogs: [Dialog], dialogID: Int) -> [UserOption] {
-        guard let currentDialog = dialogs.first(where: { $0.id == dialogID }) else {
-            return []
-        }
-        return currentDialog.user_options
+        return dialog.user_options
     }
 
     func selectOption(optionID: String) {
@@ -81,33 +57,21 @@ class DialogViewModel: ObservableObject {
             return
         }
 
-        let userHistory = History(content: selectedOption.user_option, isUser: true, partner: selectedPartner)
-        histories.append(userHistory)
+        histories.append(History(content: selectedOption.reply, isUser: true, partner: selectedPartner))
         saveHistoryToJSON()
 
-        if let responseText = selectedOption.response?.text {
-            let responseHistory = History(content: responseText, isUser: false, partner: selectedPartner)
-            histories.append(responseHistory)
-            saveHistoryToJSON()
-            lastResponseText = responseText
-        } else {
-            lastResponseText = nil
-        }
+        histories.append(History(content: selectedOption.response, isUser: false, partner: selectedPartner))
+        saveHistoryToJSON()
 
-        if let nextOptions = selectedOption.response?.options {
-            currDialogID += 1
-            userOptions = nextOptions
-        } else {
-            userOptions = []
-        }
-        saveStateToJSON()  // Save the current state after updating user options
+        currDialogID += 1
+        userOptions = fetchUserOptions(for: selectedPartner, dialogID: currDialogID)
+        saveStateToJSON()
     }
 
     private func appendStartDialogHistoryIfNeeded(for partner: String) {
         if histories.isEmpty {
             if let conversation = conversations.first(where: { $0.partner_dialog == partner }) {
-                let startHistory = History(content: conversation.start_dialog, isUser: false, partner: partner)
-                histories.append(startHistory)
+                histories.append(History(content: conversation.start_dialog, isUser: false, partner: partner))
                 saveHistoryToJSON()
             }
         }
@@ -119,20 +83,6 @@ class DialogViewModel: ObservableObject {
             let url = getDocumentsDirectory().appendingPathComponent(historyFileName)
             try? encodedData.write(to: url)
         }
-    }
-
-    func resetChatStorage() {
-        histories.removeAll()
-        userOptions.removeAll()
-        currDialogID = 1
-        lastResponseText = nil
-
-        saveHistoryToJSON()
-        saveStateToJSON()
-        
-        // Reinitialize the dialog for the selected partner
-        appendStartDialogHistoryIfNeeded(for: selectedPartner)
-        userOptions = fetchUserOptions(for: selectedPartner, dialogID: currDialogID)
     }
 
     private func loadHistoryFromJSON() {
@@ -168,6 +118,19 @@ class DialogViewModel: ObservableObject {
 
     private func getDocumentsDirectory() -> URL {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    }
+
+    func resetChatStorage() {
+        histories.removeAll()
+        userOptions.removeAll()
+        currDialogID = 1
+
+        saveHistoryToJSON()
+        saveStateToJSON()
+        
+        // Reinitialize the dialog for the selected partner
+        appendStartDialogHistoryIfNeeded(for: selectedPartner)
+        userOptions = fetchUserOptions(for: selectedPartner, dialogID: currDialogID)
     }
 
     func initialSetup() {
