@@ -1,21 +1,35 @@
-//
-//  Mini_2App.swift
-//  Mini 2
-//
-//  Created by Zefanya on 13/06/24.
-//
-
 import SwiftUI
-import SwiftData
 
 @main
 struct Mini_2App: App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+    @StateObject private var viewModel = DialogViewModel()
+    
+    @Environment(\.scenePhase) private var scenePhase
     
     var body: some Scene {
         WindowGroup {
             PhoneView()
-                //.modelContainer(for: [ConversationHistory.self])
+                .environmentObject(viewModel) // Provide the viewModel to the view hierarchy
+                .onChange(of: scenePhase) { phase in
+                    handleScenePhaseChange(phase)
+                }
+        }
+    }
+    
+    private func handleScenePhaseChange(_ phase: ScenePhase) {
+        switch phase {
+        case .active:
+            // App is now active (foreground)
+            break // Optionally handle any necessary actions
+        case .inactive:
+            // App is about to become inactive (background)
+            viewModel.resetChatStorage() // Reset chat storage
+        case .background:
+            // App is in the background
+            viewModel.resetChatStorage() // Reset chat storage
+        @unknown default:
+            break // Handle future cases if needed
         }
     }
 }

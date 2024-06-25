@@ -4,6 +4,7 @@ struct Episode1View: View {
     @StateObject private var notificationViewModel = NotificationViewModel(currentEpisode: 1)
     @State private var showPostView = false
     @State private var showChatView = false
+    @State private var isSecondNotification = false
     
     let targetPost: Post = Post(
         username: "beautyjasmine",
@@ -27,10 +28,17 @@ struct Episode1View: View {
                                     image: "icon",
                                     title: "QueensTagram",
                                     description: "You got 1K+ comments on your latest post",
-                                    time: "19:00"
+                                    time: "19:00",
+                                    onSecondNotification: {
+                                        isSecondNotification = true
+                                    }
                                 )
                                 .onTapGesture {
-                                    showPostView = true
+                                    if isSecondNotification {
+                                                                           showChatView = true
+                                                                       } else {
+                                                                           showPostView = true
+                                                                       }
                                 }
                                 .background(
                                     NavigationLink(destination: PostView(
@@ -62,4 +70,3 @@ struct Episode1View_Previews: PreviewProvider {
         Episode1View()
     }
 }
-

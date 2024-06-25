@@ -72,11 +72,8 @@ struct ChatView: View {
     }
 }
 
-
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(viewModel: DialogViewModel(), partner: "Rose")
+        ChatView(viewModel: DialogViewModel(), partner: "Steph")
     }
 }
-
-

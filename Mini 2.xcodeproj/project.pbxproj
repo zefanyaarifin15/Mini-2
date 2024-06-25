@@ -69,6 +69,8 @@
 		D9526C5D2C2412FB008FFBE5 /* DialogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C5C2C2412FB008FFBE5 /* DialogViewModel.swift */; };
 		D9526C5F2C241304008FFBE5 /* DialogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C5E2C241304008FFBE5 /* DialogModel.swift */; };
 		D9526C612C244D30008FFBE5 /* PhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C602C244D30008FFBE5 /* PhoneModel.swift */; };
+		D96F92162C2B25F900E37206 /* ChatStorage.json in Resources */ = {isa = PBXBuildFile; fileRef = D96F92142C2B25F900E37206 /* ChatStorage.json */; };
+		D96F92172C2B25F900E37206 /* Conversation.json in Resources */ = {isa = PBXBuildFile; fileRef = D96F92152C2B25F900E37206 /* Conversation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +137,8 @@
 		D9526C5C2C2412FB008FFBE5 /* DialogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogViewModel.swift; sourceTree = "<group>"; };
 		D9526C5E2C241304008FFBE5 /* DialogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogModel.swift; sourceTree = "<group>"; };
 		D9526C602C244D30008FFBE5 /* PhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneModel.swift; sourceTree = "<group>"; };
+		D96F92142C2B25F900E37206 /* ChatStorage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ChatStorage.json; sourceTree = "<group>"; };
+		D96F92152C2B25F900E37206 /* Conversation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Conversation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,8 +239,10 @@
 		6D5EF1122C1AC1A500C20D4D /* Mini 2 */ = {
 			isa = PBXGroup;
 			children = (
-				4B30030A2C2AAA87003CCCB3 /* Chapter */,
+				D96F92142C2B25F900E37206 /* ChatStorage.json */,
+				D96F92152C2B25F900E37206 /* Conversation.json */,
 				D9526C5A2C241184008FFBE5 /* messages.json */,
+				4B30030A2C2AAA87003CCCB3 /* Chapter */,
 				4B1195742C1EE523002AE982 /* ViewModel */,
 				4B11956E2C1EC49F002AE982 /* Model */,
 				4B11956D2C1EC375002AE982 /* Sound */,
@@ -387,6 +393,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96F92162C2B25F900E37206 /* ChatStorage.json in Resources */,
+				D96F92172C2B25F900E37206 /* Conversation.json in Resources */,
 				D9526C5B2C241184008FFBE5 /* messages.json in Resources */,
 				A3AACE3F2C298360007C982F /* ring_call.mp3 in Resources */,
 				4B1195782C1EEB0C002AE982 /* Sound1.mp3 in Resources */,

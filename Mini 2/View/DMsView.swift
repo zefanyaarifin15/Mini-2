@@ -5,7 +5,7 @@ struct DMsView: View {
     @ObservedObject var viewModel_2: DMsViewModel
 
     var body: some View {
-        NavigationView { // Ensure DMsView is within a NavigationView
+        NavigationView { 
             List {
                 ForEach(viewModel_2.chat, id: \.profileName) { message in
                     NavigationLink(destination: ChatView(viewModel: viewModel, partner: message.profileName)) {
