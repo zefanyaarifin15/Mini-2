@@ -18,7 +18,7 @@ struct ConfirmationReportPage: View {
 
             VStack {
                 if showCallNotification {
-                    CallNotification(showGameOverText: $showGameOverText)
+                    CallNotification(profile: "profile", name: "Stephanie", showGameOverText: $showGameOverText, showCallNotification: $showCallNotification)
                         .transition(.move(edge: .top))
                         .animation(.easeInOut)
                 }
