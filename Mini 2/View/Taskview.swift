@@ -21,7 +21,7 @@ struct PaperBackgroundView: View {
     }
 }
 
-struct TaskView2: View {
+struct TaskView: View {
     @StateObject private var viewModel = TaskViewModel()
     
     var body: some View {
@@ -76,8 +76,8 @@ struct TaskView2: View {
 }
 
 // Preview
-struct TaskView2_Previews: PreviewProvider {
-    static var previews: TaskView2 {
-        TaskView2()
+struct TaskView_Previews: PreviewProvider {
+    static var previews: TaskView {
+        TaskView()
     }
 }

@@ -1,10 +1,3 @@
-//
-//  PostView.swift
-//  Mini 2
-//
-//  Created by Jasmine Mutia Alifa on 24/06/24.
-//
-
 import SwiftUI
 
 struct PostView: View {
@@ -98,8 +91,6 @@ struct PostView: View {
                             .foregroundColor(.black)
                             .frame(width: 25, height: 25)
                     }
-                    
-                    
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 18)
@@ -120,15 +111,9 @@ struct PostView: View {
                     Text(caption)
                         .font(.system(size: 16))
                         .padding(.top, 5)
-                    
-//                    Text("more")
-//                        .foregroundColor(.gray)
-//                        .font(.system(size: 16))
                 }
                 
-                Button {
-                    
-                } label: {
+                NavigationLink(destination: CommentsView()) {
                     Text("View all comments")
                         .foregroundColor(.gray)
                         .font(.system(size: 16))
@@ -154,7 +139,8 @@ struct PostView: View {
     }
 }
 
-
-#Preview {
-    PostView(username: "beautyjasmine", caption: "My niece is so cute", location: "Location", postImage: "feeds1", profileImage: "profile1", initialLikes: 11926, commentUser: "ShadowLurker", commentText: "That lips look like pongo lips")
+struct PostView_Previews: PreviewProvider {
+    static var previews: some View {
+        PostView(username: "beautyjasmine", caption: "My niece is so cute", location: "Home", postImage: "feeds1", profileImage: "beautyjasmine", initialLikes: 319872, commentUser: "ShadowLurker", commentText: "You're nothing but a fake")
+    }
 }

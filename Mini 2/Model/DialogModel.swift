@@ -17,10 +17,15 @@ struct UserOption: Codable, Identifiable {
     let response: String
 }
 
-struct History: Identifiable {
-    let id = UUID()
+struct History: Identifiable, Codable {
+    var id = UUID()
     let content: String
     let isUser: Bool
+    let partner: String
 }
 
-
+struct ConversationState: Codable {
+    var selectedPartner: String
+    var currDialogID: Int
+    var userOptions: [UserOption]
+}

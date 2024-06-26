@@ -55,11 +55,6 @@ struct BoardView: View {
                 }
     }
 }
-struct TaskView: View {
-    var body: some View {
-        Text("Task app")
-    }
-}
 struct NotesView: View {
     var body: some View {
         Text("dummy Notes app")

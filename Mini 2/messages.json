@@ -126,7 +126,7 @@
     ]
   },
   {
-    "partner_dialog": "Nataliebert",
+    "partner_dialog": "Natalie",
     "start_dialog": "Hi Jasmine! It's been a while since we hung out. How about we plan something for this weekend? 😆",
     "dialog": [
       {
@@ -179,7 +179,7 @@
           },
           {
             "id": "3b",
-            "reply": "Totally! I've had my eye on their lip gloss too. It’s supposed to be really long-lasting and has a beautiful finish?",
+            "reply": "Totally! I've had my eye on their lip gloss too. It’s supposed to be really long-lasting and has a beautiful finish.",
             "response": "We should definitely go to a store that stocks their products and try them out. Maybe we can get some samples or do a mini-makeover there lol 😂"
           },
           {
@@ -224,7 +224,7 @@
           },
           {
             "id": "5c",
-            "reply": "Okay, i’ll send you the detail this Saturday!.",
+            "reply": "Okay, I’ll send you the details this Saturday!",
             "response": "Btw Jasmine, I’ve noticed your Instagram has been blowing up lately. Your follower count is amazing lol. How do you do it?"
           }
         ]
@@ -244,7 +244,7 @@
           },
           {
             "id": "6c",
-            "reply": "I don’t know.. i just do what i want to do",
+            "reply": "I don’t know... I just do what I want to do.",
             "response": "Yeah, I’ve been trying, but my follower count just doesn’t seem to go up 😓. It’s kinda frustrating. Maybe we can take some cute pics this weekend for my IG?"
           }
         ]
@@ -284,7 +284,7 @@
           },
           {
             "id": "8c",
-            "reply": "Can’t wait! see you there.",
+            "reply": "Can’t wait! See you there.",
             "response": "OK!"
           }
         ]
@@ -441,6 +441,191 @@
         ]
       }
     ]
+  },
+ 
+ {
+    "partner_dialog": "Rose",
+    "start_dialog": "Hi there, how are you holding up today?",
+    "dialog": [
+      {
+        "id": 1,
+        "user_options": [
+          {
+            "id": "1a",
+            "reply": "Hi Rose, not good. I want to talk to you about something serious.",
+            "response": "Of course, I’m all ears. What’s going on?"
+          },
+          {
+            "id": "1b",
+            "reply": "Hi Rose, I’m feeling a bit better since the breakup. It’s been tough, but your support means the world to me. But I have a little concern.",
+            "response": "I’m glad to hear that. Breakups are never easy. Just remember, you deserve someone who appreciates you for who you are. What's your concern?"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "user_options": [
+          {
+            "id": "2a",
+            "reply": "I’ve been stalked online recently, and it’s getting really scary.",
+            "response": "Oh no, that sounds terrifying. I’m so sorry you’re going through this. I’ve had my share of crazy fans who thought I was an imposter. It was tough, but I found a way to handle it."
+          },
+          {
+            "id": "2b",
+            "reply": "Someone has been sending me threatening messages, and I don’t know what to do.",
+            "response": "Oh no, that sounds terrifying. I’m so sorry you’re going through this. I’ve had my share of crazy fans who thought I was an imposter. It was tough, but I found a way to handle it."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "user_options": [
+          {
+            "id": "3a",
+            "reply": "How did you deal with it?",
+            "response": "I started by documenting everything. Every message, every threat. Then I contacted the platform’s support team and reported the harassment. It also helped to confide in close friends and family for support."
+          },
+          {
+            "id": "3b",
+            "reply": "What do you suggest I do?",
+            "response": "I started by documenting everything. Every message, every threat. Then I contacted the platform’s support team and reported the harassment. It also helped to confide in close friends and family for support."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "user_options": [
+          {
+            "id": "4a",
+            "reply": "That’s really helpful, thank you. I’ll start documenting everything.",
+            "response": "In that case, you might want to consider involving the authorities. It’s better to be safe, and they can provide more direct help. Stay safe, okay?"
+          },
+          {
+            "id": "4b",
+            "reply": "I’ve reported it, but it’s still happening. Any other tips?",
+            "response": "In that case, you might want to consider involving the authorities. It’s better to be safe, and they can provide more direct help. Stay safe, okay?"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "user_options": [
+          {
+            "id": "5a",
+            "reply": "You always know the right thing to say.",
+            "response": "Thank you! I just speak from the heart and try to put myself in your shoes. I’ve had my own struggles, and I’ve learned that sometimes, just knowing someone is there for you can make all the difference."
+          },
+          {
+            "id": "5b",
+            "reply": "How do you know who to trust?",
+            "response": "It can be difficult, but I usually look for consistency and honesty. Trust your instincts, too. If someone makes you feel uneasy or their actions don’t match their words, it’s a sign to be cautious. Surround yourself with those who genuinely care about your well-being."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "user_options": [
+          {
+            "id": "6a",
+            "reply": "I don’t know who else to trust anymore.",
+            "response": "Unfortunately, that’s the reality of life. Not everyone has the best intentions. It’s important to be cautious about who you trust. I’m grateful for you."
+          }
+        ]
+      }
+    ]
+  },
+ 
+ {
+    "partner_dialog": "Rose2",
+    "start_dialog": "I’m worried about you, are you alright? I’m here for you all the time.",
+    "dialog": [
+      {
+        "id": 1,
+        "user_options": [
+          {
+            "id": "1a",
+            "reply": "Rose, things are getting worse. The stalker is intimidating me by knowing my schedule and location.",
+            "response": "That's really creepy. I heard the stalker even sent a picture of your house."
+          },
+          {
+            "id": "1b",
+            "reply": "Rose, the situation is getting worse. The stalker is scaring me by knowing my schedule and location.",
+            "response": "That's really creepy. I heard the stalker even sent a picture of your house."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "user_options": [
+          {
+            "id": "2a",
+            "reply": "Wait, how do you know the stalker sent a picture of my house?",
+            "response": "I... I just heard about it. Jasmine, you can't seriously think I'm the stalker!"
+          },
+          {
+            "id": "2b",
+            "reply": "Wait, how do you know about the picture of my house that the stalker sent?",
+            "response": "I... I just heard about it. Jasmine, you can't seriously think I'm the stalker!"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "user_options": [
+          {
+            "id": "3a",
+            "reply": "How could you possibly know about the picture of my house that the stalker sent?",
+            "response": "Jasmine, how could you accuse me of something like that? I'm your sister! It’s impossible for me to harm you."
+          },
+          {
+            "id": "3b",
+            "reply": "But how else would you know? It doesn’t add up, Rose. Are you the one stalking me?",
+            "response": "Jasmine, how could you accuse me of something like that? I'm your sister! It’s impossible for me to harm you."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "user_options": [
+          {
+            "id": "4a",
+            "reply": "Then explain how you know so much about what the stalker is doing.",
+            "response": "Remember when you logged into your Instagram account on my phone? Maybe that’s how I saw it. But Jasmine, I would never, ever do anything to hurt you. You have to believe me."
+          },
+          {
+            "id": "4b",
+            "reply": "Then tell me how you know so much about what the stalker is doing",
+            "response": "Remember when you logged into your Instagram account on my phone? Maybe that’s how I saw it. But Jasmine, I would never, ever do anything to hurt you. You have to believe me."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "user_options": [
+          {
+            "id": "5a",
+            "reply": "I did log into my account on your phone... Maybe that explains it. But this whole situation is terrifying. I don’t know who to trust anymore.",
+            "response": "I understand, Jasmine. It's scary and confusing. But please know that I’m here for you, and we’ll figure this out together. I love you."
+          },
+          {
+            "id": "5b",
+            "reply": "I did use my account on your phone... Maybe that's how you saw it. But this whole situation is terrifying. I don’t know who to trust anymore.",
+            "response": "I understand, Jasmine. It's scary and confusing. But please know that I’m here for you, and we’ll figure this out together. I love you."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "user_options": [
+          {
+            "id": "6a",
+            "reply": "I love you too, Rose. I just hope we can find out who’s behind this soon.",
+            "response": "Yes Jasmine, we can go through this"
+          }
+        ]
+      }
+    ]
   }
-
+ 
 ]
+ 

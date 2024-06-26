@@ -8,7 +8,7 @@
 import Foundation
 
 struct Post: Identifiable {
-    let id: Int
+    let id = UUID()
     let username: String
     let caption: String
     let location: String
@@ -18,4 +18,3 @@ struct Post: Identifiable {
     let commentUser: String
     let commentText: String
 }
-
