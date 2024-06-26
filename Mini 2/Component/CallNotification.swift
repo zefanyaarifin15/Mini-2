@@ -17,7 +17,7 @@ struct CallNotification: View {
     
     var body: some View {
         HStack(spacing: 30) {
-            Image(profile)
+            Image("Stephanie Profile&Post")
                 .resizable()
                 .frame(width: 60, height: 60)
                 .clipShape(Circle())
