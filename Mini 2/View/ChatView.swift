@@ -45,7 +45,7 @@ struct ChatView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    ChatProfile(profilePicture: "post9", profileName: profileName, checkMark: true)
+                    ChatProfile(profilePicture: profileName , profileName: profileName, checkMark: true)
                 }
             }
             .toolbar(.hidden, for: .tabBar)
