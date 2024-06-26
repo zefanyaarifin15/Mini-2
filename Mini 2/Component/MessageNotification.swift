@@ -10,15 +10,17 @@ struct MessageNotification: View {
     
     let soundPlayer = SoundPlayer()
     @State private var isVisible = false
+    var disableSecondNotification: Bool
     
     var onSecondNotification: (() -> Void)?
     
-    init(image: String, title: String, description: String, time: String, onSecondNotification: (() -> Void)? = nil) {
+    init(image: String, title: String, description: String, time: String, onSecondNotification: (() -> Void)? = nil, disableSecondNotification: Bool = false) {
         self._image = State(initialValue: image)
         self._title = State(initialValue: title)
         self._description = State(initialValue: description)
         self._time = State(initialValue: time)
         self.onSecondNotification = onSecondNotification
+        self.disableSecondNotification = disableSecondNotification
     }
     
     var body: some View {
@@ -66,13 +68,15 @@ struct MessageNotification: View {
             withAnimation {
                 isVisible = true
             }
-            scheduleNotificationUpdate()
+            if !disableSecondNotification {
+                scheduleNotificationUpdate()
+            }
         }
     }
     
     private func scheduleNotificationUpdate() {
-        // Schedule the notification update after 30 seconds
-        DispatchQueue.main.asyncAfter(deadline: .now() + 30) {
+        // Menjadwalkan pembaruan notifikasi setelah 30 detik
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             withAnimation {
                 isVisible = false
             }

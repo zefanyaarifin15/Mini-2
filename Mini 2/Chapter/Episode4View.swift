@@ -1,10 +1,3 @@
-//
-//  Episode4View.swift
-//  Mini 2
-//
-//  Created by Haliza Syafa Oktaviani on 25/06/24.
-//
-
 import SwiftUI
 
 struct Episode4View: View {
@@ -29,7 +22,8 @@ struct Episode4View: View {
                                 image: "icon",
                                 title: "Rose",
                                 description: "I’m worried about you, are you alright? I’m here for you all the time.",
-                                time: "19:00"
+                                time: "19:00",
+                                disableSecondNotification: true
                             )
                             Spacer()
                         }
