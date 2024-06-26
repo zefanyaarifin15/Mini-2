@@ -141,6 +141,6 @@ struct PostView: View {
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView(username: "beautyjasmine", caption: "My niece is so cute", location: "Home", postImage: "feeds1", profileImage: "beautyjasmine", initialLikes: 319872, commentUser: "ShadowLurker", commentText: "You're nothing but a fake")
+        PostView(username: "beautyjasmine", caption: "beauty Mascara🫶🏻", location: "Home", postImage: "post1", profileImage: "beautyjasmine", initialLikes: 319872, commentUser: "ShadowLurker", commentText: "That lips look like pongo lips")
     }
 }

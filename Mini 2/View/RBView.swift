@@ -18,11 +18,11 @@ struct DraggableView<Content>: View where Content: View {
 struct RBView: View {
     @State private var connections: Set<Connection> = []
     @State private var photos: [Photo] = [
-        Photo(name: "Jasmine", image: Image("post7"), position: CGPoint(x: 70, y: 200)),
-        Photo(name: "Stephanie", image: Image("post6"), position: CGPoint(x: 70, y: 500)),
-        Photo(name: "James", image: Image("post5"), position: CGPoint(x: 322, y: 200)),
-        Photo(name: "Natalie", image: Image("post4"), position: CGPoint(x: 322, y: 500)),
-        Photo(name: "Jasmine", image: Image("post7"), position: CGPoint(x: 196, y: 350))
+        Photo(name: "Rose", image: Image("Rose"), position: CGPoint(x: 70, y: 200)),
+        Photo(name: "Stephanie", image: Image("Stephanie"), position: CGPoint(x: 70, y: 500)),
+        Photo(name: "James", image: Image("James"), position: CGPoint(x: 322, y: 200)),
+        Photo(name: "Natalie", image: Image("Natalie"), position: CGPoint(x: 322, y: 500)),
+        Photo(name: "Jasmine", image: Image("beautyjasmine"), position: CGPoint(x: 196, y: 350))
     ]
     @State private var notes: [Note] = [
         Note(text: "Note 1", position: CGPoint(x: 320, y: 680)),
