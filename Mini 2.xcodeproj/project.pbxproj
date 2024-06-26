@@ -35,6 +35,7 @@
 		A30F11262C28863700EFA434 /* OngoingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11252C28863700EFA434 /* OngoingCallView.swift */; };
 		A30F11282C28867A00EFA434 /* RingingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11272C28867A00EFA434 /* RingingCallView.swift */; };
 		A30F112A2C28869E00EFA434 /* IncomingCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F11292C28869E00EFA434 /* IncomingCallView.swift */; };
+		A3A4F8332C2BCC7800FC4B99 /* Episode7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4F8322C2BCC7800FC4B99 /* Episode7View.swift */; };
 		A3AACE352C2982CF007C982F /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AACE342C2982CF007C982F /* SoundPlayer.swift */; };
 		A3AACE3B2C298360007C982F /* dial_call.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3AACE362C298360007C982F /* dial_call.mp3 */; };
 		A3AACE3C2C298360007C982F /* people_talking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3AACE372C298360007C982F /* people_talking.mp3 */; };
@@ -104,6 +105,7 @@
 		A30F11252C28863700EFA434 /* OngoingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingCallView.swift; sourceTree = "<group>"; };
 		A30F11272C28867A00EFA434 /* RingingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingingCallView.swift; sourceTree = "<group>"; };
 		A30F11292C28869E00EFA434 /* IncomingCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingCallView.swift; sourceTree = "<group>"; };
+		A3A4F8322C2BCC7800FC4B99 /* Episode7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode7View.swift; sourceTree = "<group>"; };
 		A3AACE342C2982CF007C982F /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		A3AACE362C298360007C982F /* dial_call.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dial_call.mp3; sourceTree = "<group>"; };
 		A3AACE372C298360007C982F /* people_talking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = people_talking.mp3; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				4B30030C2C2AAAB7003CCCB3 /* Episode1View.swift */,
 				4B2528252C2B1698007A26A6 /* Episode4View.swift */,
+				A3A4F8322C2BCC7800FC4B99 /* Episode7View.swift */,
 			);
 			path = Chapter;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				A30F11212C2885D300EFA434 /* MessageNotification.swift in Sources */,
 				4B2A045A2C22C53300E47EE5 /* ReportCard.swift in Sources */,
 				6DACC7672C21589C00AC7ED2 /* TabBarButton.swift in Sources */,
+				A3A4F8332C2BCC7800FC4B99 /* Episode7View.swift in Sources */,
 				A30F11262C28863700EFA434 /* OngoingCallView.swift in Sources */,
 				D92C1B1A2C2AA4A000E6288F /* DMsViewModel.swift in Sources */,
 				6DACC7732C293AD800AC7ED2 /* TaskModel.swift in Sources */,
