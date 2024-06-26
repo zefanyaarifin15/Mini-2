@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct Episode4View: View {
-    @State private var navigateToChat = false
+    @State private var showChatView = false
     
     var body: some View {
         VStack {
@@ -14,21 +14,21 @@ struct Episode4View: View {
                         time: "19:00",
                         disableSecondNotification: true
                     )
+                    .onTapGesture {
+                        showChatView = true
+                    }
                     Spacer()
                 }
             }
             
-            //ini bingung knp dia navigate ke post view?
+            //ini bingung knp dia navigate ke RB view?
             
             .background(
-                NavigationLink(destination: ChatView(viewModel: DialogViewModel(), partner: "Rose2"), isActive: $navigateToChat) {
-                    EmptyView()
-                }
-                .hidden()
+                NavigationLink(destination: ChatView(viewModel: DialogViewModel(), partner: "Rose2"), isActive: $showChatView) { EmptyView() }
+                    .hidden()
             )
-            .onTapGesture {
-                navigateToChat = true
-            }
+            
+         
             
             //abis itu dia lgsg logout ig dari hp rose
             
