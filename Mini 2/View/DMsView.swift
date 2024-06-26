@@ -9,7 +9,7 @@ struct DMsView: View {
             VStack {
                 List {
                     ForEach(viewModel_2.chat, id: \.profileName) { message in
-                        NavigationLink(destination: ChatView(viewModel: viewModel, partner: message.profileName)) {
+                        NavigationLink(destination: ChatView(viewModel: viewModel, partner: message.profileName, profileName: message.profileName)) {
                             HStack {
                                 DMsList(profilePicture: message.profilePicture, profileName: message.profileName, textMessage: "..")
                                 }

@@ -45,7 +45,7 @@ struct Episode7View: View {
                                     )
                                 }
                                 .sheet(isPresented: $showChatView) {
-                                    ChatView(viewModel: DialogViewModel(), partner: "Fans")
+                                    ChatView(viewModel: DialogViewModel(), partner: "Fans", profileName: "Jenna")
                                 }
                             } else {
                                 if showSecondNotification {

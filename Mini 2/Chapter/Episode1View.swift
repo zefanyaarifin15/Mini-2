@@ -53,7 +53,7 @@ struct Episode1View: View {
                                     ), isActive: $showPostView) { EmptyView() }
                                 )
                                 .background(
-                                    NavigationLink(destination: ChatView(viewModel: DialogViewModel(), partner: "Rose"), isActive: $showChatView) { EmptyView() }
+                                    NavigationLink(destination: ChatView(viewModel: DialogViewModel(), partner: "Rose", profileName: "Rose"), isActive: $showChatView) { EmptyView() }
                                 )
                             }
                             Spacer()

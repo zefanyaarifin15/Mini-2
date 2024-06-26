@@ -3,7 +3,7 @@ import Foundation
 let jamesMessages: [(String, String)] = [
     ("Jasmine", "Hey babe! Guess what? I just got your flowers. They’re beautiful!"),
     ("James", "I’m glad you like them! Just wanted to make you smile 😊"),
-    ("Jasmine", "You’re the sweetest. These flowers are going to look amazing in my next Instagram post."),
+    ("Jasmine", "You’re the sweetest. These flowers are going to look amazing in my next InstaQueen post."),
     ("James", "I can’t wait to see it! Your makeup tutorials are getting so much attention lately."),
     ("Jasmine", "Thanks to you! You’re always there cheering me on and helping with all those late-night editing sessions."),
     ("James", "I'm always here to support my amazing girlfriend, whether it's with flowers or cheering you on as you conquer the beauty world 🤩"),
