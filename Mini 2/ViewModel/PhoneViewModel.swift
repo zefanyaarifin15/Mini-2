@@ -2,10 +2,10 @@ import SwiftUI
 
 class PhoneViewModel: ObservableObject {
     @Published var appIcons: [AppIconViewModel] = [
-        AppIconViewModel(imageName: "Postingan 2", labelText: "InstaQueen", destination: AnyView(HomeView())),
-        AppIconViewModel(imageName: "Postingan 2", labelText: "Board", destination: AnyView(RBView())),
-        AppIconViewModel(imageName: "Postingan 2", labelText: "Task", destination: AnyView(TaskView())),
-        AppIconViewModel(imageName: "Postingan 2", labelText: "Notes", destination: AnyView(NotesView()))
+        AppIconViewModel(imageName: "Instaqueen", labelText: "InstaQueen", destination: AnyView(HomeView())),
+        AppIconViewModel(imageName: "R&B", labelText: "Board", destination: AnyView(RBView())),
+        AppIconViewModel(imageName: "Task", labelText: "Task", destination: AnyView(TaskView())),
+        AppIconViewModel(imageName: "Notes", labelText: "Notes", destination: AnyView(NotesView()))
     ]
     
 }

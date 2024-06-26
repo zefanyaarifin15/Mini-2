@@ -1,37 +1,35 @@
 import SwiftUI
 
 struct Episode4View: View {
-    @State private var navigateToChat = false
-    
+    @State private var showChatView = false
+
     var body: some View {
-        VStack {
-            PhoneView().overlay {
-                VStack {
-                    MessageNotification(
-                        image: "icon",
-                        title: "Rose",
-                        description: "I’m worried about you, are you alright? I’m here for you all the time.",
-                        time: "19:00",
-                        disableSecondNotification: true
-                    )
-                    Spacer()
+        NavigationView {
+            VStack {
+                PhoneView().overlay {
+                    VStack {
+                        MessageNotification(
+                            image: "icon",
+                            title: "Rose",
+                            description: "I’m worried about you, are you alright? I’m here for you all the time.",
+                            time: "20:00",
+                            disableSecondNotification: true
+                        )
+                        .onTapGesture {
+                            showChatView = true
+                        }
+                        Spacer()
+                    }
                 }
             }
-            
-            //ini bingung knp dia navigate ke post view?
-            
             .background(
-                NavigationLink(destination: ChatView(viewModel: DialogViewModel(), partner: "Rose2"), isActive: $navigateToChat) {
+                NavigationLink(destination: ChatView(viewModel: DialogViewModel(), partner: "Rose2", profileName: "Rose"), isActive: $showChatView) {
                     EmptyView()
                 }
                 .hidden()
             )
-            .onTapGesture {
-                navigateToChat = true
-            }
             
-            //abis itu dia lgsg logout ig dari hp rose
-            
+            //dia bakal logout ig dari hp rose (ini liat di task list)
         }
     }
 }

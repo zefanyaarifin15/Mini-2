@@ -23,7 +23,7 @@ struct Episode3View: View {
                 }
             }
             .background(
-                NavigationLink(destination: ChatView(viewModel: DialogViewModel(), partner: "Stalker"), isActive: $showChatView) {
+                NavigationLink(destination: ChatView(viewModel: DialogViewModel(), partner: "Stalker", profileName: "ShadowLurker"), isActive: $showChatView) {
                     EmptyView()
                 }
                 .hidden()

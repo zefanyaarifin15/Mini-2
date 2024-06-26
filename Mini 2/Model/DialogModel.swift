@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 
 struct PartnerConversation: Codable {
     let partner_dialog: String
@@ -14,7 +14,7 @@ struct DialogSegment: Codable, Identifiable {
 struct UserOption: Codable, Identifiable {
     let id: String
     let reply: String
-    let response: String
+    let response: String?
 }
 
 struct History: Identifiable, Codable {

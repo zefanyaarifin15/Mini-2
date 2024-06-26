@@ -8,13 +8,13 @@ struct Episode1View: View {
     
     let targetPost: Post = Post(
         username: "beautyjasmine",
-        caption: "My niece is so cute",
+        caption: "beauty Mascara🫶🏻",
         location: "Home",
-        postImage: "feeds1",
+        postImage: "post1",
         profileImage: "beautyjasmine",
         initialLikes: 319872,
         commentUser: "ShadowLurker",
-        commentText: "You're nothing but a fake"
+        commentText: "That lips look like pongo lips"
     )
     
     var body: some View {
@@ -53,7 +53,7 @@ struct Episode1View: View {
                                     ), isActive: $showPostView) { EmptyView() }
                                 )
                                 .background(
-                                    NavigationLink(destination: ChatView(viewModel: DialogViewModel(), partner: "Rose"), isActive: $showChatView) { EmptyView() }
+                                    NavigationLink(destination: ChatView(viewModel: DialogViewModel(), partner: "Rose", profileName: "Rose"), isActive: $showChatView) { EmptyView() }
                                 )
                             }
                             Spacer()
