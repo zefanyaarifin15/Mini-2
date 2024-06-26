@@ -11,10 +11,10 @@ class DMsViewModel: ObservableObject {
     @Published var chat: [DMsList] = []
 
     private let predefinedDMs: [DMType: (profilePicture: String, profileName: String, textMessage: String)] = [
-        .rose: (profilePicture: "post9", profileName: "Rose", textMessage: "Hello from Rose!"),
-        .steph: (profilePicture: "post9", profileName: "Steph", textMessage: "Hello from Steph!"),
-        .natalie: (profilePicture: "post9", profileName: "Natalie", textMessage: "Hello from Natalie!"),
-        .stalker: (profilePicture: "post9", profileName: "Stalker", textMessage: "Hello from Stalker!")
+        .rose: (profilePicture: "Rose", profileName: "Rose", textMessage: "Hello from Rose!"),
+        .steph: (profilePicture: "Stephanie", profileName: "Steph", textMessage: "Hello from Steph!"),
+        .natalie: (profilePicture: "Natalie", profileName: "Natalie", textMessage: "Hello from Natalie!"),
+        .stalker: (profilePicture: "Stalker", profileName: "Stalker", textMessage: "Hello from Stalker!")
     ]
 
     func addDM(_ type: DMType) {
