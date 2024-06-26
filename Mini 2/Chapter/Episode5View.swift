@@ -26,12 +26,12 @@ struct Episode5View: View {
                             if notificationViewModel.showNotification {
                                 MessageNotification(
                                     image: "icon",
-                                    title: isSecondNotification ? "anonim" : "Natalie",  // Change title based on notification state
-                                    description: isSecondNotification ? "@jasmine natalie is copying!" : "How about a girls night out?",  // Change description based on notification state
+                                    title: isSecondNotification ? "anonim" : "Natalie",
+                                    description: isSecondNotification ? "@jasmine natalie is copying!" : "How about a girls night out?",
                                     time: "20:00",
                                     onSecondNotification: {
                                         isSecondNotification = true
-                                        // Update the notification to show immediately after changing the state
+                                      
                                         notificationViewModel.showNotification = false
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                             notificationViewModel.showNotification = true
