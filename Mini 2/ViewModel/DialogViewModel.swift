@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 
 class DialogViewModel: ObservableObject {
     @Published var conversations: [PartnerConversation] = []
@@ -6,9 +6,7 @@ class DialogViewModel: ObservableObject {
     @Published var selectedPartner: String = ""
     @Published var userOptions: [UserOption] = []
     @Published var currDialogID: Int = 1
-
-    private let historyFileName = "ChatStorage.json"
-    private let stateFileName = "Conversation.json"
+    @Published var lastResponseText: String?
 
     init() {
         initialSetup()
@@ -29,26 +27,18 @@ class DialogViewModel: ObservableObject {
         }
     }
 
-    // Ambil nama2 partnersnya
-    func fetchPartners() -> [String] {
-        conversations.map { $0.partner_dialog }
-    }
-
-    // Ganti nama partner yang sedang dipilih
     func changeSelectedPartner(to newPartner: String) {
         selectedPartner = newPartner
-        histories.removeAll()
         currDialogID = 1
         userOptions = fetchUserOptions(for: newPartner, dialogID: currDialogID)
         appendStartDialogHistoryIfNeeded(for: newPartner)
     }
 
-
     func fetchUserOptions(for partner: String, dialogID: Int) -> [UserOption] {
-        guard let dialog = conversations.first(where: { $0.partner_dialog == partner })?.dialog.first(where: { $0.id == dialogID }) else {
+        guard let conversation = conversations.first(where: { $0.partner_dialog == partner }) else {
             return []
         }
-        return dialog.user_options
+        return conversation.dialog.first(where: { $0.id == dialogID })?.user_options ?? []
     }
 
     func selectOption(optionID: String) {
@@ -57,86 +47,100 @@ class DialogViewModel: ObservableObject {
             return
         }
 
-        histories.append(History(content: selectedOption.reply, isUser: true, partner: selectedPartner))
-        saveHistoryToJSON()
+        saveHistory(content: selectedOption.reply, isUser: true, partner: selectedPartner)
 
-        histories.append(History(content: selectedOption.response, isUser: false, partner: selectedPartner))
-        saveHistoryToJSON()
+        if let responseText = selectedOption.response {
+            saveHistory(content: responseText, isUser: false, partner: selectedPartner)
+            lastResponseText = responseText
+        } else {
+            lastResponseText = nil
+        }
 
+        // Increment the dialog ID to fetch the next set of user options
         currDialogID += 1
         userOptions = fetchUserOptions(for: selectedPartner, dialogID: currDialogID)
-        saveStateToJSON()
+        saveState()
     }
 
     private func appendStartDialogHistoryIfNeeded(for partner: String) {
-        if histories.isEmpty {
-            if let conversation = conversations.first(where: { $0.partner_dialog == partner }) {
-                histories.append(History(content: conversation.start_dialog, isUser: false, partner: partner))
-                saveHistoryToJSON()
-            }
+        guard let conversation = conversations.first(where: { $0.partner_dialog == partner }) else {
+            return
+        }
+
+        // Check if start dialog already exists in histories
+        if !histories.contains(where: { $0.content == conversation.start_dialog }) {
+            saveHistory(content: conversation.start_dialog, isUser: false, partner: partner)
         }
     }
 
+    private func saveHistory(content: String, isUser: Bool, partner: String) {
+        let newHistory = History(content: content, isUser: isUser, partner: partner)
+        histories.append(newHistory)
+        saveHistoryToJSON() // Save history to JSON file
+    }
+
     private func saveHistoryToJSON() {
-        let encoder = JSONEncoder()
-        if let encodedData = try? encoder.encode(histories) {
-            let url = getDocumentsDirectory().appendingPathComponent(historyFileName)
-            try? encodedData.write(to: url)
+        do {
+            let data = try JSONEncoder().encode(histories)
+            if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("ChatStorage.json") {
+                try data.write(to: url)
+            }
+        } catch {
+            print("Failed to save history to JSON: \(error)")
         }
     }
 
     private func loadHistoryFromJSON() {
-        let url = getDocumentsDirectory().appendingPathComponent(historyFileName)
-        if let data = try? Data(contentsOf: url) {
-            let decoder = JSONDecoder()
-            if let decodedHistories = try? decoder.decode([History].self, from: data) {
-                histories = decodedHistories
+        do {
+            if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("ChatStorage.json") {
+                let data = try Data(contentsOf: url)
+                histories = try JSONDecoder().decode([History].self, from: data)
             }
+        } catch {
+            print("Failed to load history from JSON: \(error)")
         }
     }
 
-    private func saveStateToJSON() {
-        let state = ConversationState(selectedPartner: selectedPartner, currDialogID: currDialogID, userOptions: userOptions)
-        let encoder = JSONEncoder()
-        if let encodedData = try? encoder.encode(state) {
-            let url = getDocumentsDirectory().appendingPathComponent(stateFileName)
-            try? encodedData.write(to: url)
-        }
-    }
-
-    private func loadStateFromJSON() {
-        let url = getDocumentsDirectory().appendingPathComponent(stateFileName)
-        if let data = try? Data(contentsOf: url) {
-            let decoder = JSONDecoder()
-            if let decodedState = try? decoder.decode(ConversationState.self, from: data) {
-                selectedPartner = decodedState.selectedPartner
-                currDialogID = decodedState.currDialogID
-                userOptions = decodedState.userOptions
+    private func saveState() {
+        do {
+            let state = ConversationState(selectedPartner: selectedPartner, currDialogID: currDialogID, userOptions: userOptions)
+            let data = try JSONEncoder().encode(state)
+            if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Conversation.json") {
+                try data.write(to: url)
             }
+        } catch {
+            print("Failed to save state to JSON: \(error)")
         }
     }
 
-    private func getDocumentsDirectory() -> URL {
-        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    private func loadState() {
+        do {
+            if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Conversation.json") {
+                let data = try Data(contentsOf: url)
+                let state = try JSONDecoder().decode(ConversationState.self, from: data)
+                selectedPartner = state.selectedPartner
+                currDialogID = state.currDialogID
+                userOptions = state.userOptions
+            }
+        } catch {
+            print("Failed to load state from JSON: \(error)")
+        }
     }
 
     func resetChatStorage() {
         histories.removeAll()
         userOptions.removeAll()
-        currDialogID = 1
-
-        saveHistoryToJSON()
-        saveStateToJSON()
-        
-        // Reinitialize the dialog for the selected partner
-        appendStartDialogHistoryIfNeeded(for: selectedPartner)
-        userOptions = fetchUserOptions(for: selectedPartner, dialogID: currDialogID)
+        saveHistoryToJSON() // Optionally, save the cleared history to JSON
+        saveState() // Optionally, save the cleared state to JSON
     }
 
     func initialSetup() {
         loadJSONData()
+        resetChatStorage() // Reset the chat storage when first opening the app
         if let firstPartner = conversations.first?.partner_dialog {
             changeSelectedPartner(to: firstPartner)
         }
     }
 }
+
+

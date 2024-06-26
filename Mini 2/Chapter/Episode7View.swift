@@ -78,7 +78,7 @@ struct Episode7View: View {
             }
         }
         .onAppear {
-            viewModel_2.addDM(.natalie)
+            viewModel_2.addNextDM()
         }
     }
 }

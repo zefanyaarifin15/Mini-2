@@ -77,6 +77,7 @@
 		D9526C612C244D30008FFBE5 /* PhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C602C244D30008FFBE5 /* PhoneModel.swift */; };
 		D96F92162C2B25F900E37206 /* ChatStorage.json in Resources */ = {isa = PBXBuildFile; fileRef = D96F92142C2B25F900E37206 /* ChatStorage.json */; };
 		D96F92172C2B25F900E37206 /* Conversation.json in Resources */ = {isa = PBXBuildFile; fileRef = D96F92152C2B25F900E37206 /* Conversation.json */; };
+		D9A043CE2C2C67EF00FFDFBA /* JamesChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A043CD2C2C67EF00FFDFBA /* JamesChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +151,7 @@
 		D9526C602C244D30008FFBE5 /* PhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneModel.swift; sourceTree = "<group>"; };
 		D96F92142C2B25F900E37206 /* ChatStorage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ChatStorage.json; sourceTree = "<group>"; };
 		D96F92152C2B25F900E37206 /* Conversation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Conversation.json; sourceTree = "<group>"; };
+		D9A043CD2C2C67EF00FFDFBA /* JamesChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamesChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +298,7 @@
 			children = (
 				A30F11242C28862300EFA434 /* Call View */,
 				D90B7CB12C1AE2FD008B3F7C /* ChatView.swift */,
+				D9A043CD2C2C67EF00FFDFBA /* JamesChatView.swift */,
 				D9526C3A2C1CC2A7008FFBE5 /* DMsView.swift */,
 				6D5EF1152C1AC1A500C20D4D /* ContentView.swift */,
 				6DACC7642C20B16F00AC7ED2 /* StalkerProfile.swift */,
@@ -421,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A043CE2C2C67EF00FFDFBA /* JamesChatView.swift in Sources */,
 				D6FD36EC2C2881DE00CC4259 /* FeedsViewModel.swift in Sources */,
 				D6FD36F62C296BE600CC4259 /* SettingsView.swift in Sources */,
 				4B30030D2C2AAAB7003CCCB3 /* Episode1View.swift in Sources */,

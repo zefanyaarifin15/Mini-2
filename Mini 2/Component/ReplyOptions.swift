@@ -17,6 +17,7 @@ struct ReplyOptions<Content: View, Content2: View>: View {
             ScrollView {
                 content
                     .padding(.top) // Add top padding as needed
+                    .padding(.bottom) // Add top padding as needed
                     .padding(.horizontal) // Add horizontal padding as needed
             }
             .defaultScrollAnchor(.bottom)
@@ -46,11 +47,9 @@ struct ReplyOptions<Content: View, Content2: View>: View {
                         .onTapGesture {
                             isTapped.toggle()
                         }
-                    
+
                     content2
                         .padding(.top, 5)
-                        
-                    
                     Spacer()
                 }
             }
