@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct PictureEditView: View {
-    @State private var exposureValue: Double = 0.0
+    @State private var exposureValue: Double = -0.8
     @Binding var isPictureClicked: Bool
     var body: some View {
         ZStack {
@@ -35,6 +35,7 @@ struct PictureBubble: View{
         ZStack {
             Image("PictureEdit")
                 .resizable()
+                .brightness(-0.8)
                 .frame(maxWidth: 250, maxHeight: 150, alignment: .leading)
                 .cornerRadius(20)
                 .frame(maxWidth: .infinity, alignment: .leading)

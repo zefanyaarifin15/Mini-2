@@ -52,10 +52,10 @@ struct ChatView: View {
             .edgesIgnoringSafeArea(.bottom)
             
 //             //Optional: Handle isLoading and selectedOptionID display
-//            if isLoading {
-//                AnimationView(name: "LoadingAnimation", animationSpeed: 1.0)
-//                    .frame(width: 10, height: 10)
-//            } else {
+            if isLoading {
+                AnimationView(name: "LoadingAnimation", animationSpeed: 1.0)
+                    .frame(width: 10, height: 10)
+            } //else {
 //                if let optionID = selectedOptionID {
 //                    Text("Reply: \(viewModel.userOptions.first { $0.id == optionID }?.reply ?? "")")
 //                        .padding()
@@ -70,7 +70,7 @@ struct ChatView: View {
                 ForEach(viewModel.histories.filter { $0.partner == partner }) { history in
                     HStack {
                         if history.isUser {
-                            if history.content != "-Ignore Chat-" {
+                            if history.content != "- Ignore Chat -" {
                                 OutgoingChatBubble(message: history.content)
                             }
                         } else {
@@ -86,15 +86,15 @@ struct ChatView: View {
                     .padding([.leading, .trailing], 10)
                 }
                 
-//                // Display loading animation if isLoading is true
-//                if isLoading {
-//                    HStack {
-//                        AnimationView(name: "LoadingAnimation", animationSpeed: 1.0)
-//                            .frame(width: 50, height: 50)
-//                        Spacer()
-//                    }
-//                    .padding([.leading, .trailing], 10)
-//                }
+                // Display loading animation if isLoading is true
+                if isLoading {
+                    HStack {
+                        AnimationView(name: "LoadingAnimation", animationSpeed: 1.0)
+                            .frame(width: 50, height: 50)
+                        Spacer()
+                    }
+                    .padding([.leading, .trailing], 10)
+                }
             }
             .padding(.top, 8)
         }
@@ -105,6 +105,6 @@ struct ChatView: View {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(viewModel: DialogViewModel(), partner: "Stalker", profileName: "Stephanie")
+        ChatView(viewModel: DialogViewModel(), partner: "ShadowLurker", profileName: "Stephanie")
     }
 }

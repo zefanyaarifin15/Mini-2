@@ -21,14 +21,15 @@ struct CallNotification: View {
                 .resizable()
                 .frame(width: 60, height: 60)
                 .clipShape(Circle())
+            .font(.system(size: 10))
             
             VStack(alignment: .leading, spacing: 5) {
                 Text("InstaQueen")
-                    .font(.system(size: 15))
+                    .font(.system(size: 15, weight: .semibold))
                     .foregroundStyle(.black)
                 
                 Text(name)
-                    .font(.system(size: 15, weight: .semibold))
+                    .font(.system(size: 14))
                     .foregroundStyle(.black)
                 
             }
@@ -75,7 +76,7 @@ struct CallNotification: View {
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color(red: 168/255, green: 165/255, blue: 164/255))
-                .opacity(0.6)
+                //.opacity(0.6)
                 .shadow(radius: 5)
         )
         .padding()
@@ -83,5 +84,5 @@ struct CallNotification: View {
 }
 
 #Preview {
-    CallNotification(profile: "profile", name: "Stephanie",  showGameOverText: .constant(false), showCallNotification: .constant(true))
+    CallNotification(profile: "profile", name: "ShadowLurker",  showGameOverText: .constant(false), showCallNotification: .constant(true))
 }

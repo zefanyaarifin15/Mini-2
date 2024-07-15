@@ -9,7 +9,7 @@ struct Episode4View: View {
                 PhoneView().overlay {
                     VStack {
                         MessageNotification(
-                            image: "icon",
+                            image: "Instaqueen",
                             title: "Rose",
                             description: "I’m worried about you, are you alright? I’m here for you all the time.",
                             time: "20:00",

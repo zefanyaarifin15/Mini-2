@@ -25,8 +25,8 @@ struct Episode1View: View {
                         VStack {
                             if notificationViewModel.showNotification {
                                 MessageNotification(
-                                    image: "icon",
-                                    title: "QueensTagram",
+                                    image: "Instaqueen",
+                                    title: "InstaQueen",
                                     description: "You got 1K+ comments on your latest post",
                                     time: "19:00",
                                     onSecondNotification: {

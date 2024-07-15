@@ -81,7 +81,7 @@ struct MessageNotification: View {
                 isVisible = false
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                image = "icon"
+                image = "Instaqueen"
                 title = "Rose"
                 description = "Hi there, how are you holding up today?"
                 time = "19:30"
@@ -97,6 +97,6 @@ struct MessageNotification: View {
 
 struct MessageNotification_Previews: PreviewProvider {
     static var previews: some View {
-        MessageNotification(image: "icon", title: "Stephanie", description: "You got 1K+ comments on your latest post", time: "19:00")
+        MessageNotification(image: "Instaqueen", title: "Stephanie", description: "You got 1K+ comments on your latest post", time: "19:00")
     }
 }

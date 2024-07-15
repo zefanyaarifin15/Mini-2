@@ -25,7 +25,7 @@ struct Episode5View: View {
                         VStack {
                             if notificationViewModel.showNotification {
                                 MessageNotification(
-                                    image: "icon",
+                                    image: "Instaqueen",
                                     title: isSecondNotification ? "anonim" : "Natalie",
                                     description: isSecondNotification ? "@jasmine natalie is copying u!" : "Hi Jasmine! It's been a while since we hung out. How about we plan something for this weekend?😆",
                                     time: "20:00",
