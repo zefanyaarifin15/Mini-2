@@ -102,7 +102,7 @@ struct Episode1View: View {
                     MessageNotification(image: "Instaqueen", title: "Instaqueen", description: "You got 1K+ comments on your latest post", time: "19:00")
                         .onAppear{
                             soundPlayer.playSound(sound: "message_notif", type: "mp3")
-                            soundPlayed = true
+                            //soundPlayed = true
                         }
                     
                 }
@@ -112,7 +112,7 @@ struct Episode1View: View {
 
                         .onAppear{
                             soundPlayer.playSound(sound: "message_notif", type: "mp3")
-                            soundPlayed = true
+                            //soundPlayed = true
                         }
                 }
 

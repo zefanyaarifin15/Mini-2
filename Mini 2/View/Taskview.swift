@@ -58,11 +58,16 @@ struct TaskView: View {
                                                 viewModel.completeTask(task)
                                             }
                                         }
-                                        else{
+                                        else if index == 1 && progress.counter == 2 {
+                                            withAnimation {
+                                                viewModel.completeTask(task)
+                                            }
+                                        }else{
                                             withAnimation {
                                                 viewModel.completeTask(task)
                                             }
                                         }
+
                                         
 
                                         
