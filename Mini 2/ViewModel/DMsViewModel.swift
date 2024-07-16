@@ -25,7 +25,10 @@ class ProfileList: Identifiable {
 }
 
 class DMsViewModel: ObservableObject {
-    @Published var chat: [DMsList] = []
+    @Published var chat: [DMsList] = [
+    DMsList(profilePicture: "James", profileName: "James", textMessage: "Hello from James!"),
+    DMsList(profilePicture: "Rose", profileName: "Rose", textMessage: "Hello from Rose!")
+    ]
     @Environment(\.modelContext) private var context
     @Query private var lists: [ProfileList]
     

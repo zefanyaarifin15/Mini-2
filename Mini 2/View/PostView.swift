@@ -13,6 +13,7 @@ struct PostView: View {
     @State private var isLiked = false
     @State private var likesCount: Int
     
+    
     init(username: String, caption: String, location: String, postImage: String, profileImage: String, initialLikes: Int, commentUser: String, commentText: String) {
         self.username = username
         self.caption = caption

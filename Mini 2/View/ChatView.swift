@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ChatView: View {
     @ObservedObject var viewModel: DialogViewModel
+    @EnvironmentObject private var progress: UserProgress
+    
     var partner: String
     var profileName: String
     
@@ -9,6 +11,8 @@ struct ChatView: View {
     @State private var selectedOptionID: String?
     
     var body: some View {
+        
+
         VStack(spacing: 0) {
             ReplyOptions(content: {
                 historyFlow
@@ -18,6 +22,7 @@ struct ChatView: View {
                     VStack(spacing: 8) {
                         ForEach(viewModel.userOptions) { option in
                             Button(action: {
+                                progress.incrementCounter()
                                 selectedOptionID = option.id
                                 viewModel.selectOption(optionID: option.id)
                             }) {
@@ -105,6 +110,6 @@ struct ChatView: View {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(viewModel: DialogViewModel(), partner: "ShadowLurker", profileName: "Stephanie")
+        ChatView(viewModel: DialogViewModel(), partner: "ShadowLurker", profileName: "Stephanie").environmentObject(UserProgress()) 
     }
 }

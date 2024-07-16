@@ -23,6 +23,8 @@ struct PaperBackgroundView: View {
 
 struct TaskView: View {
     @StateObject private var viewModel = TaskViewModel()
+    @EnvironmentObject private var progress: UserProgress
+    @State private var curr: Int = 0
     
     var body: some View {
         ScrollView {
@@ -40,17 +42,37 @@ struct TaskView: View {
                     
                     ForEach(Array(viewModel.tasks.enumerated()), id: \.element.id) { index, task in
                         if viewModel.showTask(at: index) {
+//                            if progress.counter == 1{
+//
+//                            }
                             HStack {
                                 Text(task.title)
                                     .font(.custom("Marker Felt", size: 20))
                                     .fontWeight(.light)
                                     .opacity(0.85)
                                     .strikethrough(task.isCompleted)
-                                    .onTapGesture {
-                                        withAnimation {
-                                            viewModel.completeTask(task)
+                                    .onAppear{
+                                        
+                                        if index == 0 && progress.counter == 1 {
+                                            withAnimation {
+                                                viewModel.completeTask(task)
+                                            }
                                         }
+                                        else{
+                                            withAnimation {
+                                                viewModel.completeTask(task)
+                                            }
+                                        }
+                                        
+
+                                        
+                                        
                                     }
+//                                    .onTapGesture {
+//                                        withAnimation {
+//                                            viewModel.completeTask(task)
+//                                        }
+//                                    }
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 5)
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -77,7 +99,7 @@ struct TaskView: View {
 
 // Preview
 struct TaskView_Previews: PreviewProvider {
-    static var previews: TaskView {
-        TaskView()
+    static var previews: some View {
+        TaskView().environmentObject(UserProgress())
     }
 }

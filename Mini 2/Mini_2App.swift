@@ -4,10 +4,14 @@ import SwiftData
 @main
 struct Mini_2App: App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+    @StateObject private var userProgress = UserProgress()
+ 
+    
     var body: some Scene {
         WindowGroup {
             Episode1View()
-                .modelContainer(for: ProfileList.self)
+                .environmentObject(userProgress)
+
         }
     }
     

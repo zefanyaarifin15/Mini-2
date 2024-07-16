@@ -3,11 +3,13 @@ import SwiftUI
 struct DMsView: View {
     @ObservedObject var viewModel: DialogViewModel
     @ObservedObject var viewModel_2: DMsViewModel
+    @EnvironmentObject private var progress: UserProgress
 
     var body: some View {
         VStack {
             List {
                 ForEach(viewModel_2.chat, id: \.profileName) { message in
+                    
                     if message.profileName == "James" {
                         NavigationLink(destination: JamesChatView(partner: "James")) {
                             HStack {
@@ -15,6 +17,7 @@ struct DMsView: View {
                             }
                         }
                     } else {
+                        
                         NavigationLink(destination: ChatView(viewModel: viewModel, partner: message.profileName, profileName: message.profileName)) {
                             HStack {
                                 DMsList(profilePicture: message.profilePicture, profileName: message.profileName, textMessage: "")
@@ -42,6 +45,6 @@ struct DMsView: View {
 
 struct DMsView_Previews: PreviewProvider {
     static var previews: some View {
-        DMsView(viewModel: DialogViewModel(), viewModel_2: DMsViewModel())
+        DMsView(viewModel: DialogViewModel(), viewModel_2: DMsViewModel()).environmentObject(UserProgress())
     }
 }

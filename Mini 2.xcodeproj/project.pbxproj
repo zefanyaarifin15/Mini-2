@@ -63,6 +63,7 @@
 		D90B7CC12C1C1451008B3F7C /* OutgoingChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B7CC02C1C1451008B3F7C /* OutgoingChatBubble.swift */; };
 		D92C1B172C296A6700E6288F /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C1B162C296A6700E6288F /* NotificationModel.swift */; };
 		D92C1B1A2C2AA4A000E6288F /* DMsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C1B192C2AA4A000E6288F /* DMsViewModel.swift */; };
+		D94930DA2C4596F4005C203A /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94930D92C4596F4005C203A /* UserProgress.swift */; };
 		D9526C3B2C1CC2A7008FFBE5 /* DMsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C3A2C1CC2A7008FFBE5 /* DMsView.swift */; };
 		D9526C3D2C1D7175008FFBE5 /* DMsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C3C2C1D7175008FFBE5 /* DMsList.swift */; };
 		D9526C3F2C1DBCB5008FFBE5 /* ChatProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9526C3E2C1DBCB5008FFBE5 /* ChatProfile.swift */; };
@@ -137,6 +138,7 @@
 		D90B7CC02C1C1451008B3F7C /* OutgoingChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingChatBubble.swift; sourceTree = "<group>"; };
 		D92C1B162C296A6700E6288F /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		D92C1B192C2AA4A000E6288F /* DMsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMsViewModel.swift; sourceTree = "<group>"; };
+		D94930D92C4596F4005C203A /* UserProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgress.swift; sourceTree = "<group>"; };
 		D9526C3A2C1CC2A7008FFBE5 /* DMsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMsView.swift; sourceTree = "<group>"; };
 		D9526C3C2C1D7175008FFBE5 /* DMsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMsList.swift; sourceTree = "<group>"; };
 		D9526C3E2C1DBCB5008FFBE5 /* ChatProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatProfile.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				D92C1B192C2AA4A000E6288F /* DMsViewModel.swift */,
 				D6FD36F92C2ABB7C00CC4259 /* NotificationViewModel.swift */,
 				D6FD36FB2C2AC27700CC4259 /* CommentModel.swift */,
+				D94930D92C4596F4005C203A /* UserProgress.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				A30F11262C28863700EFA434 /* OngoingCallView.swift in Sources */,
 				D92C1B1A2C2AA4A000E6288F /* DMsViewModel.swift in Sources */,
 				6DACC7732C293AD800AC7ED2 /* TaskModel.swift in Sources */,
+				D94930DA2C4596F4005C203A /* UserProgress.swift in Sources */,
 				4B2528262C2B1698007A26A6 /* Episode4View.swift in Sources */,
 				4B1195732C1EE3AB002AE982 /* SoundModel.swift in Sources */,
 				D9526C612C244D30008FFBE5 /* PhoneModel.swift in Sources */,
@@ -619,6 +623,7 @@
 				DEVELOPMENT_TEAM = ZSHV98B7GC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mini-2-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -649,6 +654,7 @@
 				DEVELOPMENT_TEAM = ZSHV98B7GC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mini-2-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
