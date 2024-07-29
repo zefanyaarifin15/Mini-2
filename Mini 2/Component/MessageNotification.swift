@@ -175,3 +175,14 @@ struct MessageNotification: View {
         }
     }
 }
+
+
+/*
+ View Notifikasi:
+ - Rapihin animation pas muncul
+ - Tambah drag gesture untuk user hapus notif (swipe up)
+ - Bisa otomatis ilang setelah 5 detik
+ - Sound muncul cukup sekali pas muncul
+ - Input: image, title, desc
+ - Output: Notif muncul (animasi+sound) -> user bisa swipe up / user bisa tunggu ilang otomatis
+*/

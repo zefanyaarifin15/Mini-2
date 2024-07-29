@@ -133,3 +133,7 @@ struct Episode1View_Previews: PreviewProvider {
     }
 }
 
+/*
+ fix logika alur episode:
+ - masih hardcode
+ */

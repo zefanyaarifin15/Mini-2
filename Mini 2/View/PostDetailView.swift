@@ -86,3 +86,7 @@ struct PostDetailView: View {
         .navigationBarTitle("Post", displayMode: .inline)
     }
 }
+
+#Preview {
+    PostDetailView(imageName: "post1", username: "beautyjasmine", caption: "beauty Mascara🫶🏻", profileImage: "beautyjasmine", initialLikes: 319872)
+}

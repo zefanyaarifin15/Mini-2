@@ -145,3 +145,10 @@ struct PostView_Previews: PreviewProvider {
         PostView(username: "beautyjasmine", caption: "beauty Mascara🫶🏻", location: "Home", postImage: "post1", profileImage: "beautyjasmine", initialLikes: 319872, commentUser: "ShadowLurker", commentText: "That lips look like pongo lips")
     }
 }
+
+/*
+ Post + Comments:
+ - Samain comment ShadowLurkernya (PostView & CommentsView)
+ - [line 125-137] Bikin comment yang muncul itu comment yang paling atas yang ada di CommentsView(), 
+   jadi ga selalu comment dari ShadowLurker
+ */

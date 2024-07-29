@@ -48,3 +48,10 @@ struct DMsView_Previews: PreviewProvider {
         DMsView(viewModel: DialogViewModel(), viewModel_2: DMsViewModel()).environmentObject(UserProgress())
     }
 }
+
+/*
+ DM:
+ - Tambah penanda kalau ada new chat (chat yang blm user buka)
+ - Save chats di SwiftData [masih hrs nunggu logic flow chapter]
+ - Buat chatnya muncul sesuai alur [masih hrs nunggu logic flow chapter]
+*/
