@@ -30,11 +30,11 @@ class DialogViewModel: ObservableObject {
     func changeSelectedPartner(to newPartner: String) {
         selectedPartner = newPartner
         currDialogID = 1
-        userOptions = fetchUserOptions(for: newPartner, dialogID: currDialogID)
+        userOptions = fetchDialog(for: newPartner, dialogID: currDialogID)
         appendStartDialogHistoryIfNeeded(for: newPartner)
     }
 
-    func fetchUserOptions(for partner: String, dialogID: Int) -> [UserOption] {
+    func fetchDialog(for partner: String, dialogID: Int) -> [UserOption] {
         guard let conversation = conversations.first(where: { $0.partner_dialog == partner }) else {
             return []
         }
@@ -56,9 +56,8 @@ class DialogViewModel: ObservableObject {
             lastResponseText = nil
         }
 
-        // Increment the dialog ID to fetch the next set of user options
         currDialogID += 1
-        userOptions = fetchUserOptions(for: selectedPartner, dialogID: currDialogID)
+        userOptions = fetchDialog(for: selectedPartner, dialogID: currDialogID)
         saveState()
     }
 
@@ -67,7 +66,7 @@ class DialogViewModel: ObservableObject {
             return
         }
 
-        // Check if start dialog already exists in histories
+    
         if !histories.contains(where: { $0.content == conversation.start_dialog }) {
             saveHistory(content: conversation.start_dialog, isUser: false, partner: partner)
         }
@@ -130,13 +129,13 @@ class DialogViewModel: ObservableObject {
     func resetChatStorage() {
         histories.removeAll()
         userOptions.removeAll()
-        saveHistoryToJSON() // Optionally, save the cleared history to JSON
-        saveState() // Optionally, save the cleared state to JSON
+        saveHistoryToJSON()
+        saveState()
     }
 
     func initialSetup() {
         loadJSONData()
-        resetChatStorage() // Reset the chat storage when first opening the app
+        resetChatStorage()
         if let firstPartner = conversations.first?.partner_dialog {
             changeSelectedPartner(to: firstPartner)
         }
