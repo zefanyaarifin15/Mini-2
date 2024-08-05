@@ -14,7 +14,6 @@
 		4B24039A2C2584CB0085574A /* UploadProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2403992C2584CB0085574A /* UploadProfileView.swift */; };
 		4B24039C2C2589140085574A /* ReportCardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B24039B2C2589140085574A /* ReportCardDetail.swift */; };
 		4B2528262C2B1698007A26A6 /* Episode4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2528252C2B1698007A26A6 /* Episode4View.swift */; };
-		4B29B89F2C2C025800F07314 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4B29B89E2C2C025800F07314 /* Lottie */; };
 		4B29B8A12C2C028700F07314 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B29B8A02C2C028700F07314 /* AnimationView.swift */; };
 		4B2A045A2C22C53300E47EE5 /* ReportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A04592C22C53300E47EE5 /* ReportCard.swift */; };
 		4B2A045C2C22DA0900E47EE5 /* ConfirmationReportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2A045B2C22DA0900E47EE5 /* ConfirmationReportPage.swift */; };
@@ -161,7 +160,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B29B89F2C2C025800F07314 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +357,6 @@
 			);
 			name = "Mini 2";
 			packageProductDependencies = (
-				4B29B89E2C2C025800F07314 /* Lottie */,
 			);
 			productName = "Mini 2";
 			productReference = 6D5EF1102C1AC1A500C20D4D /* Mini 2.app */;
@@ -620,7 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini 2/Preview Content\"";
-				DEVELOPMENT_TEAM = ZSHV98B7GC;
+				DEVELOPMENT_TEAM = 76R68ZMQGR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-2-Info.plist";
@@ -651,7 +648,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini 2/Preview Content\"";
-				DEVELOPMENT_TEAM = ZSHV98B7GC;
+				DEVELOPMENT_TEAM = 76R68ZMQGR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-2-Info.plist";
@@ -707,14 +704,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		4B29B89E2C2C025800F07314 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4B29B89D2C2C025800F07314 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6D5EF1082C1AC1A400C20D4D /* Project object */;
 }

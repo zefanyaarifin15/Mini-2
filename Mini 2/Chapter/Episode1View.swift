@@ -110,10 +110,6 @@ struct Episode1View: View {
                 if progress.counter == 1 {
                     MessageNotification(image: "Instaqueen", title: "Rose", description: "Hi there, how are you holding up today?", time: "19:00")
 
-                        .onAppear{
-                            soundPlayer.playSound(sound: "message_notif", type: "mp3")
-                            //soundPlayed = true
-                        }
                 }
 
             }
