@@ -42,3 +42,4 @@ struct VNBubble: View {
     return VNBubble(viewModel: viewModel, sound: sampleSound)
 }
 
+

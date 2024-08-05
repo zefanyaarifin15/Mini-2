@@ -1,6 +1,6 @@
 [
   {
-    "partner_dialog": "Steph",
+    "partner_dialog": "Stephanie",
     "start_dialog": "Hi, Jasmine! How are you?",
     "dialog": [
       {
@@ -292,7 +292,7 @@
     ]
   },
   {
-    "partner_dialog": "Stalker",
+    "partner_dialog": "ShadowLurker",
     "start_dialog": "I saw you go to work at 8 am today, you fucking piece of shit.",
     "dialog": [
       {
@@ -300,7 +300,7 @@
         "user_options": [
           {
             "id": "1a",
-            "reply": "",
+            "reply": "- Ignore Chat -",
             "response": "Be careful, bitch. Lol"
           }
         ]
@@ -310,7 +310,7 @@
         "user_options": [
           {
             "id": "2a",
-            "reply": "Ignore",
+            "reply": "- Ignore Chat -",
             "response": "Typical! You always ignore me, but I see everything lol"
           },
           {
@@ -325,7 +325,7 @@
         "user_options": [
           {
             "id": "3a",
-            "reply": "",
+            "reply": "- Ignore Chat -",
             "response": "Remember, every step you take, I'm right behind you, watching your every move."
           }
         ]
@@ -350,7 +350,7 @@
         "user_options": [
           {
             "id": "5a",
-            "reply": "",
+            "reply": "- Ignore Chat -",
             "response": "HouseImage"
           }
         ]
@@ -375,7 +375,7 @@
         "user_options": [
           {
             "id": "7a",
-            "reply": "",
+            "reply": "- Ignore Chat -",
             "response": "The way you double-check the locks every night is almost like you're expecting me. Paranoid much? lol 😛"
           }
         ]
@@ -385,7 +385,7 @@
         "user_options": [
           {
             "id": "8a",
-            "reply": "",
+            "reply": "- Ignore Chat -",
             "response": "You're soo stupid! Even your closest ones can't stand you lol"
           }
         ]
@@ -395,7 +395,7 @@
         "user_options": [
           {
             "id": "9a",
-            "reply": "",
+            "reply": "- Ignore Chat -",
             "response": "Your reflection in the bathroom mirror looked particularly haunted this morning, too much makeup can’t hide that 🤢"
           }
         ]
@@ -405,7 +405,7 @@
         "user_options": [
           {
             "id": "10a",
-            "reply": "",
+            "reply": "- Ignore Chat -",
             "response": "VoiceNote"
           }
         ]
@@ -435,7 +435,7 @@
         "user_options": [
           {
             "id": "12a",
-            "reply": "",
+            "reply": "- Ignore Chat -",
             "response": "And I dare you to try reporting me to the police! They won't believe a word you say. You're trapped, and I'm enjoying every second of it."
           }
         ]

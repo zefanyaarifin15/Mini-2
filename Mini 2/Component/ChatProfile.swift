@@ -24,7 +24,7 @@ struct ChatProfile: View {
             Spacer()
             
             Image("Phone")
-                .padding(.trailing, 5)
+                //.padding(.trailing, 5)
             
         }
     }

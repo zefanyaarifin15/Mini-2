@@ -2,6 +2,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
+    @StateObject private var viewModel_2 = DMsViewModel()
     
     var body: some View {
         TabView {
@@ -17,7 +18,9 @@ struct HomeView: View {
                     Label("Chat", systemImage: "ellipsis.message.fill")
                 }
                 .navigationBarBackButtonHidden(true)
-                   
+
+
+            .padding()
             ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.circle.fill")
@@ -44,10 +47,13 @@ struct HomeView: View {
     var navigationBar: some View {
         VStack {
             HStack {
-                Image("Logo IG")
-                    .resizable()
-                    .frame(width: 100, height: 50) // Sesuaikan ukuran sesuai kebutuhan
-                    .padding(.leading, 15) // Tambahkan padding untuk menempatkan logo di pojok kiri
+                Text("InstaQueen")
+                    .padding(.leading, 15)
+                    .font(.title)
+                    .bold()
+//                    .resizable()
+//                    .frame(width: 100, height: 50) // Sesuaikan ukuran sesuai kebutuhan
+                     // Tambahkan padding untuk menempatkan logo di pojok kiri
                 Spacer()
             }
             Divider()

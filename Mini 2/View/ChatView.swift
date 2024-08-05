@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ChatView: View {
     @ObservedObject var viewModel: DialogViewModel
+    @EnvironmentObject private var progress: UserProgress
+    
     var partner: String
     var profileName: String
     
@@ -9,6 +11,8 @@ struct ChatView: View {
     @State private var selectedOptionID: String?
     
     var body: some View {
+        
+
         VStack(spacing: 0) {
             ReplyOptions(content: {
                 historyFlow
@@ -18,6 +22,7 @@ struct ChatView: View {
                     VStack(spacing: 8) {
                         ForEach(viewModel.userOptions) { option in
                             Button(action: {
+                                progress.incrementCounter()
                                 selectedOptionID = option.id
                                 viewModel.selectOption(optionID: option.id)
                             }) {
@@ -48,19 +53,8 @@ struct ChatView: View {
             }
             .toolbar(.hidden, for: .tabBar)
             .navigationBarTitleDisplayMode(.inline)
-            //.navigationBarBackButtonHidden(true)
             .edgesIgnoringSafeArea(.bottom)
             
-//             //Optional: Handle isLoading and selectedOptionID display
-//            if isLoading {
-//                AnimationView(name: "LoadingAnimation", animationSpeed: 1.0)
-//                    .frame(width: 10, height: 10)
-//            } else {
-//                if let optionID = selectedOptionID {
-//                    Text("Reply: \(viewModel.userOptions.first { $0.id == optionID }?.reply ?? "")")
-//                        .padding()
-//                }
-//            }
         }
     }
 
@@ -70,7 +64,7 @@ struct ChatView: View {
                 ForEach(viewModel.histories.filter { $0.partner == partner }) { history in
                     HStack {
                         if history.isUser {
-                            if history.content != "-Ignore Chat-" {
+                            if history.content != "- Ignore Chat -" {
                                 OutgoingChatBubble(message: history.content)
                             }
                         } else {
@@ -86,15 +80,6 @@ struct ChatView: View {
                     .padding([.leading, .trailing], 10)
                 }
                 
-//                // Display loading animation if isLoading is true
-//                if isLoading {
-//                    HStack {
-//                        AnimationView(name: "LoadingAnimation", animationSpeed: 1.0)
-//                            .frame(width: 50, height: 50)
-//                        Spacer()
-//                    }
-//                    .padding([.leading, .trailing], 10)
-//                }
             }
             .padding(.top, 8)
         }
@@ -105,6 +90,14 @@ struct ChatView: View {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(viewModel: DialogViewModel(), partner: "Stalker", profileName: "Stephanie")
+        ChatView(viewModel: DialogViewModel(), partner: "ShadowLurker", profileName: "Stephanie").environmentObject(UserProgress()) 
     }
 }
+
+/*
+ChatView:
+ - tambahin delay 2 detik untuk munculin chat dari partnernya
+ - tambahin animasi loading (maap kmrn ke delete buat debugging :" )
+ - [line 23 - 41] Bikin kalau option.reply isinya "Ignore Chat", chat dari partner langsung muncul, 
+   tanpa harus ada option untuk user klik button "Ignore Chat" dulu di ReplyOptions.
+ */

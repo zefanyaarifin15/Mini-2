@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CommentsView: View {
+    @EnvironmentObject private var progress: UserProgress
+    
+    
     let comments: [Comment] = [
         Comment(username: "makeupfanatic", text: "Love this look! Can you share your routine?"),
         Comment(username: "beautyjunkie", text: "Your makeup is always on point!"),
@@ -45,11 +48,15 @@ struct CommentsView: View {
             .padding(.vertical, 5)
         }
         .navigationTitle("Comments")
+        .onAppear {
+            progress.incrementCounter()
+            print("task 1")
+        }
     }
 }
 
 struct CommentsView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentsView()
+        CommentsView().environmentObject(UserProgress())
     }
 }

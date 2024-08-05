@@ -1,11 +1,17 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct Mini_2App: App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+    @StateObject private var userProgress = UserProgress()
+ 
+    
     var body: some Scene {
         WindowGroup {
-            PhoneView()
+            Episode1View()
+                .environmentObject(userProgress)
+
         }
     }
     
